@@ -1,0 +1,11 @@
+"Phrases"
+{
+	"Flashlight Intro"
+	{
+		"es"		""
+	}
+	"Flashlight Usage"
+	{
+		"es"		""
+	}
+}

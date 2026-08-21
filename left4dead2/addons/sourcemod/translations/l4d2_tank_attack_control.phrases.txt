@@ -1,0 +1,19 @@
+"Phrases"
+{
+	"Title"
+	{
+		"en"	"{blue}[{default}Tank Rocas Selectivas{blue}]"
+	}
+	"Reload"
+	{
+		"en"	"{olive}Recarga{default} = {blue}Roca con dos manos {default}"
+	}
+	"Use"
+	{
+		"en"	"{olive}Usar E{default} = {blue}Roca baja curva {default}"
+	}
+	"M2"
+	{
+		"en"	"{olive}M2{default} = {blue} Roca con una mano{default}"
+	}
+}

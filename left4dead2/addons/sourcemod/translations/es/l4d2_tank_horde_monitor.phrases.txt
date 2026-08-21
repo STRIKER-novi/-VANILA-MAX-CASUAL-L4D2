@@ -1,0 +1,27 @@
+"Phrases"
+{
+	"Tag"
+	{
+		"es"		""
+	}
+	"TankPlay"
+	{
+               "es"          "La horda se {blue}DETUVO{default} por que el Tank, Si avanzan la horda {blue}CONTINUA"
+	}
+	"UntilHordeStarts"
+	{
+        	"es"          ""
+	}
+	"HordeResumed"
+	{
+        	"es"          ""
+	}
+	"HordeStrength"
+	{
+        	"es"          ""
+	}
+	"HordeVeryStrength"
+	{
+        	"es"          "{red}Avanzaron demasiado{default}, la horda {green}CONTINUA{default}"
+	}
+}
