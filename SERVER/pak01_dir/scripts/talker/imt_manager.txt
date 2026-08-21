@@ -1,0 +1,1708 @@
+//--------------------------------------------------------------------------------------------------------------
+// ion's Vocalizer: Manager Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+// Stories
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_EllisStoryInterruptManager
+{
+	scene "scenes/Manager/GenericResponses25.vcd" then from iMT_EllisStoryReac foo:0 0.3  //Tell me you ain't serious.
+}
+
+Rule iMT_EllisStoryInterruptManager
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsManager IsTalk IsTalkManager IsWorldTalkManager IssuerCloseEnough
+	forceweight 1
+	Response iMT_EllisStoryInterruptManager
+}
+
+Response iMT_EllisStoryStopManager
+{
+	scene "scenes/Manager/GenericResponses39.vcd" then all iMT_EllisStoryStop foo:0 0.3  //Oh no. Ain't no damn way...
+}
+
+Rule iMT_EllisStoryStopManager
+{
+	criteria iMT_EllisStories IsManager _auto_IsTellingStory
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryStopManager
+}
+
+// Story-specific overrides
+
+Response iMT_EllisStoryInterruptAutoManager
+{
+	scene "scenes/Manager/GenericResponses25.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Tell me you ain't serious.
+}
+
+Rule iMT_EllisStoryInterruptAutoManager
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsManager IsNotSaidLeavingSafeArea _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryInterruptAutoManager
+}
+
+Rule iMT_EllisStoryInterruptGenericManager
+{
+	criteria ConceptEllisInterrupt IsManager _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryInterruptAutoManager
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerReadyManager
+{
+	scene "scenes/Manager/AnswerReady01.vcd"  //Ready!
+	scene "scenes/Manager/AnswerReady02.vcd"  //Let's do it!
+	scene "scenes/Manager/AnswerReady03.vcd"  //Hit it!
+	scene "scenes/Manager/AnswerReady04.vcd"  //Come on, let's do it!
+}
+
+Rule iMT_PlayerAnswerReadyManager
+{
+	criteria iMT_PlayerAnswerReady IsManager
+	Response iMT_PlayerAnswerReadyManager
+}
+
+Rule iMT_PlayerBattleCryManager
+{
+	criteria iMT_PlayerBattleCry IsManager
+	Response L4D1PlayerChainSawUsedManager
+}
+
+Response iMT_PlayerBreathingManager
+{
+	scene "scenes/Manager/ExertionCritical01.vcd"  //[frightened freaked out breathing]
+	scene "scenes/Manager/ExertionCritical02.vcd"  //[frightened freaked out breathing]
+	scene "scenes/Manager/ExertionCritical03.vcd"  //[frightened freaked out breathing]
+	scene "scenes/Manager/ExertionMajor01.vcd"  //[heavy breathing - seriously winded]
+	scene "scenes/Manager/ExertionMajor02.vcd"  //[heavy breathing - seriously winded]
+	scene "scenes/Manager/ExertionMinor01.vcd"  //[breathing - panting out of breath]
+	scene "scenes/Manager/ExertionMinor02.vcd"  //[breathing - panting out of breath]
+	scene "scenes/Manager/ExertionMinor03.vcd"  //[breathing - panting out of breath]
+	scene "scenes/Manager/ExertionMinor04.vcd"  //[breathing - panting out of breath]
+}
+
+Rule iMT_PlayerBreathingManager
+{
+	criteria iMT_PlayerBreathing IsManager
+	Response iMT_PlayerBreathingManager
+}
+
+Rule iMT_PlayerCloseTheDoorManager
+{
+	criteria iMT_PlayerCloseTheDoor IsManager
+	Response L4D1PlayerLockTheDoorCheckPointManager
+}
+
+Rule iMT_PlayerCoughingManager
+{
+	criteria iMT_PlayerCoughing IsManager
+	Response L4D1SurvivorCoughingManager
+}
+
+Response iMT_PlayerDeathScreamManager
+{
+	scene "scenes/Manager/Fall01.vcd"  //[Falling-to-Death scream]
+	scene "scenes/Manager/Fall02.vcd"  //[Falling-to-Death scream]
+	scene "scenes/Manager/Fall03.vcd"  //[Falling-to-Death scream]
+}
+
+Rule iMT_PlayerDeathScreamManager
+{
+	criteria iMT_PlayerDeathScream IsManager
+	Response iMT_PlayerDeathScreamManager
+}
+
+Rule iMT_PlayerEquippedItemManager
+{
+	criteria iMT_PlayerEquippedItem IsManager
+	Response GrabbingGasSCManager
+}
+
+Response iMT_PlayerFriendlyFireManager
+{
+	scene "scenes/Manager/FriendlyFire01.vcd"  //Hey, man, that hurt.
+	scene "scenes/Manager/FriendlyFire02.vcd"  //AH! Will you knock it off?
+	scene "scenes/Manager/FriendlyFire03.vcd"  //Do I look like one of them?
+	scene "scenes/Manager/FriendlyFire04.vcd"  //You know I would appreciate it, IF YOU'D STOP SHOOTING ME.
+	scene "scenes/Manager/FriendlyFire05.vcd"  //Watch where you're shooting!
+	scene "scenes/Manager/FriendlyFire06.vcd"  //Hey, man, that's not cool.
+	scene "scenes/Manager/FriendlyFire07.vcd"  //Man, what the hell, quit shooting me
+	scene "scenes/Manager/FriendlyFire08.vcd"  //Whoa, whoa, don't shoot, it's me!
+	scene "scenes/Manager/FriendlyFire09.vcd"  //Ow man ow! Why you shooting me!
+	scene "scenes/Manager/FriendlyFire10.vcd"  //Look at my face, do I look like them?
+	scene "scenes/Manager/FriendlyFire11.vcd"  //Oh what the hell, why you shootin' me
+	scene "scenes/Manager/FriendlyFire12.vcd"  //I'm gonna shoot you back next time
+	scene "scenes/Manager/FriendlyFire13.vcd"  //Ahhh Mother
+	scene "scenes/Manager/FriendlyFire14.vcd"  //Whoa, whoa, don't shoot, it's me!
+}
+
+Rule iMT_PlayerFriendlyFireManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager
+	Response iMT_PlayerFriendlyFireManager
+}
+
+Response iMT_PlayerFriendlyFireFromBikerManager
+{
+	scene "scenes/Manager/Manager_FriendlyFireFrancis01.vcd"  //Francis, that's MY ass your shootin'.
+	scene "scenes/Manager/Manager_FriendlyFireFrancis02.vcd"  //Francis, What the HELL is wrong with you?
+	scene "scenes/Manager/Manager_FriendlyFireFrancis06.vcd"  //[angry] Francis!
+	scene "scenes/Manager/Manager_FriendlyFireFrancis07.vcd"  //Go on do it one more time, fat man.
+	scene "scenes/Manager/Manager_FriendlyFireFrancis08.vcd"  //[angry] Francis!
+}
+
+Rule iMT_PlayerFriendlyFireFromBikerManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerFriendlyFireFromBikerManager
+}
+
+Response iMT_PlayerFriendlyFireFromNamVetManager
+{
+	scene "scenes/Manager/Manager_FriendlyFireBill01.vcd"  //Old man, stop shooting me!
+	scene "scenes/Manager/Manager_FriendlyFireBill02.vcd"  //Whoah, whoah whoah! Jesus, Bill, what are you doing?
+	scene "scenes/Manager/Manager_FriendlyFireBill03.vcd"  //William! Come on, man!
+	scene "scenes/Manager/Manager_FriendlyFireBill04.vcd"  //Watch it, Bill!
+	scene "scenes/Manager/Manager_FriendlyFireBill05.vcd"  //[angry] Bill!
+	scene "scenes/Manager/Manager_FriendlyFireBill06.vcd"  //I cannot BELIEVE you just shot me AGAIN.
+	scene "scenes/Manager/Manager_FriendlyFireBill08.vcd"  //[angry] Bill!
+	scene "scenes/Manager/Manager_FriendlyFireBill09.vcd"  //[angry] Bill!
+}
+
+Rule iMT_PlayerFriendlyFireFromNamVetManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager SubjectIsNamVet IsSubjectDistNear800
+	Response iMT_PlayerFriendlyFireFromNamVetManager
+}
+
+Rule iMT_PlayerFriendlyFireFromTeenGirlManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager SubjectIsTeenGirl IsSubjectDistNear800
+	Response L4D1PlayerFriendlyFireFromZoeyManager
+}
+
+Rule iMT_PlayerFriendlyFireFromUnknownManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager SubjectIsUnknown IsSubjectDistNear800
+	Response L4D1PlayerFriendlyFireFromZoeyManager
+}
+
+Response iMT_PlayerGetToVehicleBoatManager
+{
+	scene "scenes/Manager/ArriveBoat01.vcd"  //Get to the boat!
+	scene "scenes/Manager/ArriveBoat02.vcd"  //Get to the boat!
+	scene "scenes/Manager/ArriveBoat03.vcd"  //Run to the boat!
+	scene "scenes/Manager/ArriveBoatInitial01.vcd"  //The boat's here! Let's go!
+	scene "scenes/Manager/ArriveBoatInitial02.vcd"  //Our boat's here! Let's go!
+}
+
+Rule iMT_PlayerGetToVehicleBoatManager
+{
+	criteria iMT_PlayerGetToVehicleBoat IsManager
+	Response iMT_PlayerGetToVehicleBoatManager
+}
+
+Response iMT_PlayerGetToVehicleChopperManager
+{
+	scene "scenes/Manager/ArriveChopper01.vcd"  //Everyone in the helicopter! Go!
+	scene "scenes/Manager/ArriveChopper02.vcd"  //Get to the helicopter!
+	scene "scenes/Manager/ArriveChopperInitial01.vcd"  //The heli's here. Let's go!
+	scene "scenes/Manager/ArriveChopperInitial02.vcd"  //The helicopter's here! Let's go!
+}
+
+Rule iMT_PlayerGetToVehicleChopperManager
+{
+	criteria iMT_PlayerGetToVehicleChopper IsManager
+	Response iMT_PlayerGetToVehicleChopperManager
+}
+
+Response iMT_PlayerGetToVehicleWheelsManager
+{
+	scene "scenes/Manager/ArriveTruck01.vcd"  //Get to the truck! TO THE TRUCK!
+	scene "scenes/Manager/ArriveTruck02.vcd"  //GET TO THE TRUCK!
+	scene "scenes/Manager/ArriveTruckInitial01.vcd"  //The truck's here! Let's go!
+}
+
+Rule iMT_PlayerGetToVehicleWheelsManager
+{
+	criteria iMT_PlayerGetToVehicleWheels IsManager
+	Response iMT_PlayerGetToVehicleWheelsManager
+}
+
+Response iMT_PlayerGoingToDieManager
+{
+	scene "scenes/Manager/GoingToDie01.vcd"  //I don't feel so good
+	scene "scenes/Manager/GoingToDie03.vcd"  //I feel awful.
+	scene "scenes/Manager/GoingToDie04.vcd"  //I'm not gonna last much longer.
+	scene "scenes/Manager/GoingToDie06.vcd"  //Shit, I am really messed up.
+	scene "scenes/Manager/GoingToDie08.vcd"  //I have to heal up.
+	scene "scenes/Manager/GoingToDie09.vcd"  //Every part of me hurts.
+	scene "scenes/Manager/GoingToDie10.vcd"  //This sucks.
+	scene "scenes/Manager/GoingToDie11.vcd"  //At this rate, I'm not gonna make it.
+	scene "scenes/Manager/GoingToDie12.vcd"  //I feel terrible.
+	scene "scenes/Manager/GoingToDie13.vcd"  //This is bad. This is really bad.
+	scene "scenes/Manager/GoingToDie14.vcd"  //I think I'm hurt bad.
+	scene "scenes/Manager/GoingToDie16.vcd"  //I feel terrible.
+	scene "scenes/Manager/GoingToDie17.vcd"  //I feel awful
+	scene "scenes/Manager/GoingToDie18.vcd"  //[gasps and sharp intake of breath]
+	scene "scenes/Manager/GoingToDie19.vcd"  //I think something's broken.
+	scene "scenes/Manager/GoingToDie24.vcd"  //Oh man, I am in sorry ass shape.
+	scene "scenes/Manager/GoingToDie25.vcd"  //I feel kinda woozy.
+	scene "scenes/Manager/GoingToDie26.vcd"  //I'm not gonna make it man
+	scene "scenes/Manager/GoingToDie27.vcd"  //Every part of me hurts
+	scene "scenes/Manager/GoingToDieLight03.vcd"  //Man, this hurts.
+	scene "scenes/Manager/GoingToDieLight14.vcd"  //[pain noise] Oh man, every damn thing hurts.
+	scene "scenes/Manager/GoingToDieLight15.vcd"  //[blows air out through pursed lips] This is some real bullshit right here.
+	scene "scenes/Manager/GoingToDieLight17.vcd"  //Ah. [pain noise] hell, hell.
+}
+
+Rule iMT_PlayerGoingToDieManager
+{
+	criteria iMT_PlayerGoingToDie IsManager
+	Response iMT_PlayerGoingToDieManager
+}
+
+Response iMT_PlayerGoingToDie3Manager
+{
+	scene "scenes/Manager/GoingToDie02.vcd"  //I don't, I don't know if I'm going to make it
+	scene "scenes/Manager/GoingToDie05.vcd"  //I really need to get some First Aid.
+	scene "scenes/Manager/GoingToDie07.vcd"  //I don't think I'm gonnna make it.
+	scene "scenes/Manager/GoingToDie15.vcd"  //I think I'm dyin'.
+	scene "scenes/Manager/GoingToDie20.vcd"  //I should have stayed in damn the store...
+	scene "scenes/Manager/GoingToDie21.vcd"  //I'm not kidding, we need to find me some First Aid.
+	scene "scenes/Manager/GoingToDie22.vcd"  //[pain sound] Dammit.
+	scene "scenes/Manager/GoingToDie23.vcd"  //Ah, I might not make it
+	scene "scenes/Manager/GoingToDieLight12.vcd"  //[quiet pep talk to self]C'mon Louis: you are NOT dyin' here.
+	scene "scenes/Manager/GoingToDieLight16.vcd"  //I don't wanna die. I know nobody wants to die, but I'm like, fifty times that.
+}
+
+Rule iMT_PlayerGoingToDie3Manager
+{
+	criteria iMT_PlayerGoingToDie IsManager IsOnThirdStrike
+	Response iMT_PlayerGoingToDie3Manager
+}
+
+Rule iMT_PlayerGooedBySpitterManager
+{
+	criteria iMT_PlayerGooedBySpitter IsManager
+	Response SurvivorGooedBySpitterManager
+}
+
+Response iMT_PlayerHelloManager
+{
+	scene "scenes/Manager/ScenarioJoin02.vcd"  //Hello!
+}
+
+Rule iMT_PlayerHelloManager
+{
+	criteria iMT_PlayerHello IsManager
+	Response iMT_PlayerHelloManager
+}
+
+Rule iMT_PlayerIncapacitatedHurtManager
+{
+	criteria iMT_PlayerIncapacitatedHurt IsManager
+	Response L4D1SurvivorIncapacitatedHurtManager
+}
+
+Response iMT_PlayerMeleeManager
+{
+	scene "scenes/Manager/Shoved01.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved02.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved03.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved04.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved05.vcd"  //[Melee grunt]
+}
+
+Rule iMT_PlayerMeleeManager
+{
+	criteria iMT_PlayerMelee IsManager
+	Response iMT_PlayerMeleeManager
+}
+
+Rule iMT_PlayerMournBikerAliveManager
+{
+	criteria iMT_PlayerMourn IsManager SubjectIsBiker IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournFrancisManager
+}
+
+Rule iMT_PlayerMournBikerDeadManager
+{
+	criteria iMT_PlayerMourn IsManager NotBikerAlive IsBikerNear200
+	Response L4D1SurvivorMournFrancisManager
+}
+
+Rule iMT_PlayerMournNamVetAliveManager
+{
+	criteria iMT_PlayerMourn IsManager SubjectIsNamVet IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournBillManager
+}
+
+Rule iMT_PlayerMournNamVetDeadManager
+{
+	criteria iMT_PlayerMourn IsManager NotNamVetAlive IsNamVetNear200
+	Response L4D1SurvivorMournBillManager
+}
+
+Rule iMT_PlayerMournTeenGirlAliveManager
+{
+	criteria iMT_PlayerMourn IsManager SubjectIsTeenGirl IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournZoeyManager
+}
+
+Rule iMT_PlayerMournTeenGirlDeadManager
+{
+	criteria iMT_PlayerMourn IsManager NotTeenGirlAlive IsTeenGirlNear200
+	Response L4D1SurvivorMournZoeyManager
+}
+
+Rule iMT_PlayerMournUnknownAliveManager
+{
+	criteria iMT_PlayerMourn IsManager SubjectIsUnknown IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournZoeyManager
+}
+
+Response iMT_PlayerNearExitManager
+{
+	scene "scenes/Manager/FinaleAhead01.vcd"  //We're almost out of here!
+	scene "scenes/Manager/FinaleAhead02.vcd"  //We're almost out of here!
+	scene "scenes/Manager/SafeSpotAhead04.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //Safe house ahead!
+	scene "scenes/Manager/SafeSpotAhead05.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //There's the safe house!
+	scene "scenes/Manager/SafeSpotAhead06.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //Safe house!
+	scene "scenes/Manager/SafeSpotAhead07.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //Safe house up ahead!
+}
+
+Rule iMT_PlayerNearExitManager
+{
+	criteria iMT_PlayerNearExit IsManager
+	Response iMT_PlayerNearExitManager
+}
+
+Rule iMT_PlayerNearExitReacManager
+{
+	criteria iMT_PlayerNearExitReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsManager IsTalk IsTalkManager IsWorldTalkManager IssuerClose ChanceToFire10Percent
+	Response SafeSpotAheadResponseManager
+}
+
+Response iMT_PlayerNiceShotManager
+{
+	scene "scenes/Manager/NiceShot01.vcd"  //Nice shot!
+	scene "scenes/Manager/NiceShot02.vcd"  //Oh man, great shot.
+	scene "scenes/Manager/NiceShot03.vcd"  //Wooo, nice baby!
+	scene "scenes/Manager/NiceShot04.vcd"  //Whoah. Nice shot.
+	scene "scenes/Manager/NiceShot05.vcd"  //Nice one!
+	scene "scenes/Manager/NiceShot07.vcd"  //Nice shot!
+	scene "scenes/Manager/NiceShot08.vcd"  //Great shot!
+	scene "scenes/Manager/NiceShot09.vcd"  //POW!
+	scene "scenes/Manager/NiceShot10.vcd"  //Oh, HELL yes.
+}
+
+Rule iMT_PlayerNiceShotManager
+{
+	criteria iMT_PlayerNiceShot IsManager
+	Response iMT_PlayerNiceShotManager
+}
+
+Response iMT_PlayerPainNoiseManager
+{
+	scene "scenes/Manager/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtMajor01.vcd"  //[Pain noise - huh]
+	scene "scenes/Manager/HurtMajor02.vcd"  //[Pain noise - ahh]
+	scene "scenes/Manager/HurtMajor03.vcd"  //[Pain noise - oy]
+	scene "scenes/Manager/HurtMajor04.vcd"  //[Pain noise - oy]
+	scene "scenes/Manager/HurtMajor05.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor06.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor07.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor08.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor09.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor10.vcd"  //[Pain noise - ugh]
+}
+
+Rule iMT_PlayerPainNoiseManager
+{
+	criteria iMT_PlayerPainNoise IsManager
+	Response iMT_PlayerPainNoiseManager
+}
+
+Response iMT_PlayerPouncedBikerManager
+{
+	scene "scenes/Manager/HunterFrancisPounced02.vcd"  //Hunter on Francis!
+	scene "scenes/Manager/HunterFrancisPounced03.vcd"  //Hunter on Francis!
+}
+
+Rule iMT_PlayerPouncedBikerManager
+{
+	criteria iMT_SurvivorWasPounced IsManager SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerPouncedBikerManager
+}
+
+Response iMT_PlayerPouncedNamVetManager
+{
+	scene "scenes/Manager/HunterBillPounced02.vcd"  //Hunter on Bill!
+	scene "scenes/Manager/HunterBillPounced03.vcd"  //Hunter on Bill!
+}
+
+Rule iMT_PlayerPouncedNamVetManager
+{
+	criteria iMT_SurvivorWasPounced IsManager SubjectIsNamVet IsSubjectDistNear800
+	Response iMT_PlayerPouncedNamVetManager
+}
+
+Response iMT_PlayerPouncedTeenGirlManager
+{
+	scene "scenes/Manager/HunterZoeyPounced01.vcd"  //Hunter on Zoey!
+	scene "scenes/Manager/HunterZoeyPounced03.vcd"  //Hunter on Zoey!
+}
+
+Rule iMT_PlayerPouncedTeenGirlManager
+{
+	criteria iMT_SurvivorWasPounced IsManager SubjectIsTeenGirl IsSubjectDistNear800
+	Response iMT_PlayerPouncedTeenGirlManager
+}
+
+Rule iMT_PlayerPouncedUnknownManager
+{
+	criteria iMT_SurvivorWasPounced IsManager SubjectIsUnknown IsSubjectDistNear800
+	Response iMT_PlayerPouncedTeenGirlManager
+}
+
+Rule iMT_PlayerReloadingManager
+{
+	criteria iMT_PlayerReloading IsManager
+	Response L4D1SurvivorReloadingManager
+}
+
+Rule iMT_PlayerSuggestHealthManager
+{
+	criteria iMT_PlayerSuggestHealth IsManager
+	Response L4D1PlayerSuggestHealthManager
+}
+
+Rule iMT_PlayerSuggestHealthBikerManager
+{
+	criteria iMT_PlayerSuggestHealth IsManager SubjectIsBiker IsSubjectDistNear200
+	Response L4D1PlayerSuggestHealthFrancisManager
+}
+
+Rule iMT_PlayerSuggestHealthNamVetManager
+{
+	criteria iMT_PlayerSuggestHealth IsManager SubjectIsNamVet IsSubjectDistNear200
+	Response L4D1PlayerSuggestHealthBillManager
+}
+
+Rule iMT_PlayerSuggestHealthTeenGirlManager
+{
+	criteria iMT_PlayerSuggestHealth IsManager SubjectIsTeenGirl IsSubjectDistNear200
+	Response L4D1PlayerSuggestHealthZoeyManager
+}
+
+Rule iMT_PlayerSuggestHealthUnknownManager
+{
+	criteria iMT_PlayerSuggestHealth IsManager SubjectIsUnknown IsSubjectDistNear200
+	Response L4D1PlayerSuggestHealthZoeyManager
+}
+
+Rule iMT_PlayerTeamKillManager
+{
+	criteria iMT_PlayerTeamKill IsManager
+	Response L4D1PlayerFriendlyFire2Manager
+}
+
+Response iMT_PlayerTransitionManager
+{
+	scene "scenes/Manager/PlayerTransitionClose01.vcd"  //Woah Jesus!
+	scene "scenes/Manager/PlayerTransitionClose02.vcd"  //Damn!
+	scene "scenes/Manager/PlayerTransitionClose03.vcd"  //At least we're safe now!
+	scene "scenes/Manager/PlayerTransitionClose04.vcd"  //BOOM-diah
+}
+
+Rule iMT_PlayerTransitionManager
+{
+	criteria iMT_PlayerTransition IsManager
+	Response iMT_PlayerTransitionManager
+}
+
+Rule iMT_PlayerWitchChasingManager
+{
+	criteria iMT_PlayerWitchChasing IsManager
+	Response L4D1PlayerWitchChasingManager
+}
+
+Rule iMT_SurvivorCaughtVomitManager
+{
+	criteria iMT_PlayerVomitInFace IsManager
+	Response L4D1SurvivorCaughtVomitManager
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-specific
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_AlleyManager
+{
+	scene "scenes/Manager/DLC2Alley01.vcd"  //Hey, Francis. Wasn't this the alley you were born in?
+}
+
+Rule iMT_AlleyManager
+{
+	criteria iMT_Alley IsManager
+	Response iMT_AlleyManager
+}
+
+Response iMT_ApocalypseManager
+{
+	scene "scenes/Manager/DLC2SwearCoupDeGrace17.vcd"  //Oh it's the BITCH apocalypse now, bitch.
+}
+
+Rule iMT_ApocalypseManager
+{
+	criteria iMT_Apocalypse IsManager
+	Response iMT_ApocalypseManager
+}
+
+Response iMT_BackToNormalManager
+{
+	scene "scenes/Manager/ZombieGenericLong15.vcd"  //When things go back to normal, Zoey, Bill-I'm giving you both jobs. Francis, I'm gonna teach your ass how to read.
+}
+
+Rule iMT_BackToNormalManager
+{
+	criteria iMT_BackToNormal IsManager
+	Response iMT_BackToNormalManager
+}
+
+Response iMT_BelchManager
+{
+	scene "scenes/Manager/Generic14.vcd" then any iMT_ShortLaugh foo:0 0  //BELCH - Excuse me
+	scene "scenes/Manager/Generic14.vcd" odds 10 then self iMT_ShortLaugh foo:0 0.6  //BELCH - Excuse me
+}
+
+Rule iMT_BelchManager
+{
+	criteria iMT_Belch IsManager
+	Response iMT_BelchManager
+}
+
+Response iMT_BelievingManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat20.vcd"  //Francis said you weren't goin' to make it. But I said I had a good feelin' about you.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat21.vcd"  //Francis said you weren't goin' to make it. But I had a good feelin' about you.
+}
+
+Rule iMT_BelievingManager
+{
+	criteria iMT_Believing IsManager
+	Response iMT_BelievingManager
+}
+
+Rule iMT_CounterStrikeManager
+{
+	criteria iMT_CounterStrike IsManager
+	Response L4D1SurvivorPickupCSSMP5SMGManager
+}
+
+Response iMT_CubScoutsManager
+{
+	scene "scenes/Manager/ZombieGenericLong11.vcd"  //Any of you guys in the Cub Scouts? Surprisingly ineffective at preparin' you for some shit like this.
+}
+
+Rule iMT_CubScoutsManager
+{
+	criteria iMT_CubScouts IsManager
+	Response iMT_CubScoutsManager
+}
+
+Rule iMT_GordonFreemanManager
+{
+	criteria iMT_GordonFreeman IsManager
+	Response L4D1SurvivorPickupHLCrowBarManager
+}
+
+Response iMT_HeroManager
+{
+	scene "scenes/Manager/ReviveFriend18.vcd"  //I never saw nobody take that much abuse and live! Oughtta start callin' you Jason.
+	scene "scenes/Manager/ReviveFriend19.vcd"  //I never saw nobody take that much abuse and live! Oughtta start callin' you Hercules.
+}
+
+Rule iMT_HeroManager
+{
+	criteria iMT_Hero IsManager
+	Response iMT_HeroManager
+}
+
+Response iMT_IntroductionManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat05.vcd"  //Hi, I'm Louis!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat06.vcd"  //Hi, I'm Louis!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat23.vcd"  //Hey guys! My name's Louis.
+}
+
+Rule iMT_IntroductionManager
+{
+	criteria iMT_Introduction IsManager
+	Response iMT_IntroductionManager
+}
+
+Response iMT_ITManager
+{
+	scene "scenes/Manager/C6DLC3SecondSafeRoom04.vcd"  //You know what I miss? Checking email. Seeing what's new.
+	scene "scenes/Manager/C6DLC3SecondSafeRoom08.vcd"  //One thing I'm not gonna miss about civilization? I.T. I will never have to tell another human being to reboot their damn computer.
+}
+
+Rule iMT_ITManager
+{
+	criteria iMT_IT IsManager
+	Response iMT_ITManager
+}
+
+Response iMT_MadeItManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat08.vcd"  //Hey, you made it!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat09.vcd"  //Hey, you made it!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat10.vcd"  //Hey, you made it!
+}
+
+Rule iMT_MadeItManager
+{
+	criteria iMT_MadeIt IsManager
+	Response iMT_MadeItManager
+}
+
+Response iMT_NervousHummingManager
+{
+	scene "scenes/Manager/NervousHumming01.vcd"  //[Nervous Humming]
+	scene "scenes/Manager/NervousHumming02.vcd"  //[Nervous Humming]
+}
+
+Rule iMT_NervousHummingManager
+{
+	criteria iMT_NervousHumming IsManager
+	Response iMT_NervousHummingManager
+}
+
+Response iMT_NewManager
+{
+	scene "scenes/Manager/DLC1_C6M3_L4D11stSpot01.vcd"  //Is that a new zombie?
+	scene "scenes/Manager/DLC1_C6M3_L4D11stSpot02.vcd"  //Is that a new zombie?
+	scene "scenes/Manager/DLC1_C6M3_L4D11stSpot03.vcd"  //Is that a new zombie?
+	scene "scenes/Manager/DLC1_CommunityL4D106.vcd" odds 20  //Zombies are driving trucks?
+}
+
+Rule iMT_NewManager
+{
+	criteria iMT_New IsManager
+	Response iMT_NewManager
+}
+
+Rule iMT_RecycleManager
+{
+	criteria iMT_Recycle IsManager
+	Response L4D1PlayerRemarkcrashcourse02_path11Manager
+}
+
+Response iMT_RifleRangeManager
+{
+	scene "scenes/Manager/GameSpeech01.vcd"  //The guys used to laugh when I hit the rifle range at lunch. Ain't so funny now, is it?
+	scene "scenes/Manager/Generic20.vcd"  //Guys at the office used to laugh when I'd hit the rifle range on my lunch break. Ain't so damn funny now, is it?
+}
+
+Rule iMT_RifleRangeManager
+{
+	criteria iMT_RifleRange IsManager
+	Response iMT_RifleRangeManager
+}
+
+Response iMT_SeeingMoreManager
+{
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic08.vcd"  //I think we're gonna be seeing more of that guy!
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic09.vcd"  //I think we're gonna be seeing more of that guy!
+}
+
+Rule iMT_SeeingMoreManager
+{
+	criteria iMT_SeeingMore IsManager
+	Response iMT_SeeingMoreManager
+}
+
+Rule iMT_ShortLaughManager
+{
+	criteria iMT_ShortLaugh IsNotCoughing IsNotIncapacitated IsNotSpeaking IsManager IsTalk IsTalkManager IsWorldTalkManager IssuerClose
+	Response ConceptBlock613
+}
+
+Response iMT_ShotHimManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat02.vcd"  //You're right, Francis. He's not friendly. I think Bill would have shot him by now.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat03.vcd"  //You're right, Francis. He's not friendly. I think Bill would have shot him by now.
+}
+
+Rule iMT_ShotHimManager
+{
+	criteria iMT_ShotHim IsManager
+	Response iMT_ShotHimManager
+}
+
+Response iMT_SingingManager
+{
+	scene "scenes/Manager/NervousWhislte01.vcd"  //[Nervous Whistle]
+}
+
+Rule iMT_SingingManager
+{
+	criteria iMT_Singing IsManager
+	Response iMT_SingingManager
+}
+
+Response iMT_TankFactoryManager
+{
+	scene "scenes/Manager/C6DLC3InTankTrainCar01.vcd" then any iMT_TankFactoryReac foo:0 1  //Hey Francis what do they make at the tank factory?
+	scene "scenes/Manager/C6DLC3InTankTrainCar02.vcd" then any iMT_TankFactoryReac foo:0 1  //Hey Francis what do they make at the tank factory?
+}
+
+Rule iMT_TankFactoryManager
+{
+	criteria iMT_TankFactory IsManager
+	Response iMT_TankFactoryManager
+}
+
+Response iMT_TankFactory2Manager
+{
+	scene "scenes/Manager/C6DLC3InTankTrainCar03.vcd" odds 10  //You're welcome.
+	scene "scenes/Manager/C6DLC3InTankTrainCar04.vcd" odds 10  //You're welcome.
+	scene "scenes/Manager/C6DLC3InTankTrainCar05.vcd"  //Tanks on a train.
+}
+
+Rule iMT_TankFactory2Manager
+{
+	criteria iMT_TankFactory2 IsNotCoughing IsNotIncapacitated IsManager
+	Response iMT_TankFactory2Manager
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Overrides
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerLostCallManager
+{
+	scene "scenes/Manager/ScenarioJoinLast01.vcd"  //We're all here!
+}
+
+Rule iMT_PlayerAnswerLostCallManager
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsEveryoneAlive IsNotSomeoneDied IsClosestSurvivorNear500 ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallManager
+}
+
+Rule iMT_PlayerHeardBoomerManager
+{
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1PlayerWarnHeardBoomerManager
+}
+
+Rule iMT_PlayerHeardHunterManager
+{
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1PlayerWarnHeardHunterManager
+}
+
+Rule iMT_PlayerHeardSmokerManager
+{
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1PlayerWarnHeardSmokerManager
+}
+
+Rule iMT_PlayerHeardWitchManager
+{
+	criteria ConceptPlayerHeardWitch IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response PlayerHeardWitchManager
+}
+
+Response iMT_PlayerHurrahManager
+{
+	scene "scenes/Manager/Hurrah05.vcd"  //We're going to be okay.
+	scene "scenes/Manager/Hurrah06.vcd"  //We're going to be okay!
+	scene "scenes/Manager/Hurrah07.vcd"  //Man, I think we're gonna make it.
+	scene "scenes/Manager/Hurrah08.vcd"  //They can't stop us now
+	scene "scenes/Manager/Hurrah09.vcd"  //Nothing can stop us.
+	scene "scenes/Manager/Hurrah10.vcd"  //Nothing can stop us, do you hear me? Nothing can stop us!
+	scene "scenes/Manager/Hurrah11.vcd"  //We are unstoppable.
+	scene "scenes/Manager/Hurrah12.vcd"  //That's right, we should call ourselves the unstoppables
+	scene "scenes/Manager/Hurrah13.vcd"  //We are unstoppable.
+	scene "scenes/Manager/Hurrah16.vcd"  //I am bad, yes I am bad, YES I AM! WOO!
+}
+
+Rule iMT_PlayerHurrahManager
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager ExtraWeight10
+	Response iMT_PlayerHurrahManager
+}
+
+Response iMT_PlayerLaughManager
+{
+	scene "scenes/Manager/Laughter04.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter05.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter13.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter14.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter16.vcd"  //<Short laugh>
+	scene "scenes/Manager/Laughter17.vcd"  //<Short laugh>
+	scene "scenes/Manager/Laughter18.vcd"  //<Short laugh>
+	scene "scenes/Manager/Laughter20.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter21.vcd"  //<Hearty Laugh>
+}
+
+Rule iMT_PlayerLaughManager
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager ExtraWeight10
+	Response iMT_PlayerLaughManager
+}
+
+Response iMT_PlayerThanksBikerManager
+{
+	scene "scenes/Manager/ToTheRescueThanks02.vcd"  //Thanks, man!
+}
+
+Rule iMT_PlayerThanksBikerManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsBiker IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerManager
+}
+
+Response iMT_PlayerThanksNamVetManager
+{
+	scene "scenes/Manager/ToTheRescueThanks03.vcd"  //Yo, thanks, man.
+}
+
+Rule iMT_PlayerThanksNamVetManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksNamVetManager
+}
+
+Response iMT_PlayerThanksTeenGirlManager
+{
+	scene "scenes/Manager/Thanks13.vcd"  //Girl, thanks.
+}
+
+Rule iMT_PlayerThanksTeenGirlManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsTeenGirl IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlManager
+}
+
+Rule iMT_PlayerThanksUnknownManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsUnknown IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlManager
+}
+
+Response iMT_ResponseSoftDispleasureSwearManager
+{
+	scene "scenes/Manager/FallShort02.vcd"  //ohhh nooooo
+	scene "scenes/Manager/NegativeNoise01.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/NegativeNoise02.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/NegativeNoise03.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/PositiveNoise04.vcd"  //[Improv non-verbal pleasure & interest sounds]
+	scene "scenes/Manager/ReactionApprehensive01.vcd"  //I have a bad feeling about this
+	scene "scenes/Manager/ReactionApprehensive03.vcd"  //I don't like this one damn bit.
+	scene "scenes/Manager/ReactionNegative01.vcd"  //Uh oh.
+	scene "scenes/Manager/ReactionNegative04.vcd"  //Ah, Jesus.
+}
+
+Rule iMT_ResponseSoftDispleasureSwearManager
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IssuerMediumClose ExtraWeight10
+	Response iMT_ResponseSoftDispleasureSwearManager
+}
+
+Rule iMT_SafeRoomStartManager
+{
+	criteria ConceptTalkIdle IsManager IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart ExtraWeight10
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Response iMT_SurvivorAskForHealthManager
+{
+	scene "scenes/Manager/GoingToDieAskForHeal01.vcd"  //Someone got a first aid kit?
+	scene "scenes/Manager/GoingToDieAskForHeal02.vcd"  //Can anybody spare a kit?
+	scene "scenes/Manager/GoingToDieAskForHeal03.vcd"  //I could use a first aid kit.
+	scene "scenes/Manager/GoingToDieAskForHeal04.vcd"  //I could use some first aid.
+}
+
+Rule iMT_SurvivorAskForHealthManager
+{
+	criteria ConceptAskForHealth2 IsManager ExtraWeight10
+	Response iMT_SurvivorAskForHealthManager
+}
+
+Rule iMT_SurvivorAskForHealthBikerManager
+{
+	criteria ConceptAskForHealth2 IsManager IsNotOnThirdStrike SubjectIsBiker IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskFrancisForHealthManager
+}
+
+Rule iMT_SurvivorAskForHealthNamVetManager
+{
+	criteria ConceptAskForHealth2 IsManager IsNotOnThirdStrike SubjectIsNamVet IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskBillForHealthManager
+}
+
+Rule iMT_SurvivorAskForHealthTeenGirlManager
+{
+	criteria ConceptAskForHealth2 IsManager IsNotOnThirdStrike SubjectIsTeenGirl IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskZoeyForHealthManager
+}
+
+Rule iMT_SurvivorAskForHealthUnknownManager
+{
+	criteria ConceptAskForHealth2 IsManager IsNotOnThirdStrike SubjectIsUnknown IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskZoeyForHealthManager
+}
+
+Rule iMT_SurvivorCoughingDeathManager
+{
+	criteria ConceptPlayerDeath IsCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SurvivorCoughingManager
+}
+
+Rule iMT_SurvivorDeathManager
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SurvivorDeathManager
+}
+
+Rule iMT_SurvivorSpottedAmmoManager
+{
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response SurvivorSpottedAmmoManager
+}
+
+Rule iMT_SurvivorSpottedBoomerManager
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SpottedBoomerManager
+}
+
+Rule iMT_SurvivorSpottedChargerManager
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SpottedChargerManager
+}
+
+Rule iMT_SurvivorSpottedHunterManager
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SpottedHunterManager
+}
+
+Rule iMT_SurvivorSpottedInfectedManager
+{
+	criteria ConceptPlayerIncoming IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SurvivorSpottedInfectedManager
+}
+
+Rule iMT_SurvivorSpottedJockeyManager
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SpottedJockeyManager
+}
+
+Rule iMT_SurvivorSpottedSmokerManager
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SpottedSmokerManager
+}
+
+Rule iMT_SurvivorSpottedSpitterManager
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SpottedSpitterManager
+}
+
+Rule iMT_SurvivorSpottedTankManager
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response SurvivorSpottedTankManager
+}
+
+Rule iMT_SurvivorSpottedTankC6M3Manager
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager Isc6m3_port ExtraWeight10
+	Response SurvivorSpottedTankManager
+}
+
+Rule iMT_SurvivorSpottedWeaponManager
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager ExtraWeight10
+	Response SurvivorSpottedWeaponManager
+}
+
+Rule iMT_SurvivorSpottedWitchManager
+{
+	criteria ConceptPlayerWarnWitch IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response SurvivorSpottedWitchManager
+}
+
+Response iMT_SurvivorTauntResponseManager
+{
+	scene "scenes/Manager/GenericResponses40.vcd" odds 20  //Hell yeah.
+	scene "scenes/Manager/Hurrah01.vcd"  //Aw riiiight!
+	scene "scenes/Manager/Hurrah02.vcd"  //Woo baby, Aw riiiight!
+	scene "scenes/Manager/Hurrah03.vcd"  //Hell yeah.
+	scene "scenes/Manager/Hurrah14.vcd"  //YEAH!
+	scene "scenes/Manager/Hurrah15.vcd"  //YEAH WOO!
+	scene "scenes/Manager/PositiveNoise02.vcd"  //[Improv non-verbal pleasure & interest sounds]
+	scene "scenes/Manager/PositiveNoise03.vcd"  //[Improv non-verbal pleasure & interest sounds]
+	scene "scenes/Manager/ReactionPositive05.vcd"  //Allright!
+	scene "scenes/Manager/ReactionPositive06.vcd"  //Heh hehhhh.
+	scene "scenes/Manager/ReactionPositive07.vcd"  //Nice!
+	scene "scenes/Manager/ReactionPositive09.vcd"  //Sweet Baby!
+	scene "scenes/Manager/ReactionPositive10.vcd"  //That's what I'm talkin' about
+	scene "scenes/Manager/Taunt01.vcd"  //That's right!
+	scene "scenes/Manager/Taunt02.vcd"  //Woo Hoo, that's right!
+	scene "scenes/Manager/Taunt03.vcd"  //Yeah, baby, Yeah!
+	scene "scenes/Manager/Taunt04.vcd"  //Alllright!
+	scene "scenes/Manager/Taunt05.vcd"  //Oh yeah, who's your momma, who's your daddy
+	scene "scenes/Manager/Taunt06.vcd"  //Helll yeah, Hell yeah!
+	scene "scenes/Manager/Taunt07.vcd"  //[loud, evil laugh]
+	scene "scenes/Manager/Taunt08.vcd"  //[loud, evil laugh]
+	scene "scenes/Manager/Taunt09.vcd"  //[loud, evil laugh]
+	scene "scenes/Manager/Taunt10.vcd"  //[loud, evil laugh]
+}
+
+Rule iMT_SurvivorTauntResponseManager
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager ExtraWeight10
+	Response iMT_SurvivorTauntResponseManager
+}
+
+Rule iMT_SurvivorVocalizeBackUpManager
+{
+	criteria ConceptPlayerBackUp IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SurvivorVocalizeBackUpManager
+}
+
+Rule iMT_SurvivorVocalizeEmphaticGoManager
+{
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SurvivorVocalizeEmphaticGoManager
+}
+
+Rule iMT_SurvivorVocalizeLookOutManager
+{
+	criteria ConceptPlayerLookOut IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response L4D1SurvivorVocalizeLookOutManager
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_BoatmanManager
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanManager
+{
+	criteria iMT_Boatman IsManager
+	Response iMT_BoatmanManager
+}
+
+Response iMT_BoatmanC8M5Manager
+{
+	print " " then pilot iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC8M5Manager
+{
+	criteria iMT_Boatman IsManager IsNoMercy5
+	Response iMT_BoatmanC8M5Manager
+}
+
+Response iMT_BoatmanC10M3Manager
+{
+	print " " then churchguy iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC10M3Manager
+{
+	criteria iMT_Boatman IsManager IsDeathToll3
+	Response iMT_BoatmanC10M3Manager
+}
+
+Response iMT_BoatmanC10M5Manager
+{
+	print " " then orator_boat_radio iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC10M5Manager
+{
+	criteria iMT_Boatman IsManager IsDeathToll5
+	Response iMT_BoatmanC10M5Manager
+}
+
+Response iMT_BoatmanC11M5Manager
+{
+	print " " then orator_plane_radio iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC11M5Manager
+{
+	criteria iMT_Boatman IsManager IsDeadAir5
+	Response iMT_BoatmanC11M5Manager
+}
+
+Response iMT_BoatmanC12M5Manager
+{
+	print " " then orator_farm_radio iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC12M5Manager
+{
+	criteria iMT_Boatman IsManager IsBloodHarvest5
+	Response iMT_BoatmanC12M5Manager
+}
+
+Response iMT_ChopperPilotManager
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotManager
+{
+	criteria iMT_ChopperPilot IsManager
+	Response iMT_ChopperPilotManager
+}
+
+Response iMT_ChopperPilotC8M5Manager
+{
+	print " " then pilot iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC8M5Manager
+{
+	criteria iMT_ChopperPilot IsManager IsNoMercy5
+	Response iMT_ChopperPilotC8M5Manager
+}
+
+Response iMT_ChopperPilotC10M3Manager
+{
+	print " " then churchguy iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC10M3Manager
+{
+	criteria iMT_ChopperPilot IsManager IsDeathToll3
+	Response iMT_ChopperPilotC10M3Manager
+}
+
+Response iMT_ChopperPilotC10M5Manager
+{
+	print " " then orator_boat_radio iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC10M5Manager
+{
+	criteria iMT_ChopperPilot IsManager IsDeathToll5
+	Response iMT_ChopperPilotC10M5Manager
+}
+
+Response iMT_ChopperPilotC11M5Manager
+{
+	print " " then orator_plane_radio iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC11M5Manager
+{
+	criteria iMT_ChopperPilot IsManager IsDeadAir5
+	Response iMT_ChopperPilotC11M5Manager
+}
+
+Response iMT_ChopperPilotC12M5Manager
+{
+	print " " then orator_farm_radio iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC12M5Manager
+{
+	criteria iMT_ChopperPilot IsManager IsBloodHarvest5
+	Response iMT_ChopperPilotC12M5Manager
+}
+
+Response iMT_ChurchGuyManager
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyManager
+{
+	criteria iMT_ChurchGuy IsManager
+	Response iMT_ChurchGuyManager
+}
+
+Response iMT_ChurchGuyC8M5Manager
+{
+	print " " then pilot iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC8M5Manager
+{
+	criteria iMT_ChurchGuy IsManager IsNoMercy5
+	Response iMT_ChurchGuyC8M5Manager
+}
+
+Response iMT_ChurchGuyC10M3Manager
+{
+	print " " then churchguy iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC10M3Manager
+{
+	criteria iMT_ChurchGuy IsManager IsDeathToll3
+	Response iMT_ChurchGuyC10M3Manager
+}
+
+Response iMT_ChurchGuyC10M5Manager
+{
+	print " " then orator_boat_radio iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC10M5Manager
+{
+	criteria iMT_ChurchGuy IsManager IsDeathToll5
+	Response iMT_ChurchGuyC10M5Manager
+}
+
+Response iMT_ChurchGuyC11M5Manager
+{
+	print " " then orator_plane_radio iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC11M5Manager
+{
+	criteria iMT_ChurchGuy IsManager IsDeadAir5
+	Response iMT_ChurchGuyC11M5Manager
+}
+
+Response iMT_ChurchGuyC12M5Manager
+{
+	print " " then orator_farm_radio iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC12M5Manager
+{
+	criteria iMT_ChurchGuy IsManager IsBloodHarvest5
+	Response iMT_ChurchGuyC12M5Manager
+}
+
+Response iMT_MoustachioManager
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioManager
+{
+	criteria iMT_Moustachio IsManager
+	Response iMT_MoustachioManager
+}
+
+Response iMT_MoustachioC8M5Manager
+{
+	print " " then pilot iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC8M5Manager
+{
+	criteria iMT_Moustachio IsManager IsNoMercy5
+	Response iMT_MoustachioC8M5Manager
+}
+
+Response iMT_MoustachioC10M3Manager
+{
+	print " " then churchguy iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC10M3Manager
+{
+	criteria iMT_Moustachio IsManager IsDeathToll3
+	Response iMT_MoustachioC10M3Manager
+}
+
+Response iMT_MoustachioC10M5Manager
+{
+	print " " then orator_boat_radio iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC10M5Manager
+{
+	criteria iMT_Moustachio IsManager IsDeathToll5
+	Response iMT_MoustachioC10M5Manager
+}
+
+Response iMT_MoustachioC11M5Manager
+{
+	print " " then orator_plane_radio iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC11M5Manager
+{
+	criteria iMT_Moustachio IsManager IsDeadAir5
+	Response iMT_MoustachioC11M5Manager
+}
+
+Response iMT_MoustachioC12M5Manager
+{
+	print " " then orator_farm_radio iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC12M5Manager
+{
+	criteria iMT_Moustachio IsManager IsBloodHarvest5
+	Response iMT_MoustachioC12M5Manager
+}
+
+Response iMT_PlanePilotManager
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotManager
+{
+	criteria iMT_PlanePilot IsManager
+	Response iMT_PlanePilotManager
+}
+
+Response iMT_PlanePilotC8M5Manager
+{
+	print " " then pilot iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC8M5Manager
+{
+	criteria iMT_PlanePilot IsManager IsNoMercy5
+	Response iMT_PlanePilotC8M5Manager
+}
+
+Response iMT_PlanePilotC10M3Manager
+{
+	print " " then churchguy iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC10M3Manager
+{
+	criteria iMT_PlanePilot IsManager IsDeathToll3
+	Response iMT_PlanePilotC10M3Manager
+}
+
+Response iMT_PlanePilotC10M5Manager
+{
+	print " " then orator_boat_radio iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC10M5Manager
+{
+	criteria iMT_PlanePilot IsManager IsDeathToll5
+	Response iMT_PlanePilotC10M5Manager
+}
+
+Response iMT_PlanePilotC11M5Manager
+{
+	print " " then orator_plane_radio iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC11M5Manager
+{
+	criteria iMT_PlanePilot IsManager IsDeadAir5
+	Response iMT_PlanePilotC11M5Manager
+}
+
+Response iMT_PlanePilotC12M5Manager
+{
+	print " " then orator_farm_radio iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC12M5Manager
+{
+	criteria iMT_PlanePilot IsManager IsBloodHarvest5
+	Response iMT_PlanePilotC12M5Manager
+}
+
+Response iMT_Rescue9Manager
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9Manager
+{
+	criteria iMT_Rescue9 IsManager
+	Response iMT_Rescue9Manager
+}
+
+Response iMT_Rescue9C8M5Manager
+{
+	print " " then pilot iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C8M5Manager
+{
+	criteria iMT_Rescue9 IsManager IsNoMercy5
+	Response iMT_Rescue9C8M5Manager
+}
+
+Response iMT_Rescue9C10M3Manager
+{
+	print " " then churchguy iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C10M3Manager
+{
+	criteria iMT_Rescue9 IsManager IsDeathToll3
+	Response iMT_Rescue9C10M3Manager
+}
+
+Response iMT_Rescue9C10M5Manager
+{
+	print " " then orator_boat_radio iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C10M5Manager
+{
+	criteria iMT_Rescue9 IsManager IsDeathToll5
+	Response iMT_Rescue9C10M5Manager
+}
+
+Response iMT_Rescue9C11M5Manager
+{
+	print " " then orator_plane_radio iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C11M5Manager
+{
+	criteria iMT_Rescue9 IsManager IsDeadAir5
+	Response iMT_Rescue9C11M5Manager
+}
+
+Response iMT_Rescue9C12M5Manager
+{
+	print " " then orator_farm_radio iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C12M5Manager
+{
+	criteria iMT_Rescue9 IsManager IsBloodHarvest5
+	Response iMT_Rescue9C12M5Manager
+}
+
+Response iMT_SoldiersManager
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersManager
+{
+	criteria iMT_Soldiers IsManager
+	Response iMT_SoldiersManager
+}
+
+Response iMT_SoldiersC8M5Manager
+{
+	print " " then pilot iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC8M5Manager
+{
+	criteria iMT_Soldiers IsManager IsNoMercy5
+	Response iMT_SoldiersC8M5Manager
+}
+
+Response iMT_SoldiersC10M3Manager
+{
+	print " " then churchguy iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC10M3Manager
+{
+	criteria iMT_Soldiers IsManager IsDeathToll3
+	Response iMT_SoldiersC10M3Manager
+}
+
+Response iMT_SoldiersC10M5Manager
+{
+	print " " then orator_boat_radio iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC10M5Manager
+{
+	criteria iMT_Soldiers IsManager IsDeathToll5
+	Response iMT_SoldiersC10M5Manager
+}
+
+Response iMT_SoldiersC11M5Manager
+{
+	print " " then orator_plane_radio iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC11M5Manager
+{
+	criteria iMT_Soldiers IsManager IsDeadAir5
+	Response iMT_SoldiersC11M5Manager
+}
+
+Response iMT_SoldiersC12M5Manager
+{
+	print " " then orator_farm_radio iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC12M5Manager
+{
+	criteria iMT_Soldiers IsManager IsBloodHarvest5
+	Response iMT_SoldiersC12M5Manager
+}
+
+Response iMT_VirgilManager
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilManager
+{
+	criteria iMT_Virgil IsManager
+	Response iMT_VirgilManager
+}
+
+Response iMT_VirgilC8M5Manager
+{
+	print " " then pilot iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC8M5Manager
+{
+	criteria iMT_Virgil IsManager IsNoMercy5
+	Response iMT_VirgilC8M5Manager
+}
+
+Response iMT_VirgilC10M3Manager
+{
+	print " " then churchguy iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC10M3Manager
+{
+	criteria iMT_Virgil IsManager IsDeathToll3
+	Response iMT_VirgilC10M3Manager
+}
+
+Response iMT_VirgilC10M5Manager
+{
+	print " " then orator_boat_radio iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC10M5Manager
+{
+	criteria iMT_Virgil IsManager IsDeathToll5
+	Response iMT_VirgilC10M5Manager
+}
+
+Response iMT_VirgilC11M5Manager
+{
+	print " " then orator_plane_radio iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC11M5Manager
+{
+	criteria iMT_Virgil IsManager IsDeadAir5
+	Response iMT_VirgilC11M5Manager
+}
+
+Response iMT_VirgilC12M5Manager
+{
+	print " " then orator_farm_radio iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC12M5Manager
+{
+	criteria iMT_Virgil IsManager IsBloodHarvest5
+	Response iMT_VirgilC12M5Manager
+}
+
+Response iMT_WhitakerManager
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerManager
+{
+	criteria iMT_Whitaker IsManager
+	Response iMT_WhitakerManager
+}
+
+Response iMT_WhitakerC8M5Manager
+{
+	print " " then pilot iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC8M5Manager
+{
+	criteria iMT_Whitaker IsManager IsNoMercy5
+	Response iMT_WhitakerC8M5Manager
+}
+
+Response iMT_WhitakerC10M3Manager
+{
+	print " " then churchguy iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC10M3Manager
+{
+	criteria iMT_Whitaker IsManager IsDeathToll3
+	Response iMT_WhitakerC10M3Manager
+}
+
+Response iMT_WhitakerC10M5Manager
+{
+	print " " then orator_boat_radio iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC10M5Manager
+{
+	criteria iMT_Whitaker IsManager IsDeathToll5
+	Response iMT_WhitakerC10M5Manager
+}
+
+Response iMT_WhitakerC11M5Manager
+{
+	print " " then orator_plane_radio iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC11M5Manager
+{
+	criteria iMT_Whitaker IsManager IsDeadAir5
+	Response iMT_WhitakerC11M5Manager
+}
+
+Response iMT_WhitakerC12M5Manager
+{
+	print " " then orator_farm_radio iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC12M5Manager
+{
+	criteria iMT_Whitaker IsManager IsBloodHarvest5
+	Response iMT_WhitakerC12M5Manager
+}

@@ -1,0 +1,1818 @@
+//--------------------------------------------------------------------------------------------------------------
+// ion's Vocalizer: TeenGirl Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+// Stories
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_EllisStoryInterruptTeenGirl
+{
+	scene "scenes/TeenGirl/C6DLC3FirstSafeRoom01.vcd" then from iMT_EllisStoryReac foo:0 0.3  //I really don't want to hear it.
+}
+
+Rule iMT_EllisStoryInterruptTeenGirl
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IssuerCloseEnough
+	forceweight 1
+	Response iMT_EllisStoryInterruptTeenGirl
+}
+
+Response iMT_EllisStoryStopTeenGirl
+{
+	scene "scenes/TeenGirl/C6DLC3Intro08.vcd" then all iMT_EllisStoryStop foo:0 0.3  //Whatever, I don't care.
+	scene "scenes/TeenGirl/C6DLC3Intro09.vcd" then all iMT_EllisStoryStop foo:0 0.3  //Whatever, I don't care.
+}
+
+Rule iMT_EllisStoryStopTeenGirl
+{
+	criteria iMT_EllisStories IsTeenGirl _auto_IsTellingStory
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryStopTeenGirl
+}
+
+// Story-specific overrides
+
+Response iMT_EllisStoryInterruptAutoTeenGirl
+{
+	scene "scenes/TeenGirl/C6DLC3FirstSafeRoom01.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //I really don't want to hear it.
+}
+
+Rule iMT_EllisStoryInterruptAutoTeenGirl
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsTeenGirl IsNotSaidLeavingSafeArea _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryInterruptAutoTeenGirl
+}
+
+Rule iMT_EllisStoryInterruptGenericTeenGirl
+{
+	criteria ConceptEllisInterrupt IsTeenGirl _auto_IsTellingStory _auto_NotDidInterrupt
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryInterruptAutoTeenGirl
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerReadyTeenGirl
+{
+	scene "scenes/TeenGirl/AnswerReady01.vcd"  //Ready
+	scene "scenes/TeenGirl/AnswerReady02.vcd"  //Yep, I'm ready
+	scene "scenes/TeenGirl/AnswerReady03.vcd"  //Yeah, ready
+	scene "scenes/TeenGirl/AnswerReady04.vcd"  //Let's go.
+	scene "scenes/TeenGirl/AnswerReady05.vcd" odds 5  //Yeah... yeah, I'm ready to bounce (laughing)
+	scene "scenes/TeenGirl/AnswerReady07.vcd"  //Ready
+	scene "scenes/TeenGirl/AnswerReady08.vcd"  //Yep, I'm ready
+	scene "scenes/TeenGirl/AnswerReady09.vcd"  //Yeah, ready
+}
+
+Rule iMT_PlayerAnswerReadyTeenGirl
+{
+	criteria iMT_PlayerAnswerReady IsTeenGirl
+	Response iMT_PlayerAnswerReadyTeenGirl
+}
+
+Rule iMT_PlayerBattleCryTeenGirl
+{
+	criteria iMT_PlayerBattleCry IsTeenGirl
+	Response L4D1PlayerChainSawUsedTeenGirl
+}
+
+Response iMT_PlayerBreathingTeenGirl
+{
+	scene "scenes/TeenGirl/ExertionCritical01.vcd"  //[frightened freaked out breathing]
+	scene "scenes/TeenGirl/ExertionCritical02.vcd"  //[frightened freaked out breathing]
+	scene "scenes/TeenGirl/ExertionCritical03.vcd"  //[frightened freaked out breathing]
+	scene "scenes/TeenGirl/ExertionCritical04.vcd"  //[frightened freaked out breathing]
+	scene "scenes/TeenGirl/ExertionMajor01.vcd"  //[frightened freaked out breathing]
+	scene "scenes/TeenGirl/ExertionMajor02.vcd"  //[frightened freaked out breathing]
+	scene "scenes/TeenGirl/ExertionMinor01.vcd"  //[breathing - panting out of breath]
+	scene "scenes/TeenGirl/ExertionMinor02.vcd"  //[breathing - panting out of breath]
+}
+
+Rule iMT_PlayerBreathingTeenGirl
+{
+	criteria iMT_PlayerBreathing IsTeenGirl
+	Response iMT_PlayerBreathingTeenGirl
+}
+
+Response iMT_PlayerCloseTheDoorTeenGirl
+{
+	scene "scenes/TeenGirl/CloseTheDoor01.vcd"  //Lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor07.vcd"  //Close the door.
+	scene "scenes/TeenGirl/CloseTheDoor08.vcd"  //Please lock the door!
+	scene "scenes/TeenGirl/CloseTheDoor11.vcd"  //Someone wanna close the door?
+	scene "scenes/TeenGirl/CloseTheDoor16.vcd"  //Close the door, please! (angry)
+	scene "scenes/TeenGirl/CloseTheDoor17.vcd"  //Lock that door.
+	scene "scenes/TeenGirl/CloseTheDoor19.vcd"  //Come on, lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor22.vcd"  //Can you lock that door?!
+}
+
+Rule iMT_PlayerCloseTheDoorTeenGirl
+{
+	criteria iMT_PlayerCloseTheDoor IsTeenGirl
+	Response iMT_PlayerCloseTheDoorTeenGirl
+}
+
+Response iMT_PlayerCloseTheDoorIntenseTeenGirl
+{
+	scene "scenes/TeenGirl/CloseTheDoor28.vcd"  //Close the door, please! (angry)
+	scene "scenes/TeenGirl/CloseTheDoor29.vcd"  //Lock that door.
+	scene "scenes/TeenGirl/CloseTheDoor32.vcd"  //Come on, lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor33.vcd"  //Close the door!
+	scene "scenes/TeenGirl/CloseTheDoor41.vcd"  //Close the door already.
+	scene "scenes/TeenGirl/CloseTheDoor42.vcd"  //Lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor45.vcd"  //Can you lock that door?!
+	scene "scenes/TeenGirl/CloseTheDoor50.vcd"  //Please lock the door!
+}
+
+Rule iMT_PlayerCloseTheDoorIntenseTeenGirl
+{
+	criteria iMT_PlayerCloseTheDoor IsTeenGirl InIntenseCombat
+	Response iMT_PlayerCloseTheDoorIntenseTeenGirl
+}
+
+Rule iMT_PlayerCoughingTeenGirl
+{
+	criteria iMT_PlayerCoughing IsTeenGirl
+	Response L4D1SurvivorCoughingTeenGirl
+}
+
+Response iMT_PlayerDeathScreamTeenGirl
+{
+	scene "scenes/TeenGirl/Fall01.vcd"  //[Death scream as you fall]
+	scene "scenes/TeenGirl/Fall02.vcd"  //[Death scream as you fall]
+	scene "scenes/TeenGirl/Fall03.vcd"  //[Death scream as you fall]
+}
+
+Rule iMT_PlayerDeathScreamTeenGirl
+{
+	criteria iMT_PlayerDeathScream IsTeenGirl
+	Response iMT_PlayerDeathScreamTeenGirl
+}
+
+Rule iMT_PlayerEquippedItemTeenGirl
+{
+	criteria iMT_PlayerEquippedItem IsTeenGirl
+	Response GrabbingGasSCTeenGirl
+}
+
+Response iMT_PlayerFriendlyFireTeenGirl
+{
+	scene "scenes/TeenGirl/FriendlyFire02.vcd"  //Hey, that hurt!
+	scene "scenes/TeenGirl/FriendlyFire03.vcd"  //Watch it!
+	scene "scenes/TeenGirl/FriendlyFire05.vcd"  //Watch where you're shooting!
+	scene "scenes/TeenGirl/FriendlyFire06.vcd"  //Stop shooting me!
+	scene "scenes/TeenGirl/FriendlyFire07.vcd"  //Ow! HEY!
+	scene "scenes/TeenGirl/FriendlyFire08.vcd"  //Stop it already!
+	scene "scenes/TeenGirl/FriendlyFire10.vcd"  //Hey!
+	scene "scenes/TeenGirl/FriendlyFire11.vcd"  //That's not funny.
+	scene "scenes/TeenGirl/FriendlyFire12.vcd"  //STOP IT!
+	scene "scenes/TeenGirl/FriendlyFire13.vcd"  //Don't shoot me!
+	scene "scenes/TeenGirl/FriendlyFire14.vcd"  //Hey, come on! Stop!
+	scene "scenes/TeenGirl/FriendlyFire17.vcd"  //What the hell?
+	scene "scenes/TeenGirl/FriendlyFire18.vcd"  //What the!
+	scene "scenes/TeenGirl/FriendlyFire19.vcd"  //Why would you do that to me?
+	scene "scenes/TeenGirl/FriendlyFire22.vcd"  //Ow! that hurt!
+	scene "scenes/TeenGirl/FriendlyFire23.vcd"  //Ow!
+	scene "scenes/TeenGirl/FriendlyFire24.vcd"  //Why would you do that to me?
+}
+
+Rule iMT_PlayerFriendlyFireTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl
+	Response iMT_PlayerFriendlyFireTeenGirl
+}
+
+Response iMT_PlayerFriendlyFireFromBikerTeenGirl
+{
+	scene "scenes/TeenGirl/TeenGirl_FriendlyFireFrancis02.vcd"  //Ow. Knock that shit off, Francis.
+}
+
+Rule iMT_PlayerFriendlyFireFromBikerTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerFriendlyFireFromBikerTeenGirl
+}
+
+Rule iMT_PlayerFriendlyFireFromManagerTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl SubjectIsManager IsSubjectDistNear800
+	Response L4D1PlayerFriendlyFireFromLouisTeenGirl
+}
+
+Rule iMT_PlayerFriendlyFireFromNamVetTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl SubjectIsNamVet IsSubjectDistNear800
+	Response L4D1PlayerFriendlyFireFromBillTeenGirl
+}
+
+Response iMT_PlayerGetToVehicleBoatTeenGirl
+{
+	scene "scenes/TeenGirl/ArriveBoat01.vcd"  //Get to the boat!
+	scene "scenes/TeenGirl/ArriveBoat02.vcd"  //Come on! To the boat!
+	scene "scenes/TeenGirl/ArriveBoat03.vcd"  //Run to the boat!
+	scene "scenes/TeenGirl/ArriveBoat04.vcd"  //We have to make it to the boat!
+	scene "scenes/TeenGirl/ArriveBoat08.vcd"  //We have to make it to the boat!
+	scene "scenes/TeenGirl/ArriveBoatInitial01.vcd"  //Boat's here, let's go!
+	scene "scenes/TeenGirl/ArriveBoatInitial02.vcd"  //The boat's here! Come on, let's go!
+	scene "scenes/TeenGirl/ArriveBoatInitial05.vcd"  //The boat's here! Come on, let's go!
+}
+
+Rule iMT_PlayerGetToVehicleBoatTeenGirl
+{
+	criteria iMT_PlayerGetToVehicleBoat IsTeenGirl
+	Response iMT_PlayerGetToVehicleBoatTeenGirl
+}
+
+Response iMT_PlayerGetToVehicleChopperTeenGirl
+{
+	scene "scenes/TeenGirl/ArriveChopper01.vcd"  //Everyone in the helicopter!
+	scene "scenes/TeenGirl/ArriveChopper02.vcd"  //Come on, get to the helicopter!
+	scene "scenes/TeenGirl/ArriveChopperInitial01.vcd"  //Guys, the helicopter's here. Let's go!
+	scene "scenes/TeenGirl/ArriveChopperInitial02.vcd"  //The helicopter's here! Come on, let's go!
+}
+
+Rule iMT_PlayerGetToVehicleChopperTeenGirl
+{
+	criteria iMT_PlayerGetToVehicleChopper IsTeenGirl
+	Response iMT_PlayerGetToVehicleChopperTeenGirl
+}
+
+Response iMT_PlayerGetToVehicleWheelsTeenGirl
+{
+	scene "scenes/TeenGirl/ArriveTruck01.vcd"  //Everyone in the truck!
+	scene "scenes/TeenGirl/ArriveTruck02.vcd"  //Get to the truck!
+	scene "scenes/TeenGirl/ArriveTruckInitial01.vcd"  //The truck's here! Let's go!
+}
+
+Rule iMT_PlayerGetToVehicleWheelsTeenGirl
+{
+	criteria iMT_PlayerGetToVehicleWheels IsTeenGirl
+	Response iMT_PlayerGetToVehicleWheelsTeenGirl
+}
+
+Response iMT_PlayerGoingToDieTeenGirl
+{
+	scene "scenes/TeenGirl/GoingToDie01.vcd"  //I don't feel so hot
+	scene "scenes/TeenGirl/GoingToDie04.vcd"  //I'm not doing so good, guys
+	scene "scenes/TeenGirl/GoingToDie07.vcd"  //This is really bad
+	scene "scenes/TeenGirl/GoingToDie10.vcd"  //Guys, I'm really torn up
+	scene "scenes/TeenGirl/GoingToDie27.vcd"  //I think I hurt something bad, real bad
+	scene "scenes/TeenGirl/GoingToDie38.vcd"  //This is not going well
+	scene "scenes/TeenGirl/GoingToDie42.vcd"  //Man, I feel like crap
+	scene "scenes/TeenGirl/GoingToDie44.vcd"  //Guys? I'm pretty hurt
+	scene "scenes/TeenGirl/GoingToDie45.vcd"  //Ohh... this is really starting to hurt
+	scene "scenes/TeenGirl/GoingToDie48.vcd"  //I'm really hurt, guys
+	scene "scenes/TeenGirl/GoingToDie49.vcd"  //I think I really hurt something
+	scene "scenes/TeenGirl/GoingToDie52.vcd"  //I'm not feeling real hot
+	scene "scenes/TeenGirl/GoingToDie53.vcd"  //I feel terrible
+	scene "scenes/TeenGirl/GoingToDie54.vcd"  //I feel awful
+	scene "scenes/TeenGirl/GoingToDie57.vcd"  //God. This really hurts
+	scene "scenes/TeenGirl/GoingToDie58.vcd"  //Ohhhh God, I'm really hurt
+	scene "scenes/TeenGirl/GoingToDieLight06.vcd"  //I feel like crap.
+	scene "scenes/TeenGirl/GoingToDieLight07.vcd"  //Goddammit, this hurts.
+	scene "scenes/TeenGirl/GoingToDieLight11.vcd"  //Oh, jesus, I've got tooth marks on me.
+	scene "scenes/TeenGirl/GoingToDieLight12.vcd"  //I hope I'm immune to tetanus too.
+	scene "scenes/TeenGirl/GoingToDieLight13.vcd"  //Ow ow ow ow.
+}
+
+Rule iMT_PlayerGoingToDieTeenGirl
+{
+	criteria iMT_PlayerGoingToDie IsTeenGirl
+	Response iMT_PlayerGoingToDieTeenGirl
+}
+
+Rule iMT_PlayerGoingToDie3TeenGirl
+{
+	criteria iMT_PlayerGoingToDie IsTeenGirl IsOnThirdStrike
+	Response L4D1SurvivorVocalizeGoingToDie3TeenGirl
+}
+
+Rule iMT_PlayerGooedBySpitterTeenGirl
+{
+	criteria iMT_PlayerGooedBySpitter IsTeenGirl
+	Response SurvivorGooedBySpitterTeenGirl
+}
+
+Response iMT_PlayerHelloTeenGirl
+{
+	scene "scenes/TeenGirl/ScenarioJoin02.vcd"  //Hello!
+	scene "scenes/TeenGirl/ScenarioJoin07.vcd"  //Hello!
+	scene "scenes/TeenGirl/ScenarioJoin12.vcd"  //Hello!
+}
+
+Rule iMT_PlayerHelloTeenGirl
+{
+	criteria iMT_PlayerHello IsTeenGirl
+	Response iMT_PlayerHelloTeenGirl
+}
+
+Response iMT_PlayerIncapacitatedHurtTeenGirl
+{
+	scene "scenes/TeenGirl/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical07.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/IncapacitatedInjury01.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/TeenGirl/IncapacitatedInjury02.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/TeenGirl/IncapacitatedInjury03.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/TeenGirl/IncapacitatedInjury04.vcd"  //AHHHHH [terrified yell]
+}
+
+Rule iMT_PlayerIncapacitatedHurtTeenGirl
+{
+	criteria iMT_PlayerIncapacitatedHurt IsTeenGirl
+	Response iMT_PlayerIncapacitatedHurtTeenGirl
+}
+
+Response iMT_PlayerMeleeTeenGirl
+{
+	scene "scenes/TeenGirl/Shoved01.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved02.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved03.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved04.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved05.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved06.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved14.vcd"  //[Melee grunt]
+}
+
+Rule iMT_PlayerMeleeTeenGirl
+{
+	criteria iMT_PlayerMelee IsTeenGirl
+	Response iMT_PlayerMeleeTeenGirl
+}
+
+Rule iMT_PlayerMournBikerAliveTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl SubjectIsBiker IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournFrancisTeenGirl
+}
+
+Rule iMT_PlayerMournBikerDeadTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl NotBikerAlive IsBikerNear200
+	Response L4D1SurvivorMournFrancisTeenGirl
+}
+
+Rule iMT_PlayerMournManagerAliveTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl SubjectIsManager IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournLouisTeenGirl
+}
+
+Rule iMT_PlayerMournManagerDeadTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl NotManagerAlive IsManagerNear200
+	Response L4D1SurvivorMournLouisTeenGirl
+}
+
+Rule iMT_PlayerMournNamVetAliveTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl SubjectIsNamVet IsSubjectDistNear200 ExtraWeight10
+	Response L4D1SurvivorMournBillTeenGirl
+}
+
+Rule iMT_PlayerMournNamVetDeadTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl NotNamVetAlive IsNamVetNear200
+	Response L4D1SurvivorMournBillTeenGirl
+}
+
+Response iMT_PlayerNearExitTeenGirl
+{
+	scene "scenes/TeenGirl/FinaleAhead01.vcd"  //Hey guys, I think we're almost there.
+	scene "scenes/TeenGirl/FinaleAhead02.vcd"  //Thank god, we're almost outta here!
+	scene "scenes/TeenGirl/FinaleAhead03.vcd"  //Finally. You see that?  We're almost out of here!
+	scene "scenes/TeenGirl/FinaleAhead04.vcd"  //This is all going to be over soon.
+	scene "scenes/TeenGirl/SafeSpotAhead01.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //Safe house just ahead.
+	scene "scenes/TeenGirl/SafeSpotAhead06.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //Safe house ahead!
+	scene "scenes/TeenGirl/SafeSpotAhead08.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //There's a safe house ahead.
+	scene "scenes/TeenGirl/SafeSpotAhead09.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //We're near a safe house.
+	scene "scenes/TeenGirl/WorldSmallTown0320.vcd" then any iMT_PlayerNearExitReac foo:0 0.3  //Yeah! Safehouse right up ahead, boys! We made it!
+}
+
+Rule iMT_PlayerNearExitTeenGirl
+{
+	criteria iMT_PlayerNearExit IsTeenGirl
+	Response iMT_PlayerNearExitTeenGirl
+}
+
+Rule iMT_PlayerNearExitReacTeenGirl
+{
+	criteria iMT_PlayerNearExitReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IssuerClose ChanceToFire10Percent
+	Response SafeSpotAheadResponseTeenGirl
+}
+
+Rule iMT_PlayerNiceShotTeenGirl
+{
+	criteria iMT_PlayerNiceShot IsTeenGirl
+	Response C6M3PlayerNiceShotTeenGirl
+}
+
+Rule iMT_PlayerNiceShotNamVetTeenGirl
+{
+	criteria iMT_PlayerNiceShot IsTeenGirl SubjectIsNamVet IsSubjectDistNear800
+	Response PlayerNiceShotNamVetTeenGirl
+}
+
+Rule iMT_PlayerPainNoiseTeenGirl
+{
+	criteria iMT_PlayerPainNoise IsTeenGirl
+	Response L4D1SurvivorMajorHurtTeenGirl
+}
+
+Response iMT_PlayerPouncedBikerTeenGirl
+{
+	scene "scenes/TeenGirl/HunterFrancisPounced02.vcd"  //Hunter's got Francis!
+}
+
+Rule iMT_PlayerPouncedBikerTeenGirl
+{
+	criteria iMT_SurvivorWasPounced IsTeenGirl SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerPouncedBikerTeenGirl
+}
+
+Response iMT_PlayerPouncedManagerTeenGirl
+{
+	scene "scenes/TeenGirl/HunterLouisPounced02.vcd"  //Hunter's got Louis!
+}
+
+Rule iMT_PlayerPouncedManagerTeenGirl
+{
+	criteria iMT_SurvivorWasPounced IsTeenGirl SubjectIsManager IsSubjectDistNear800
+	Response iMT_PlayerPouncedManagerTeenGirl
+}
+
+Response iMT_PlayerPouncedNamVetTeenGirl
+{
+	scene "scenes/TeenGirl/HunterBillPounced02.vcd"  //Hunter's got Bill!
+}
+
+Rule iMT_PlayerPouncedNamVetTeenGirl
+{
+	criteria iMT_SurvivorWasPounced IsTeenGirl SubjectIsNamVet IsSubjectDistNear800
+	Response iMT_PlayerPouncedNamVetTeenGirl
+}
+
+Rule iMT_PlayerReloadingTeenGirl
+{
+	criteria iMT_PlayerReloading IsTeenGirl
+	Response L4D1SurvivorReloadingTeenGirl
+}
+
+Rule iMT_PlayerSuggestHealthTeenGirl
+{
+	criteria iMT_PlayerSuggestHealth IsTeenGirl
+	Response L4D1PlayerSuggestHealthTeenGirl
+}
+
+Response iMT_PlayerSuggestHealthBikerTeenGirl
+{
+	scene "scenes/TeenGirl/PlayerSuggestHealthSpecific04.vcd"  //Francis, you might want to heal.
+	scene "scenes/TeenGirl/PlayerSuggestHealthSpecific05.vcd"  //Francis, you might want to heal.
+	scene "scenes/TeenGirl/SuggestHealthFrancis01.vcd"  //Francis, use your first aid kit
+}
+
+Rule iMT_PlayerSuggestHealthBikerTeenGirl
+{
+	criteria iMT_PlayerSuggestHealth IsTeenGirl SubjectIsBiker IsSubjectDistNear200
+	Response iMT_PlayerSuggestHealthBikerTeenGirl
+}
+
+Rule iMT_PlayerSuggestHealthManagerTeenGirl
+{
+	criteria iMT_PlayerSuggestHealth IsTeenGirl SubjectIsManager IsSubjectDistNear200
+	Response L4D1PlayerSuggestHealthLouisTeenGirl
+}
+
+Response iMT_PlayerSuggestHealthNamVetTeenGirl
+{
+	scene "scenes/TeenGirl/PlayerSuggestHealthSpecific06.vcd"  //Bill, might be time to heal up.
+	scene "scenes/TeenGirl/PlayerSuggestHealthSpecific07.vcd"  //Bill, might be time to heal up.
+	scene "scenes/TeenGirl/SuggestHealthBill01.vcd"  //Bill, use your first aid kit
+	scene "scenes/TeenGirl/SuggestHealthBill02.vcd"  //Bill, use your first aid kit
+}
+
+Rule iMT_PlayerSuggestHealthNamVetTeenGirl
+{
+	criteria iMT_PlayerSuggestHealth IsTeenGirl SubjectIsNamVet IsSubjectDistNear200
+	Response iMT_PlayerSuggestHealthNamVetTeenGirl
+}
+
+Rule iMT_PlayerTeamKillTeenGirl
+{
+	criteria iMT_PlayerTeamKill IsTeenGirl
+	Response L4D1PlayerFriendlyFire2TeenGirl
+}
+
+Response iMT_PlayerTransitionTeenGirl
+{
+	scene "scenes/TeenGirl/TransitionClose01.vcd"  //That was close
+	scene "scenes/TeenGirl/TransitionClose05.vcd"  //Close one
+	scene "scenes/TeenGirl/TransitionClose07.vcd"  //That was close
+	scene "scenes/TeenGirl/TransitionClose09.vcd"  //That was close
+	scene "scenes/TeenGirl/TransitionClose10.vcd"  //Close one
+}
+
+Rule iMT_PlayerTransitionTeenGirl
+{
+	criteria iMT_PlayerTransition IsTeenGirl
+	Response iMT_PlayerTransitionTeenGirl
+}
+
+Rule iMT_PlayerWitchChasingTeenGirl
+{
+	criteria iMT_PlayerWitchChasing IsTeenGirl
+	Response L4D1PlayerWitchChasingTeenGirl
+}
+
+Rule iMT_SurvivorCaughtVomitTeenGirl
+{
+	criteria iMT_PlayerVomitInFace IsTeenGirl
+	Response L4D1SurvivorCaughtVomitTeenGirl
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-specific
+//--------------------------------------------------------------------------------------------------------------
+
+Rule iMT_5000LawyersTeenGirl
+{
+	criteria iMT_5000Lawyers IsTeenGirl
+	Response L4D1PlayerRemarkairport02_path02TeenGirl
+}
+
+Rule iMT_CarCallingTeenGirl
+{
+	criteria iMT_CarCalling IsTeenGirl
+	Response WorldC6M3_ByBridge01EllisTeenGirl
+}
+
+Response iMT_ChickenshitsTeenGirl
+{
+	scene "scenes/TeenGirl/C6DLC3OpeningDoor06.vcd"  //Unbelievable. You guys are the biggest chickenshits.
+	scene "scenes/TeenGirl/C6DLC3TankInTrainyard10.vcd" odds 30 then any iMT_ChickenshitsReac foo:0 0.3  //So, I'm a girl, right? You guys wouldn't make a lady open up a deathtrap, right?
+}
+
+Rule iMT_ChickenshitsTeenGirl
+{
+	criteria iMT_Chickenshits IsTeenGirl
+	Response iMT_ChickenshitsTeenGirl
+}
+
+Response iMT_ComeBackTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic19.vcd"  //Y'all come back now!
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic20.vcd"  //Y'all come back now!
+}
+
+Rule iMT_ComeBackTeenGirl
+{
+	criteria iMT_ComeBack IsTeenGirl
+	Response iMT_ComeBackTeenGirl
+}
+
+Rule iMT_CopyPaperTeenGirl
+{
+	criteria iMT_CopyPaper IsTeenGirl
+	Response L4D1PlayerRemarkcrashcourse01_path27TeenGirl
+}
+
+Response iMT_GodDamnYouTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic16.vcd"  //(Planet of the apes) You finally really did it. You maniacs! You blew it up! God damn you! God damn you all to hell!
+}
+
+Rule iMT_GodDamnYouTeenGirl
+{
+	criteria iMT_GodDamnYou IsTeenGirl
+	Response iMT_GodDamnYouTeenGirl
+}
+
+Rule iMT_GodIsDeadTeenGirl
+{
+	criteria iMT_GodIsDead IsTeenGirl
+	Response L4D1PlayerRemarkairport04_03TeenGirl
+}
+
+Response iMT_GreetingTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat15.vcd"  //Hey.
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat16.vcd"  //Hey.
+}
+
+Rule iMT_GreetingTeenGirl
+{
+	criteria iMT_Greeting IsTeenGirl
+	Response iMT_GreetingTeenGirl
+}
+
+Response iMT_LastWomanTeenGirl
+{
+	scene "scenes/TeenGirl/Generic10.vcd"  //Great, that makes me the last woman on earth.
+}
+
+Rule iMT_LastWomanTeenGirl
+{
+	criteria iMT_LastWoman IsTeenGirl
+	Response iMT_LastWomanTeenGirl
+}
+
+Response iMT_LatestIssueTeenGirl
+{
+	scene "scenes/TeenGirl/DLC2MagazineRack01.vcd" then any iMT_LatestIssueReac foo:0 0.3  //Hey, Francis. They've got the latest issue of Hating Everything Magazine here.
+}
+
+Rule iMT_LatestIssueTeenGirl
+{
+	criteria iMT_LatestIssue IsTeenGirl
+	Response iMT_LatestIssueTeenGirl
+}
+
+Rule iMT_MetalSupplyTeenGirl
+{
+	criteria iMT_MetalSupply IsTeenGirl
+	Response L4D1PlayerRemarkcrashcourse02_path02TeenGirl
+}
+
+Response iMT_MissEllisTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic06.vcd"  //Ellis! ELLIS!!! Maybe we should have gone with him?
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic07.vcd"  //Ellis! ELLIS!!! Maybe he should have come with us?
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic23.vcd"  //I'm going to miss Ellis.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic24.vcd"  //Hm. I'm going to miss Ellis.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic25.vcd"  //I'm going to miss Ellis.
+}
+
+Rule iMT_MissEllisTeenGirl
+{
+	criteria iMT_MissEllis IsTeenGirl
+	Response iMT_MissEllisTeenGirl
+}
+
+Response iMT_MoronsTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat14.vcd"  //Hello! Morons. I think we have a bridge to lower.
+}
+
+Rule iMT_MoronsTeenGirl
+{
+	criteria iMT_Morons IsTeenGirl
+	Response iMT_MoronsTeenGirl
+}
+
+Response iMT_MyBuddyEllisTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic21.vcd"  //I ever tell you about the time my buddy Ellis stole a race car from the mall and drove it over some zombies?
+}
+
+Rule iMT_MyBuddyEllisTeenGirl
+{
+	criteria iMT_MyBuddyEllis IsTeenGirl
+	Response iMT_MyBuddyEllisTeenGirl
+}
+
+Response iMT_NervousHummingTeenGirl
+{
+	scene "scenes/TeenGirl/NervousHumming01.vcd"  //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming02.vcd"  //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming03.vcd"  //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming04.vcd"  //[Nervous Humming]
+}
+
+Rule iMT_NervousHummingTeenGirl
+{
+	criteria iMT_NervousHumming IsTeenGirl
+	Response iMT_NervousHummingTeenGirl
+}
+
+Response iMT_NiceCarTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting05.vcd"  //Nice car!
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting06.vcd"  //Nice car, dude!
+}
+
+Rule iMT_NiceCarTeenGirl
+{
+	criteria iMT_NiceCar IsTeenGirl
+	Response iMT_NiceCarTeenGirl
+}
+
+Response iMT_ParkingTeenGirl
+{
+	scene "scenes/TeenGirl/WorldAirport0314.vcd"  //Oh no! Not short term parking!
+}
+
+Rule iMT_ParkingTeenGirl
+{
+	criteria iMT_Parking IsTeenGirl
+	Response iMT_ParkingTeenGirl
+}
+
+Response iMT_PassingGasTeenGirl
+{
+	scene "scenes/TeenGirl/DLC2GasTanks01.vcd"  //Hey, Francis, look! We're 'passing gas'... [chuckles]
+}
+
+Rule iMT_PassingGasTeenGirl
+{
+	criteria iMT_PassingGas IsTeenGirl
+	Response iMT_PassingGasTeenGirl
+}
+
+Rule iMT_PilotLicenseTeenGirl
+{
+	criteria iMT_PilotLicense IsTeenGirl
+	Response L4D1PlayerRemarkcrashcourse01_path01TeenGirl
+}
+
+Response iMT_ProclaimLibertyTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic15.vcd"  //(10 commandments) Go - proclaim liberty throughout all the lands, and to all the inhabitants thereof!
+}
+
+Rule iMT_ProclaimLibertyTeenGirl
+{
+	criteria iMT_ProclaimLiberty IsTeenGirl
+	Response iMT_ProclaimLibertyTeenGirl
+}
+
+Response iMT_ReallyTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat05.vcd"  //(noting flirting) Francis? Him? Are you kidding? REALLY?
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat06.vcd"  //(noting flirting) Francis? Him? Are you kidding? REALLY?
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat09.vcd"  //(noting flirting) Francis? Him? Are you kidding? REALLY?
+}
+
+Rule iMT_ReallyTeenGirl
+{
+	criteria iMT_Really IsTeenGirl
+	Response iMT_ReallyTeenGirl
+}
+
+Rule iMT_SexyBrunetteTeenGirl
+{
+	criteria iMT_SexyBrunette IsTeenGirl
+	Response L4D1PlayerRemarkcrashcourse01_path26TeenGirl
+}
+
+Rule iMT_ShoesTeenGirl
+{
+	criteria iMT_Shoes IsTeenGirl
+	Response L4D1PlayerRemarkairport04_06TeenGirl
+}
+
+Rule iMT_ShortLaughTeenGirl
+{
+	criteria iMT_ShortLaugh IsNotCoughing IsNotIncapacitated IsNotSpeaking IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IssuerClose
+	Response ConceptBlock615
+}
+
+Response iMT_SingingTeenGirl
+{
+	scene "scenes/TeenGirl/NervousWhislte01.vcd"  //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte02.vcd"  //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte03.vcd"  //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte04.vcd"  //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte05.vcd"  //[Nervous Whistle]
+}
+
+Rule iMT_SingingTeenGirl
+{
+	criteria iMT_Singing IsTeenGirl
+	Response iMT_SingingTeenGirl
+}
+
+Response iMT_SnowColdTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_CommunityL4D105.vcd" then any iMT_SnowColdReac foo:0 0.3  //Francis, what do you hate more: the snow or the cold?
+}
+
+Rule iMT_SnowColdTeenGirl
+{
+	criteria iMT_SnowCold IsTeenGirl
+	Response iMT_SnowColdTeenGirl
+}
+
+Response iMT_SoylentGreenTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic17.vcd"  //Remember soylent green is people!
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic18.vcd"  //Remember soylent green is people!
+}
+
+Rule iMT_SoylentGreenTeenGirl
+{
+	criteria iMT_SoylentGreen IsTeenGirl
+	Response iMT_SoylentGreenTeenGirl
+}
+
+Response iMT_StealTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_CommunityL4D102.vcd"  //If no one minds, we can steal a boat.
+}
+
+Rule iMT_StealTeenGirl
+{
+	criteria iMT_Steal IsTeenGirl
+	Response iMT_StealTeenGirl
+}
+
+Response iMT_YoinkTeenGirl
+{
+	scene "scenes/TeenGirl/Generic20.vcd"  //Yoink!
+}
+
+Rule iMT_YoinkTeenGirl
+{
+	criteria iMT_Yoink IsTeenGirl
+	Response iMT_YoinkTeenGirl
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Overrides
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerLostCallTeenGirl
+{
+	scene "scenes/TeenGirl/ScenarioJoinLast01.vcd"  //We're all here.
+	scene "scenes/TeenGirl/ScenarioJoinLast02.vcd"  //Well, we're all here.
+}
+
+Rule iMT_PlayerAnswerLostCallTeenGirl
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsEveryoneAlive IsNotSomeoneDied IsClosestSurvivorNear500 ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallTeenGirl
+}
+
+Rule iMT_PlayerHeardBoomerTeenGirl
+{
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1PlayerWarnHeardBoomerTeenGirl
+}
+
+Rule iMT_PlayerHeardHunterTeenGirl
+{
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1PlayerWarnHeardHunterTeenGirl
+}
+
+Rule iMT_PlayerHeardSmokerTeenGirl
+{
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1PlayerWarnHeardSmokerTeenGirl
+}
+
+Rule iMT_PlayerHeardWitchTeenGirl
+{
+	criteria ConceptPlayerHeardWitch IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response PlayerHeardWitchTeenGirl
+}
+
+Response iMT_PlayerHurrahTeenGirl
+{
+	scene "scenes/TeenGirl/Hurrah07.vcd"  //I think we're gonna make it
+	scene "scenes/TeenGirl/Hurrah10.vcd"  //We're doing all right.
+	scene "scenes/TeenGirl/Hurrah13.vcd"  //We're gonna be okay
+	scene "scenes/TeenGirl/Hurrah18.vcd"  //We are kickin' ass
+	scene "scenes/TeenGirl/Hurrah19.vcd"  //No stopping us!
+	scene "scenes/TeenGirl/Hurrah20.vcd"  //We are unstoppable
+	scene "scenes/TeenGirl/Hurrah31.vcd"  //Oh god, we're gonna be okay
+	scene "scenes/TeenGirl/Hurrah35.vcd"  //We might actually make it through this
+	scene "scenes/TeenGirl/Hurrah38.vcd"  //We're doing all right.
+	scene "scenes/TeenGirl/Hurrah46.vcd"  //Oh, thank god!
+	scene "scenes/TeenGirl/Hurrah48.vcd"  //Wow, I can't believe we did that.
+	scene "scenes/TeenGirl/Hurrah53.vcd"  //We are awesome together.
+	scene "scenes/TeenGirl/Hurrah54.vcd"  //Oh my god, we made that. Can you believe it?
+	scene "scenes/TeenGirl/Hurrah55.vcd"  //Wow, oh, thank god!
+	scene "scenes/TeenGirl/Hurrah58.vcd"  //We did it. Can you believe it?
+}
+
+Rule iMT_PlayerHurrahTeenGirl
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl ExtraWeight10
+	Response iMT_PlayerHurrahTeenGirl
+}
+
+Response iMT_PlayerLaughTeenGirl
+{
+	scene "scenes/TeenGirl/Laughter02.vcd"  //<Hearty Laugh>
+	scene "scenes/TeenGirl/Laughter04.vcd"  //<Hearty Laugh>
+	scene "scenes/TeenGirl/Laughter06.vcd"  //<Hearty Laugh>
+	scene "scenes/TeenGirl/Laughter11.vcd"  //<Hearty Laugh>
+	scene "scenes/TeenGirl/Laughter14.vcd"  //<Hearty Laugh>
+	scene "scenes/TeenGirl/Laughter18.vcd"  //<Short laugh>
+	scene "scenes/TeenGirl/Laughter20.vcd"  //<Short laugh>
+	scene "scenes/TeenGirl/Laughter21.vcd"  //<Short laugh>
+}
+
+Rule iMT_PlayerLaughTeenGirl
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl ExtraWeight10
+	Response iMT_PlayerLaughTeenGirl
+}
+
+Response iMT_PlayerNegativeTeenGirl
+{
+	scene "scenes/TeenGirl/ReactionNegative17.vcd"  //Shit
+	scene "scenes/TeenGirl/ReactionNegative18.vcd"  //This sucks
+	scene "scenes/TeenGirl/ReactionNegative25.vcd"  //Crap
+	scene "scenes/TeenGirl/ReactionNegative31.vcd"  //Shit
+	scene "scenes/TeenGirl/Swear02.vcd"  //Shit.
+	scene "scenes/TeenGirl/Swear06.vcd"  //Mother.
+	scene "scenes/TeenGirl/Swear09.vcd"  //Ah bullshit.
+	scene "scenes/TeenGirl/Swear10.vcd"  //Dammit.
+	scene "scenes/TeenGirl/Swear12.vcd"  //Shit.
+	scene "scenes/TeenGirl/Swear13.vcd"  //Goddammit.
+	scene "scenes/TeenGirl/Swear14.vcd"  //Shit.
+	scene "scenes/TeenGirl/Swear22.vcd"  //Dammit.
+}
+
+Rule iMT_PlayerNegativeTeenGirl
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl ExtraWeight10
+	Response iMT_PlayerNegativeTeenGirl
+}
+
+Response iMT_PlayerThanksBikerTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks41.vcd"  //Thanks, Francis.
+	scene "scenes/TeenGirl/Thanks44.vcd"  //Thanks, Francis.
+}
+
+Rule iMT_PlayerThanksBikerTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsBiker IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerTeenGirl
+}
+
+Response iMT_PlayerThanksManagerTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks32.vcd"  //Thanks Louis.
+	scene "scenes/TeenGirl/Thanks35.vcd" odds 10  //Thanks, Louis. It's about time you were some help.
+	scene "scenes/TeenGirl/Thanks42.vcd"  //Thanks, Louis.
+	scene "scenes/TeenGirl/Thanks43.vcd"  //Thanks, Louis. I owe you one.
+	scene "scenes/TeenGirl/Thanks45.vcd"  //Thanks, Louis.
+	scene "scenes/TeenGirl/Thanks46.vcd"  //Thanks, Louis. I owe you one.
+}
+
+Rule iMT_PlayerThanksManagerTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsManager IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksManagerTeenGirl
+}
+
+Response iMT_PlayerThanksNamVetTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks05.vcd"  //Thanks, Bill.
+	scene "scenes/TeenGirl/Thanks40.vcd"  //Thanks, Bill.
+}
+
+Rule iMT_PlayerThanksNamVetTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksNamVetTeenGirl
+}
+
+Rule iMT_PlayerYouAreWelcomeManagerTeenGirl
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsManager IsSubjectDistNear100 ChanceToFire30Percent
+	Response L4D1AutoYouAreWelcomeLouisTeenGirl
+}
+
+Rule iMT_PlayerYouAreWelcomeNamVetTeenGirl
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	Response L4D1AutoYouAreWelcomeBillTeenGirl
+}
+
+Response iMT_ResponseSoftDispleasureSwearTeenGirl
+{
+	scene "scenes/TeenGirl/NegativeNoise13.vcd"  //[Improv non-verbal displeasure sounds]
+	scene "scenes/TeenGirl/ReactionApprehensive18.vcd"  //I have a bad feeling about this
+	scene "scenes/TeenGirl/ReactionNegative01.vcd"  //Uh oh
+	scene "scenes/TeenGirl/ReactionNegative02.vcd"  //This is so messed up
+	scene "scenes/TeenGirl/ReactionNegative03.vcd"  //This sucks
+	scene "scenes/TeenGirl/ReactionNegative04.vcd"  //This sucks big time
+	scene "scenes/TeenGirl/ReactionNegative05.vcd"  //Oh damn
+	scene "scenes/TeenGirl/ReactionNegative06.vcd"  //This isn't working
+	scene "scenes/TeenGirl/ReactionNegative08.vcd"  //What the hell was that?
+	scene "scenes/TeenGirl/ReactionNegative10.vcd"  //This is so messed up
+	scene "scenes/TeenGirl/ReactionNegative11.vcd"  //Are you kidding me?
+	scene "scenes/TeenGirl/ReactionNegative12.vcd"  //Not again
+	scene "scenes/TeenGirl/ReactionNegative14.vcd"  //This is never going to end
+	scene "scenes/TeenGirl/ReactionNegative15.vcd"  //This is not going well
+	scene "scenes/TeenGirl/ReactionNegative16.vcd"  //Oh man oh man oh man
+	scene "scenes/TeenGirl/ReactionNegative19.vcd"  //This sucks big time
+	scene "scenes/TeenGirl/ReactionNegative21.vcd"  //Oh no
+	scene "scenes/TeenGirl/ReactionNegative22.vcd"  //Ah crap!
+	scene "scenes/TeenGirl/ReactionNegative23.vcd"  //This is bad
+	scene "scenes/TeenGirl/ReactionNegative26.vcd"  //No No No No NO
+	scene "scenes/TeenGirl/ReactionNegative27.vcd"  //This is never going to end
+	scene "scenes/TeenGirl/ReactionNegative28.vcd"  //This is not going well
+	scene "scenes/TeenGirl/ReactionNegative29.vcd"  //Oh man oh man oh man
+	scene "scenes/TeenGirl/ReactionNegative32.vcd"  //This is bad
+	scene "scenes/TeenGirl/ReactionNegative33.vcd"  //Ah crap!
+	scene "scenes/TeenGirl/ReactionNegativeSpecial03.vcd"  //[Frustration sound]
+	scene "scenes/TeenGirl/ReactionNegativeSpecial12.vcd"  //[Frustration sound]
+	scene "scenes/TeenGirl/ReactionNegativeSpecial13.vcd"  //[Frustration sound]
+}
+
+Rule iMT_ResponseSoftDispleasureSwearTeenGirl
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IssuerMediumClose ExtraWeight10
+	Response iMT_ResponseSoftDispleasureSwearTeenGirl
+}
+
+Rule iMT_SafeRoomStartTeenGirl
+{
+	criteria ConceptTalkIdle IsTeenGirl IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart ExtraWeight10
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Response iMT_SurvivorAskForHealthTeenGirl
+{
+	scene "scenes/TeenGirl/GoingToDieAskForHeal01.vcd"  //Anyone have some first aid?
+	scene "scenes/TeenGirl/GoingToDieAskForHeal02.vcd"  //I need some first aid, now!
+	scene "scenes/TeenGirl/GoingToDieAskForHeal04.vcd"  //Anyone have some first aid? I'm gonna die.
+	scene "scenes/TeenGirl/GoingToDieAskForHeal05.vcd"  //I need some first aid, now!
+	scene "scenes/TeenGirl/GoingToDieAskForHeal13.vcd"  //I can't make it without some help...
+}
+
+Rule iMT_SurvivorAskForHealthTeenGirl
+{
+	criteria ConceptAskForHealth2 IsTeenGirl ExtraWeight10
+	Response iMT_SurvivorAskForHealthTeenGirl
+}
+
+Rule iMT_SurvivorAskForHealthBikerTeenGirl
+{
+	criteria ConceptAskForHealth2 IsTeenGirl IsNotOnThirdStrike SubjectIsBiker IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskFrancisForHealthTeenGirl
+}
+
+Rule iMT_SurvivorAskForHealthManagerTeenGirl
+{
+	criteria ConceptAskForHealth2 IsTeenGirl IsNotOnThirdStrike SubjectIsManager IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskLouisForHealthTeenGirl
+}
+
+Rule iMT_SurvivorAskForHealthNamVetTeenGirl
+{
+	criteria ConceptAskForHealth2 IsTeenGirl IsNotOnThirdStrike SubjectIsNamVet IsSubjectDistNear400 ExtraWeight10
+	Response L4D1SurvivorAskBillForHealthTeenGirl
+}
+
+Rule iMT_SurvivorCoughingDeathTeenGirl
+{
+	criteria ConceptPlayerDeath IsCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SurvivorCoughingTeenGirl
+}
+
+Rule iMT_SurvivorDeathTeenGirl
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SurvivorDeathTeenGirl
+}
+
+Rule iMT_SurvivorSpottedAmmoTeenGirl
+{
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response SurvivorSpottedAmmoTeenGirl
+}
+
+Rule iMT_SurvivorSpottedBoomerTeenGirl
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SpottedBoomerTeenGirl
+}
+
+Rule iMT_SurvivorSpottedChargerTeenGirl
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SpottedChargerTeenGirl
+}
+
+Rule iMT_SurvivorSpottedHunterTeenGirl
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SpottedHunterTeenGirl
+}
+
+Rule iMT_SurvivorSpottedInfectedTeenGirl
+{
+	criteria ConceptPlayerIncoming IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SurvivorSpottedInfectedTeenGirl
+}
+
+Rule iMT_SurvivorSpottedJockeyTeenGirl
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SpottedJockeyTeenGirl
+}
+
+Rule iMT_SurvivorSpottedSmokerTeenGirl
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SpottedSmokerTeenGirl
+}
+
+Rule iMT_SurvivorSpottedSpitterTeenGirl
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SpottedSpitterTeenGirl
+}
+
+Rule iMT_SurvivorSpottedTankTeenGirl
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response SurvivorSpottedTankTeenGirl
+}
+
+Rule iMT_SurvivorSpottedTankC6M3TeenGirl
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl Isc6m3_port ExtraWeight10
+	Response SurvivorSpottedTankTeenGirl
+}
+
+Rule iMT_SurvivorSpottedWeaponTeenGirl
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl ExtraWeight10
+	Response SurvivorSpottedWeaponsTeenGirl
+}
+
+Rule iMT_SurvivorSpottedWitchTeenGirl
+{
+	criteria ConceptPlayerWarnWitch IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response SurvivorSpottedWitchTeenGirl
+}
+
+Response iMT_SurvivorTauntResponseTeenGirl
+{
+	scene "scenes/TeenGirl/Hurrah01.vcd"  //Cool.
+	scene "scenes/TeenGirl/Hurrah03.vcd"  //Awesome!
+	scene "scenes/TeenGirl/Hurrah04.vcd"  //YESSS!
+	scene "scenes/TeenGirl/Hurrah08.vcd"  //Looks good
+	scene "scenes/TeenGirl/Hurrah11.vcd"  //YEAH!
+	scene "scenes/TeenGirl/Hurrah12.vcd"  //Oh yeah, lovely.
+	scene "scenes/TeenGirl/Hurrah16.vcd"  //Oh yeah!
+	scene "scenes/TeenGirl/Hurrah17.vcd"  //Impressive.
+	scene "scenes/TeenGirl/Hurrah22.vcd"  //Oh yeah, oh yeah, oh yeah
+	scene "scenes/TeenGirl/Hurrah34.vcd"  //Okayyy, okayyy, okay.
+	scene "scenes/TeenGirl/Hurrah51.vcd"  //Oh god!
+	scene "scenes/TeenGirl/Hurrah52.vcd"  //Whoo!
+	scene "scenes/TeenGirl/Hurrah56.vcd"  //Oh man, ha!
+	scene "scenes/TeenGirl/Hurrah57.vcd"  //Wow.
+	scene "scenes/TeenGirl/ReactionPositive01.vcd"  //Sweet
+	scene "scenes/TeenGirl/ReactionPositive02.vcd"  //Killer
+	scene "scenes/TeenGirl/ReactionPositive13.vcd"  //Sweet
+	scene "scenes/TeenGirl/ReactionPositive14.vcd"  //Killer
+	scene "scenes/TeenGirl/Taunt02.vcd"  //Thats right. [grim, determined]
+	scene "scenes/TeenGirl/Taunt13.vcd"  //Awesome!
+	scene "scenes/TeenGirl/Taunt18.vcd"  //All right!
+	scene "scenes/TeenGirl/Taunt19.vcd"  //Awesome!
+	scene "scenes/TeenGirl/Taunt20.vcd"  //YEAH!
+	scene "scenes/TeenGirl/Taunt21.vcd"  //YESSS!
+	scene "scenes/TeenGirl/Taunt24.vcd"  //Lookin good.
+	scene "scenes/TeenGirl/Taunt25.vcd"  //Oh yeah!
+	scene "scenes/TeenGirl/Taunt26.vcd"  //Impressive.
+	scene "scenes/TeenGirl/Taunt28.vcd"  //Thats right. [grim, determined]
+	scene "scenes/TeenGirl/Taunt29.vcd"  //Oh yeah, lovely.
+	scene "scenes/TeenGirl/Taunt30.vcd"  //Lookin good.
+	scene "scenes/TeenGirl/Taunt31.vcd"  //OH YEAH!
+	scene "scenes/TeenGirl/Taunt34.vcd"  //Thats right. [grim, determined]
+	scene "scenes/TeenGirl/Taunt35.vcd"  //YESSS!
+	scene "scenes/TeenGirl/Taunt39.vcd"  //YEAHHHH!
+}
+
+Rule iMT_SurvivorTauntResponseTeenGirl
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl ExtraWeight10
+	Response iMT_SurvivorTauntResponseTeenGirl
+}
+
+Rule iMT_SurvivorVocalizeBackUpTeenGirl
+{
+	criteria ConceptPlayerBackUp IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SurvivorVocalizeBackUpTeenGirl
+}
+
+Rule iMT_SurvivorVocalizeEmphaticGoTeenGirl
+{
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SurvivorVocalizeEmphaticGoTeenGirl
+}
+
+Rule iMT_SurvivorVocalizeLookOutTeenGirl
+{
+	criteria ConceptPlayerLookOut IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response L4D1SurvivorVocalizeLookOutTeenGirl
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_BoatmanTeenGirl
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanTeenGirl
+{
+	criteria iMT_Boatman IsTeenGirl
+	Response iMT_BoatmanTeenGirl
+}
+
+Response iMT_BoatmanC8M5TeenGirl
+{
+	print " " then pilot iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC8M5TeenGirl
+{
+	criteria iMT_Boatman IsTeenGirl IsNoMercy5
+	Response iMT_BoatmanC8M5TeenGirl
+}
+
+Response iMT_BoatmanC10M3TeenGirl
+{
+	print " " then churchguy iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC10M3TeenGirl
+{
+	criteria iMT_Boatman IsTeenGirl IsDeathToll3
+	Response iMT_BoatmanC10M3TeenGirl
+}
+
+Response iMT_BoatmanC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC10M5TeenGirl
+{
+	criteria iMT_Boatman IsTeenGirl IsDeathToll5
+	Response iMT_BoatmanC10M5TeenGirl
+}
+
+Response iMT_BoatmanC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC11M5TeenGirl
+{
+	criteria iMT_Boatman IsTeenGirl IsDeadAir5
+	Response iMT_BoatmanC11M5TeenGirl
+}
+
+Response iMT_BoatmanC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanC12M5TeenGirl
+{
+	criteria iMT_Boatman IsTeenGirl IsBloodHarvest5
+	Response iMT_BoatmanC12M5TeenGirl
+}
+
+Response iMT_ChopperPilotTeenGirl
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotTeenGirl
+{
+	criteria iMT_ChopperPilot IsTeenGirl
+	Response iMT_ChopperPilotTeenGirl
+}
+
+Response iMT_ChopperPilotC8M5TeenGirl
+{
+	print " " then pilot iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC8M5TeenGirl
+{
+	criteria iMT_ChopperPilot IsTeenGirl IsNoMercy5
+	Response iMT_ChopperPilotC8M5TeenGirl
+}
+
+Response iMT_ChopperPilotC10M3TeenGirl
+{
+	print " " then churchguy iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC10M3TeenGirl
+{
+	criteria iMT_ChopperPilot IsTeenGirl IsDeathToll3
+	Response iMT_ChopperPilotC10M3TeenGirl
+}
+
+Response iMT_ChopperPilotC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC10M5TeenGirl
+{
+	criteria iMT_ChopperPilot IsTeenGirl IsDeathToll5
+	Response iMT_ChopperPilotC10M5TeenGirl
+}
+
+Response iMT_ChopperPilotC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC11M5TeenGirl
+{
+	criteria iMT_ChopperPilot IsTeenGirl IsDeadAir5
+	Response iMT_ChopperPilotC11M5TeenGirl
+}
+
+Response iMT_ChopperPilotC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotC12M5TeenGirl
+{
+	criteria iMT_ChopperPilot IsTeenGirl IsBloodHarvest5
+	Response iMT_ChopperPilotC12M5TeenGirl
+}
+
+Response iMT_ChurchGuyTeenGirl
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyTeenGirl
+{
+	criteria iMT_ChurchGuy IsTeenGirl
+	Response iMT_ChurchGuyTeenGirl
+}
+
+Response iMT_ChurchGuyC8M5TeenGirl
+{
+	print " " then pilot iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC8M5TeenGirl
+{
+	criteria iMT_ChurchGuy IsTeenGirl IsNoMercy5
+	Response iMT_ChurchGuyC8M5TeenGirl
+}
+
+Response iMT_ChurchGuyC10M3TeenGirl
+{
+	print " " then churchguy iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC10M3TeenGirl
+{
+	criteria iMT_ChurchGuy IsTeenGirl IsDeathToll3
+	Response iMT_ChurchGuyC10M3TeenGirl
+}
+
+Response iMT_ChurchGuyC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC10M5TeenGirl
+{
+	criteria iMT_ChurchGuy IsTeenGirl IsDeathToll5
+	Response iMT_ChurchGuyC10M5TeenGirl
+}
+
+Response iMT_ChurchGuyC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC11M5TeenGirl
+{
+	criteria iMT_ChurchGuy IsTeenGirl IsDeadAir5
+	Response iMT_ChurchGuyC11M5TeenGirl
+}
+
+Response iMT_ChurchGuyC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyC12M5TeenGirl
+{
+	criteria iMT_ChurchGuy IsTeenGirl IsBloodHarvest5
+	Response iMT_ChurchGuyC12M5TeenGirl
+}
+
+Response iMT_MoustachioTeenGirl
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioTeenGirl
+{
+	criteria iMT_Moustachio IsTeenGirl
+	Response iMT_MoustachioTeenGirl
+}
+
+Response iMT_MoustachioC8M5TeenGirl
+{
+	print " " then pilot iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC8M5TeenGirl
+{
+	criteria iMT_Moustachio IsTeenGirl IsNoMercy5
+	Response iMT_MoustachioC8M5TeenGirl
+}
+
+Response iMT_MoustachioC10M3TeenGirl
+{
+	print " " then churchguy iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC10M3TeenGirl
+{
+	criteria iMT_Moustachio IsTeenGirl IsDeathToll3
+	Response iMT_MoustachioC10M3TeenGirl
+}
+
+Response iMT_MoustachioC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC10M5TeenGirl
+{
+	criteria iMT_Moustachio IsTeenGirl IsDeathToll5
+	Response iMT_MoustachioC10M5TeenGirl
+}
+
+Response iMT_MoustachioC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC11M5TeenGirl
+{
+	criteria iMT_Moustachio IsTeenGirl IsDeadAir5
+	Response iMT_MoustachioC11M5TeenGirl
+}
+
+Response iMT_MoustachioC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioC12M5TeenGirl
+{
+	criteria iMT_Moustachio IsTeenGirl IsBloodHarvest5
+	Response iMT_MoustachioC12M5TeenGirl
+}
+
+Response iMT_PlanePilotTeenGirl
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotTeenGirl
+{
+	criteria iMT_PlanePilot IsTeenGirl
+	Response iMT_PlanePilotTeenGirl
+}
+
+Response iMT_PlanePilotC8M5TeenGirl
+{
+	print " " then pilot iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC8M5TeenGirl
+{
+	criteria iMT_PlanePilot IsTeenGirl IsNoMercy5
+	Response iMT_PlanePilotC8M5TeenGirl
+}
+
+Response iMT_PlanePilotC10M3TeenGirl
+{
+	print " " then churchguy iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC10M3TeenGirl
+{
+	criteria iMT_PlanePilot IsTeenGirl IsDeathToll3
+	Response iMT_PlanePilotC10M3TeenGirl
+}
+
+Response iMT_PlanePilotC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC10M5TeenGirl
+{
+	criteria iMT_PlanePilot IsTeenGirl IsDeathToll5
+	Response iMT_PlanePilotC10M5TeenGirl
+}
+
+Response iMT_PlanePilotC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC11M5TeenGirl
+{
+	criteria iMT_PlanePilot IsTeenGirl IsDeadAir5
+	Response iMT_PlanePilotC11M5TeenGirl
+}
+
+Response iMT_PlanePilotC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotC12M5TeenGirl
+{
+	criteria iMT_PlanePilot IsTeenGirl IsBloodHarvest5
+	Response iMT_PlanePilotC12M5TeenGirl
+}
+
+Response iMT_Rescue9TeenGirl
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9TeenGirl
+{
+	criteria iMT_Rescue9 IsTeenGirl
+	Response iMT_Rescue9TeenGirl
+}
+
+Response iMT_Rescue9C8M5TeenGirl
+{
+	print " " then pilot iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C8M5TeenGirl
+{
+	criteria iMT_Rescue9 IsTeenGirl IsNoMercy5
+	Response iMT_Rescue9C8M5TeenGirl
+}
+
+Response iMT_Rescue9C10M3TeenGirl
+{
+	print " " then churchguy iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C10M3TeenGirl
+{
+	criteria iMT_Rescue9 IsTeenGirl IsDeathToll3
+	Response iMT_Rescue9C10M3TeenGirl
+}
+
+Response iMT_Rescue9C10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C10M5TeenGirl
+{
+	criteria iMT_Rescue9 IsTeenGirl IsDeathToll5
+	Response iMT_Rescue9C10M5TeenGirl
+}
+
+Response iMT_Rescue9C11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C11M5TeenGirl
+{
+	criteria iMT_Rescue9 IsTeenGirl IsDeadAir5
+	Response iMT_Rescue9C11M5TeenGirl
+}
+
+Response iMT_Rescue9C12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9C12M5TeenGirl
+{
+	criteria iMT_Rescue9 IsTeenGirl IsBloodHarvest5
+	Response iMT_Rescue9C12M5TeenGirl
+}
+
+Response iMT_SoldiersTeenGirl
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersTeenGirl
+{
+	criteria iMT_Soldiers IsTeenGirl
+	Response iMT_SoldiersTeenGirl
+}
+
+Response iMT_SoldiersC8M5TeenGirl
+{
+	print " " then pilot iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC8M5TeenGirl
+{
+	criteria iMT_Soldiers IsTeenGirl IsNoMercy5
+	Response iMT_SoldiersC8M5TeenGirl
+}
+
+Response iMT_SoldiersC10M3TeenGirl
+{
+	print " " then churchguy iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC10M3TeenGirl
+{
+	criteria iMT_Soldiers IsTeenGirl IsDeathToll3
+	Response iMT_SoldiersC10M3TeenGirl
+}
+
+Response iMT_SoldiersC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC10M5TeenGirl
+{
+	criteria iMT_Soldiers IsTeenGirl IsDeathToll5
+	Response iMT_SoldiersC10M5TeenGirl
+}
+
+Response iMT_SoldiersC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC11M5TeenGirl
+{
+	criteria iMT_Soldiers IsTeenGirl IsDeadAir5
+	Response iMT_SoldiersC11M5TeenGirl
+}
+
+Response iMT_SoldiersC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersC12M5TeenGirl
+{
+	criteria iMT_Soldiers IsTeenGirl IsBloodHarvest5
+	Response iMT_SoldiersC12M5TeenGirl
+}
+
+Response iMT_VirgilTeenGirl
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilTeenGirl
+{
+	criteria iMT_Virgil IsTeenGirl
+	Response iMT_VirgilTeenGirl
+}
+
+Response iMT_VirgilC8M5TeenGirl
+{
+	print " " then pilot iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC8M5TeenGirl
+{
+	criteria iMT_Virgil IsTeenGirl IsNoMercy5
+	Response iMT_VirgilC8M5TeenGirl
+}
+
+Response iMT_VirgilC10M3TeenGirl
+{
+	print " " then churchguy iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC10M3TeenGirl
+{
+	criteria iMT_Virgil IsTeenGirl IsDeathToll3
+	Response iMT_VirgilC10M3TeenGirl
+}
+
+Response iMT_VirgilC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC10M5TeenGirl
+{
+	criteria iMT_Virgil IsTeenGirl IsDeathToll5
+	Response iMT_VirgilC10M5TeenGirl
+}
+
+Response iMT_VirgilC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC11M5TeenGirl
+{
+	criteria iMT_Virgil IsTeenGirl IsDeadAir5
+	Response iMT_VirgilC11M5TeenGirl
+}
+
+Response iMT_VirgilC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilC12M5TeenGirl
+{
+	criteria iMT_Virgil IsTeenGirl IsBloodHarvest5
+	Response iMT_VirgilC12M5TeenGirl
+}
+
+Response iMT_WhitakerTeenGirl
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerTeenGirl
+{
+	criteria iMT_Whitaker IsTeenGirl
+	Response iMT_WhitakerTeenGirl
+}
+
+Response iMT_WhitakerC8M5TeenGirl
+{
+	print " " then pilot iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC8M5TeenGirl
+{
+	criteria iMT_Whitaker IsTeenGirl IsNoMercy5
+	Response iMT_WhitakerC8M5TeenGirl
+}
+
+Response iMT_WhitakerC10M3TeenGirl
+{
+	print " " then churchguy iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC10M3TeenGirl
+{
+	criteria iMT_Whitaker IsTeenGirl IsDeathToll3
+	Response iMT_WhitakerC10M3TeenGirl
+}
+
+Response iMT_WhitakerC10M5TeenGirl
+{
+	print " " then orator_boat_radio iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC10M5TeenGirl
+{
+	criteria iMT_Whitaker IsTeenGirl IsDeathToll5
+	Response iMT_WhitakerC10M5TeenGirl
+}
+
+Response iMT_WhitakerC11M5TeenGirl
+{
+	print " " then orator_plane_radio iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC11M5TeenGirl
+{
+	criteria iMT_Whitaker IsTeenGirl IsDeadAir5
+	Response iMT_WhitakerC11M5TeenGirl
+}
+
+Response iMT_WhitakerC12M5TeenGirl
+{
+	print " " then orator_farm_radio iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerC12M5TeenGirl
+{
+	criteria iMT_Whitaker IsTeenGirl IsBloodHarvest5
+	Response iMT_WhitakerC12M5TeenGirl
+}

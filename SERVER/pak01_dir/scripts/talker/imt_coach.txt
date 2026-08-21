@@ -1,0 +1,1949 @@
+//--------------------------------------------------------------------------------------------------------------
+// ion's Vocalizer: Coach Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+// Stories
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_EllisStoryInterruptCoach
+{
+	scene "scenes/Coach/EllisInterrupt01.vcd" then from iMT_EllisStoryReac foo:0 0.3  //Boy, you are WEARIN' me out.
+	scene "scenes/Coach/EllisInterrupt02.vcd" then from iMT_EllisStoryReac foo:0 0.3  //We ain't got time for this, Ellis.
+	scene "scenes/Coach/WorldC1M1B51.vcd" then from iMT_EllisStoryReac foo:0 0.3  //You're tirin' me REAL fast, son.
+}
+
+Rule iMT_EllisStoryInterruptCoach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough isNotmap_c1m1_hotel
+	forceweight 1
+	Response iMT_EllisStoryInterruptCoach
+}
+
+Rule iMT_EllisStoryInterruptC1KnownCoach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough ismap_c1m1_hotel YesKnowNames
+	forceweight 1
+	Response iMT_EllisStoryInterruptCoach
+}
+
+Response iMT_EllisStoryInterruptC1UnknownCoach
+{
+	scene "scenes/Coach/EllisInterrupt01.vcd" then from iMT_EllisStoryReac foo:0 0.3  //Boy, you are WEARIN' me out.
+	scene "scenes/Coach/WorldC1M1B51.vcd" then from iMT_EllisStoryReac foo:0 0.3  //You're tirin' me REAL fast, son.
+}
+
+Rule iMT_EllisStoryInterruptC1UnknownCoach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough ismap_c1m1_hotel NoKnowNames
+	forceweight 1
+	Response iMT_EllisStoryInterruptC1UnknownCoach
+}
+
+Rule iMT_EllisStoryInterruptC1M2Coach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough IsEllisStorySpecific ismap_c1m2_streets
+	Response EllisStoryInterruptC1M2Coach
+}
+
+Rule iMT_EllisStoryInterruptC1M3Coach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough IsEllisStorySpecific ismap_c1m3_mall
+	Response iMT_EllisStoryInterruptCoach
+}
+
+Rule iMT_EllisStoryInterruptC2M5Coach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough IsEllisStorySpecific ismap_c2m5
+	Response iMT_EllisStoryInterruptCoach
+}
+
+Response iMT_EllisStoryInterruptC3M2Coach
+{
+	scene "scenes/Coach/EllisInterrupt08.vcd"  //I'm listenin'!
+	scene "scenes/Coach/EllisInterrupt09.vcd"  //I'm listening. But this better be about pancakes.
+	scene "scenes/Coach/EllisInterrupt10.vcd" then from PlayerNo foo:0 0.3  //All right, you MENTIONED pancakes, but it wasn't really ABOUT them, was it?
+}
+
+Rule iMT_EllisStoryInterruptC3M2Coach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough IsEllisStorySpecific ismapc3m2_swamp
+	Response iMT_EllisStoryInterruptC3M2Coach
+}
+
+Rule iMT_EllisStoryInterruptC4M3Coach
+{
+	criteria iMT_EllisStoryInterrupt IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerCloseEnough IsEllisStorySpecific isc4m3
+	Response iMT_EllisStoryInterruptCoach
+}
+
+Response iMT_EllisStoryStopCoach
+{
+	scene "scenes/Coach/EllisInterrupt02.vcd" then all iMT_EllisStoryStop foo:0 0.3  //We ain't got time for this, Ellis.
+}
+
+Rule iMT_EllisStoryStopCoach
+{
+	criteria iMT_EllisStories IsCoach _auto_IsTellingStory
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryStopCoach
+}
+
+Response iMT_EllisStoryStopC1Coach
+{
+	scene "scenes/Coach/EllisInterrupt01.vcd" then all iMT_EllisStoryStop foo:0 0.3  //Boy, you are WEARIN' me out.
+}
+
+Rule iMT_EllisStoryStopC1Coach
+{
+	criteria iMT_EllisStories IsCoach ismap_c1m1_hotel NoKnowNames _auto_IsTellingStory
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryStopC1Coach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerReadyCoach
+{
+	scene "scenes/Coach/TakeMelee01.vcd"  //Oh yeah.
+	scene "scenes/Coach/TakeMelee02.vcd"  //Alright now, mm-hm. This is gonna work.
+	scene "scenes/Coach/TakeMelee07.vcd"  //Alright. Now I am ready.
+}
+
+Rule iMT_PlayerAnswerReadyCoach
+{
+	criteria iMT_PlayerAnswerReady IsCoach
+	Response iMT_PlayerAnswerReadyCoach
+}
+
+Rule iMT_PlayerBattleCryCoach
+{
+	criteria iMT_PlayerBattleCry IsCoach
+	Response PlayerChainSawUsedCoach
+}
+
+Response iMT_PlayerBreathingCoach
+{
+	scene "scenes/Coach/HeavyBreathing01.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing02.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing03.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing04.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, medium]
+	scene "scenes/Coach/HeavyBreathing05.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, medium]
+	scene "scenes/Coach/HeavyBreathing06.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing07.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing08.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, gasping]
+	scene "scenes/Coach/HeavyBreathing09.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing10.vcd" then any iMT_PlayerBreathingReac foo:0 0  //[panting, gasping]
+}
+
+Rule iMT_PlayerBreathingCoach
+{
+	criteria iMT_PlayerBreathing IsCoach
+	Response iMT_PlayerBreathingCoach
+}
+
+Rule iMT_PlayerCloseTheDoorCoach
+{
+	criteria iMT_PlayerCloseTheDoor IsCoach
+	Response PlayerLockTheDoorCheckPointCoach
+}
+
+Rule iMT_PlayerCloseTheDoorC1Coach
+{
+	criteria iMT_PlayerCloseTheDoor IsCoach ismap_c1m1_hotel
+	Response PlayerLockTheDoorCheckPointC1Coach
+}
+
+Rule iMT_PlayerCoughingCoach
+{
+	criteria iMT_PlayerCoughing IsCoach
+	Response SurvivorCoughingCoach
+}
+
+Response iMT_PlayerDeathScreamCoach
+{
+	scene "scenes/Coach/DeathScream01.vcd"  //[Loud painful death scream]
+	scene "scenes/Coach/DeathScream03.vcd"  //[Loud painful death scream]
+	scene "scenes/Coach/DeathScream05.vcd"  //[Short quick death scream]
+	scene "scenes/Coach/DeathScream06.vcd"  //[Short quick death scream]
+}
+
+Rule iMT_PlayerDeathScreamCoach
+{
+	criteria iMT_PlayerDeathScream IsCoach
+	Response iMT_PlayerDeathScreamCoach
+}
+
+Response iMT_PlayerEquippedItemCoach
+{
+	scene "scenes/Coach/KillConfirmation01.vcd"  //Got it!
+	scene "scenes/Coach/KillConfirmation07.vcd"  //Got it! [calmer]
+	scene "scenes/Coach/KillConfirmation08.vcd"  //I got it. [calmer]
+}
+
+Rule iMT_PlayerEquippedItemCoach
+{
+	criteria iMT_PlayerEquippedItem IsCoach
+	Response iMT_PlayerEquippedItemCoach
+}
+
+Rule iMT_PlayerFriendlyFireCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach
+	Response PlayerFriendlyFireCoach
+}
+
+Rule iMT_PlayerFriendlyFireC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach SubjectIsGambler IsSubjectDistNear800
+	Response PlayerFriendlyFireFromGamblerCoach
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach SubjectIsGambler IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireFromMechanicCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach SubjectIsMechanic IsSubjectDistNear800
+	Response PlayerFriendlyFireFromMechanicCoach
+}
+
+Rule iMT_PlayerFriendlyFireFromMechanicC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach SubjectIsMechanic IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromMechanicC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach SubjectIsProducer IsSubjectDistNear800
+	Response PlayerFriendlyFireFromProducerCoach
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach SubjectIsProducer IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromProducerC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireTankCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsZombiePresentTank IsSaidTankWarn2
+	Response PlayerFriendlyFireTankCoach
+}
+
+Rule iMT_PlayerFriendlyFireTankC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsZombiePresentTank IsSaidTankWarn2 C1M1orC1M2 IsNotSurvival
+	Response PlayerFriendlyFireTankC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireTankGamblerCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsZombiePresentTank IsSaidTankWarn2 SubjectIsGambler IsSubjectDistNear800 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankGamblerCoach
+}
+
+Rule iMT_PlayerFriendlyFireTankMechanicCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsZombiePresentTank IsSaidTankWarn2 SubjectIsMechanic IsSubjectDistNear800 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankMechanicCoach
+}
+
+Rule iMT_PlayerFriendlyFireTankProducerCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsZombiePresentTank IsSaidTankWarn2 SubjectIsProducer IsSubjectDistNear800 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankProducerCoach
+}
+
+Response iMT_PlayerGetToVehicleBoatCoach
+{
+	scene "scenes/Coach/WorldC3M421.vcd"  //Get on the boat!
+	scene "scenes/Coach/WorldC3M422.vcd"  //Run to the boat!
+	scene "scenes/Coach/WorldC3M423.vcd"  //Everyone onto the boat!
+	scene "scenes/Coach/WorldC3M424.vcd"  //Get your asses on the boat!
+	scene "scenes/Coach/WorldC4M4B20.vcd"  //GET TO THE BOAT!
+}
+
+Rule iMT_PlayerGetToVehicleBoatCoach
+{
+	criteria iMT_PlayerGetToVehicleBoat IsCoach
+	Response iMT_PlayerGetToVehicleBoatCoach
+}
+
+Response iMT_PlayerGetToVehicleChopperCoach
+{
+	scene "scenes/Coach/WorldC2M5B123.vcd"  //Get on the chopper!
+	scene "scenes/Coach/WorldC2M5B124.vcd" odds 10  //WOOO! Get on the chopper!
+	scene "scenes/Coach/WorldC2M5B125.vcd"  //Everyone to the chopper!
+	scene "scenes/Coach/WorldC2M5B126.vcd"  //Get on that chopper!
+	scene "scenes/Coach/WorldC5M5B24.vcd"  //THERE'S OUR CHOPPER! COME ON!
+	scene "scenes/Coach/WorldC5M5B25.vcd"  //GET TO THE CHOPPER!
+}
+
+Rule iMT_PlayerGetToVehicleChopperCoach
+{
+	criteria iMT_PlayerGetToVehicleChopper IsCoach
+	Response iMT_PlayerGetToVehicleChopperCoach
+}
+
+Response iMT_PlayerGetToVehicleChopperGamblerCoach
+{
+	scene "scenes/Coach/NickOCD03.vcd"  //Nick, get your OCD-smelling ass in the chopper!
+}
+
+Rule iMT_PlayerGetToVehicleChopperGamblerCoach
+{
+	criteria iMT_PlayerGetToVehicleChopper IsCoach SubjectIsGambler IsSubjectDistNear800 ChanceToFire50Percent
+	Response iMT_PlayerGetToVehicleChopperGamblerCoach
+}
+
+Rule iMT_PlayerGetToVehicleChopperGamblerC1Coach
+{
+	criteria iMT_PlayerGetToVehicleChopper IsCoach SubjectIsGambler IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerGetToVehicleChopperCoach
+}
+
+Response iMT_PlayerGetToVehicleWheelsCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
+	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun02.vcd"  //Let's get to the car!
+	scene "scenes/Coach/WorldC1M4B34.vcd"  //GET TO THE CAR!
+	scene "scenes/Coach/WorldC1M4B35.vcd"  //GET TO THE CAR, PEOPLE!
+}
+
+Rule iMT_PlayerGetToVehicleWheelsCoach
+{
+	criteria iMT_PlayerGetToVehicleWheels IsCoach
+	Response iMT_PlayerGetToVehicleWheelsCoach
+}
+
+Rule iMT_PlayerGoingToDieCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach
+	Response SurvivorVocalizeGoingToDieCoach
+}
+
+Response iMT_PlayerGoingToDie3Coach
+{
+	scene "scenes/Coach/GoingToDie301.vcd"  //I'm just gonna admit it, I need some help.
+	scene "scenes/Coach/GoingToDie302.vcd"  //I need to get right.
+	scene "scenes/Coach/GoingToDie303.vcd"  //Sheeeeeet, I ain't gonna make it.
+	scene "scenes/Coach/GoingToDie304.vcd"  //Come on, pull it together man. You can make it through this shit. [to self]
+}
+
+Rule iMT_PlayerGoingToDie3Coach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsOnThirdStrike
+	Response iMT_PlayerGoingToDie3Coach
+}
+
+Rule iMT_PlayerGoingToDieGamblerCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsGambler IsSubjectDistNear200 ChanceToFire30Percent
+	Response PlayercoachcoachesGamblerCoach
+}
+
+Rule iMT_PlayerGoingToDieGamblerC1Coach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsGambler IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieGamblerGenericCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsGambler IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieMechanicCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsMechanic IsSubjectDistNear200 ChanceToFire30Percent
+	Response PlayercoachcoachesMechanicCoach
+}
+
+Rule iMT_PlayerGoingToDieMechanicC1Coach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsMechanic IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieMechanicGenericCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsMechanic IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieProducerCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsProducer IsSubjectDistNear200 ChanceToFire30Percent
+	Response PlayercoachcoachesProducerCoach
+}
+
+Rule iMT_PlayerGoingToDieProducerGenericCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsProducer IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieBikerCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsBiker IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieManagerCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsManager IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieNamVetCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsNamVet IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieTeenGirlCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsTeenGirl IsSubjectDistNear200 ChanceToFire30Percent
+	Response PlayercoachcoachesProducerCoach
+}
+
+Rule iMT_PlayerGoingToDieTeenGirlGenericCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsTeenGirl IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGoingToDieUnknownCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsUnknown IsSubjectDistNear200 ChanceToFire30Percent
+	Response PlayercoachcoachesProducerCoach
+}
+
+Rule iMT_PlayerGoingToDieUnknownGenericCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsRocking SubjectIsUnknown IsSubjectDistNear200
+	Response PlayercoachcoachesCoach
+}
+
+Rule iMT_PlayerGooedBySpitterCoach
+{
+	criteria iMT_PlayerGooedBySpitter IsCoach
+	Response SurvivorGooedBySpitterCoach
+}
+
+Rule iMT_PlayerGooedBySpitterC1Coach
+{
+	criteria iMT_PlayerGooedBySpitter IsCoach C1M1orC1M2 NoKnowSpitter IsNotSurvival
+	Response SurvivorGooedBySpitterC1Coach
+}
+
+Response iMT_PlayerHelloCoach
+{
+	scene "scenes/Coach/ScenarioJoin02.vcd"  //Hello!
+}
+
+Rule iMT_PlayerHelloCoach
+{
+	criteria iMT_PlayerHello IsCoach
+	Response iMT_PlayerHelloCoach
+}
+
+Rule iMT_PlayerIncapacitatedHurtCoach
+{
+	criteria iMT_PlayerIncapacitatedHurt IsCoach
+	Response SurvivorIncapacitatedHurtCoach
+}
+
+Response iMT_PlayerMeleeCoach
+{
+	scene "scenes/Coach/MeleeSwing01.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing02.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing03.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing04.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing05.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing06.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing07.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing08.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing09.vcd"  //[Melee grunt]
+}
+
+Rule iMT_PlayerMeleeCoach
+{
+	criteria iMT_PlayerMelee IsCoach
+	Response iMT_PlayerMeleeCoach
+}
+
+Response iMT_PlayerMeleeIntenseCoach
+{
+	scene "scenes/Coach/MeleeSwing10.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing11.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing12.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing13.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing14.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing15.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing16.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing17.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing18.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing19.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing20.vcd"  //[Intense melee grunt]
+}
+
+Rule iMT_PlayerMeleeIntenseCoach
+{
+	criteria iMT_PlayerMelee IsCoach InIntenseCombat
+	Response iMT_PlayerMeleeIntenseCoach
+}
+
+Response iMT_PlayerMournGamblerCoach
+{
+	scene "scenes/Coach/SurvivorMournGamblerC101.vcd"  //Nick, we're gonna miss your gun.
+	scene "scenes/Coach/SurvivorMournGamblerC102.vcd"  //Damn. Nick, this just got a whole lot harder.
+	scene "scenes/Coach/SurvivorMournNick01.vcd"  //Nick, you gonna be missed.
+	scene "scenes/Coach/SurvivorMournNick02.vcd"  //Bye Nick.
+}
+
+Response iMT_PlayerMournGamblerC1Coach
+{
+	scene "scenes/Coach/SurvivorMournMechanicC101.vcd"  //Ahh damnit, I can't take losing anymore people.
+}
+
+Rule iMT_PlayerMournGamblerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsGambler IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournGamblerCoach
+}
+
+Rule iMT_PlayerMournGamblerAliveC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsGambler IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames ExtraWeight10
+	Response iMT_PlayerMournGamblerC1Coach
+}
+
+Rule iMT_PlayerMournGamblerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNotAlive IsGamblerNear200
+	Response iMT_PlayerMournGamblerCoach
+}
+
+Rule iMT_PlayerMournGamblerDeadC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNotAlive IsGamblerNear200 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerMournGamblerC1Coach
+}
+
+Response iMT_PlayerMournMechanicCoach
+{
+	scene "scenes/Coach/SurvivorMournEllis01.vcd"  //Boy, I'm going to miss your goofy ass.
+	scene "scenes/Coach/SurvivorMournEllis02.vcd"  //Bye Ellis.
+	scene "scenes/Coach/SurvivorMournMechanicC101.vcd"  //Ahh damnit, I can't take losing anymore people.
+	scene "scenes/Coach/SurvivorMournMechanicC102.vcd"  //Little man, we are goin' to miss you.
+}
+
+Rule iMT_PlayerMournMechanicAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsMechanic IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournMechanicCoach
+}
+
+Rule iMT_PlayerMournMechanicAliveC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsMechanic IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames ExtraWeight10
+	Response SurvivorMournMechanicC1Coach
+}
+
+Rule iMT_PlayerMournMechanicDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNotAlive IsMechanicNear200
+	Response iMT_PlayerMournMechanicCoach
+}
+
+Rule iMT_PlayerMournMechanicDeadC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNotAlive IsMechanicNear200 ismap_c1m1_hotel NoKnowNames
+	Response SurvivorMournMechanicC1Coach
+}
+
+Response iMT_PlayerMournProducerCoach
+{
+	scene "scenes/Coach/SurvivorMournProducerC101.vcd"  //Gentlemen, we just lost the best thing in our little group.
+	scene "scenes/Coach/SurvivorMournProducerC102.vcd"  //Damn. Baby, I should have tried to protect you more.
+	scene "scenes/Coach/SurvivorMournRochelle01.vcd"  //Ahh baby girl, goodbye.
+	scene "scenes/Coach/SurvivorMournRochelle02.vcd"  //Oh Ro, oh Ro man...
+	scene "scenes/Coach/SurvivorMournRochelle03.vcd"  //Ahh baby girl, mmm.
+}
+
+Rule iMT_PlayerMournProducerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsProducer IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournProducerCoach
+}
+
+Rule iMT_PlayerMournProducerAliveC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsProducer IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames ExtraWeight10
+	Response SurvivorMournProducerC1Coach
+}
+
+Rule iMT_PlayerMournProducerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNotAlive IsProducerNear200
+	Response iMT_PlayerMournProducerCoach
+}
+
+Rule iMT_PlayerMournProducerDeadC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNotAlive IsProducerNear200 ismap_c1m1_hotel NoKnowNames
+	Response SurvivorMournProducerC1Coach
+}
+
+Rule iMT_PlayerMournBikerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsBiker IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournGamblerC1Coach
+}
+
+Rule iMT_PlayerMournBikerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach NotBikerAlive IsBikerNear200
+	Response iMT_PlayerMournGamblerC1Coach
+}
+
+Rule iMT_PlayerMournManagerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsManager IsSubjectDistNear200 ExtraWeight10
+	Response SurvivorMournMechanicC1Coach
+}
+
+Rule iMT_PlayerMournManagerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach NotManagerAlive IsManagerNear200
+	Response SurvivorMournMechanicC1Coach
+}
+
+Rule iMT_PlayerMournNamVetAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsNamVet IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournGamblerC1Coach
+}
+
+Rule iMT_PlayerMournNamVetDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach NotNamVetAlive IsNamVetNear200
+	Response iMT_PlayerMournGamblerC1Coach
+}
+
+Response iMT_PlayerMournTeenGirlCoach
+{
+	scene "scenes/Coach/SurvivorMournRochelle01.vcd"  //Ahh baby girl, goodbye.
+	scene "scenes/Coach/SurvivorMournRochelle03.vcd"  //Ahh baby girl, mmm.
+}
+
+Rule iMT_PlayerMournTeenGirlAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsTeenGirl IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournTeenGirlCoach
+}
+
+Rule iMT_PlayerMournTeenGirlDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach NotTeenGirlAlive IsTeenGirlNear200
+	Response iMT_PlayerMournTeenGirlCoach
+}
+
+Rule iMT_PlayerMournUnknownAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach SubjectIsUnknown IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournTeenGirlCoach
+}
+
+Rule iMT_PlayerNearExitCoach
+{
+	criteria iMT_PlayerNearExit IsCoach
+	Response SurvivorNearCheckpointCoach
+}
+
+Response iMT_PlayerNiceShotCoach
+{
+	scene "scenes/Coach/NiceShot01.vcd"  //Nice shot.
+	scene "scenes/Coach/NiceShot02.vcd"  //Damn. Good one.
+	scene "scenes/Coach/NiceShot03.vcd"  //Good one!
+	scene "scenes/Coach/NiceShot04.vcd"  //You on it.
+	scene "scenes/Coach/NiceShot05.vcd"  //You got it.
+	scene "scenes/Coach/NiceShot06.vcd"  //ohh hoo hoo, allright!
+	scene "scenes/Coach/NiceShot07.vcd"  //Damn. I'm impressed.
+	scene "scenes/Coach/NiceShot08.vcd"  //You nailed it.
+	scene "scenes/Coach/NiceShot09.vcd"  //You beat 'em.
+	scene "scenes/Coach/NiceShot10.vcd"  //Well alright now, you're in charge.
+}
+
+Rule iMT_PlayerNiceShotCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotGamblerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsGambler IsSubjectDistNear800
+	Response PlayerNiceShotGamblerCoach
+}
+
+Rule iMT_PlayerNiceShotGamblerC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsGambler IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotMechanicCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsMechanic IsSubjectDistNear800
+	Response PlayerNiceShotMechanicCoach
+}
+
+Rule iMT_PlayerNiceShotMechanicC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsMechanic IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Response iMT_PlayerNiceShotProducerCoach
+{
+	scene "scenes/Coach/NiceShotFemale01.vcd"  //All right, girl.
+	scene "scenes/Coach/NiceShotFemale02.vcd"  //Work it, girl.
+	scene "scenes/Coach/NiceShotFemale03.vcd"  //Right, work it, girl.
+	scene "scenes/Coach/NiceShotProducer01.vcd"  //Ro that was a nice shot.
+}
+
+Rule iMT_PlayerNiceShotProducerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsProducer IsSubjectDistNear800
+	Response iMT_PlayerNiceShotProducerCoach
+}
+
+Rule iMT_PlayerNiceShotProducerC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsProducer IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotBikerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsBiker IsSubjectDistNear800
+	Response L4D1PlayerNiceShotFrancisCoach
+}
+
+Rule iMT_PlayerNiceShotBikerC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsBiker IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotManagerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsManager IsSubjectDistNear800
+	Response L4D1PlayerNiceShotLouisC6M3Coach
+}
+
+Rule iMT_PlayerNiceShotManagerC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsManager IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotTeenGirlCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsTeenGirl IsSubjectDistNear800
+	Response L4D1PlayerNiceShotZoeyCoach
+}
+
+Rule iMT_PlayerNiceShotTeenGirlC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsTeenGirl IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotUnknownCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsUnknown IsSubjectDistNear800
+	Response L4D1PlayerNiceShotZoeyCoach
+}
+
+Rule iMT_PlayerNiceShotUnknownC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach SubjectIsUnknown IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
+}
+
+Response iMT_PlayerPainNoiseCoach
+{
+	scene "scenes/Coach/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical06.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical07.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical08.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtMajor01.vcd"  //[Pain noise - huh]
+	scene "scenes/Coach/HurtMajor02.vcd"  //[Pain noise - huh]
+	scene "scenes/Coach/HurtMajor03.vcd"  //[Pain noise - ahh]
+	scene "scenes/Coach/HurtMajor04.vcd"  //[Pain noise - oy]
+	scene "scenes/Coach/HurtMajor05.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor06.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor07.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor08.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor09.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor10.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor11.vcd"  //[Pain noise - ugh]
+}
+
+Rule iMT_PlayerPainNoiseCoach
+{
+	criteria iMT_PlayerPainNoise IsCoach
+	Response iMT_PlayerPainNoiseCoach
+}
+
+Response iMT_PlayerPouncedC1Coach
+{
+	scene "scenes/Coach/HunterPouncedC101.vcd"  //That thing's ripping him up!
+	scene "scenes/Coach/HunterPouncedC102.vcd"  //Zombie's ripping him up!
+}
+
+Response iMT_PlayerPouncedGamblerCoach
+{
+	scene "scenes/Coach/HunterNickPounced01.vcd"  //Hunter's got Nick!
+	scene "scenes/Coach/HunterNickPounced02.vcd"  //Hunter's on Nick!
+}
+
+Rule iMT_PlayerPouncedGamblerCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsGambler IsSubjectDistNear800
+	Response iMT_PlayerPouncedGamblerCoach
+}
+
+Rule iMT_PlayerPouncedGamblerC1Coach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsGambler IsSubjectDistNear800 C1M1orC1M2 NoKnowHunter IsNotSurvival
+	Response iMT_PlayerPouncedC1Coach
+}
+
+Response iMT_PlayerPouncedMechanicCoach
+{
+	scene "scenes/Coach/HunterEllisPounced01.vcd"  //Hunter's got Ellis!
+	scene "scenes/Coach/HunterEllisPounced02.vcd"  //Hunter on Ellis!
+}
+
+Rule iMT_PlayerPouncedMechanicCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsMechanic IsSubjectDistNear800
+	Response iMT_PlayerPouncedMechanicCoach
+}
+
+Rule iMT_PlayerPouncedMechanicC1Coach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsMechanic IsSubjectDistNear800 C1M1orC1M2 NoKnowHunter IsNotSurvival
+	Response iMT_PlayerPouncedC1Coach
+}
+
+Response iMT_PlayerPouncedProducerCoach
+{
+	scene "scenes/Coach/HunterRochellePounced01.vcd"  //Hunter's got Ro!
+	scene "scenes/Coach/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
+}
+
+Rule iMT_PlayerPouncedProducerCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsProducer IsSubjectDistNear800
+	Response iMT_PlayerPouncedProducerCoach
+}
+
+Response iMT_PlayerPouncedProducerC1Coach
+{
+	scene "scenes/Coach/HunterPouncedC1Producer01.vcd"  //Zombie's on Ro!
+	scene "scenes/Coach/HunterPouncedC1Producer02.vcd"  //Ro's getting ripped up!
+}
+
+Response iMT_PlayerPouncedProducerC1UnknownCoach
+{
+	scene "scenes/Coach/WorldC5M4B03.vcd"  //SHIT!
+}
+
+Rule iMT_PlayerPouncedProducerC1M1Coach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsProducer IsSubjectDistNear800 ismap_c1m1_hotel
+	Response iMT_PlayerPouncedProducerC1Coach
+}
+
+Rule iMT_PlayerPouncedProducerC1M1UnknownCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsProducer IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerPouncedProducerC1UnknownCoach
+}
+
+Rule iMT_PlayerPouncedProducerC1M2Coach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsProducer IsSubjectDistNear800 ismap_c1m2_streets NoKnowHunter IsNotSurvival
+	Response iMT_PlayerPouncedProducerC1Coach
+}
+
+Rule iMT_PlayerPouncedBikerCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerPouncedC1Coach
+}
+
+Rule iMT_PlayerPouncedManagerCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsManager IsSubjectDistNear800
+	Response iMT_PlayerPouncedC1Coach
+}
+
+Rule iMT_PlayerPouncedNamVetCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsNamVet IsSubjectDistNear800
+	Response iMT_PlayerPouncedC1Coach
+}
+
+Rule iMT_PlayerPouncedTeenGirlCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsTeenGirl IsSubjectDistNear800
+	Response iMT_PlayerPouncedProducerC1UnknownCoach
+}
+
+Rule iMT_PlayerPouncedUnknownCoach
+{
+	criteria iMT_SurvivorWasPounced IsCoach SubjectIsUnknown IsSubjectDistNear800
+	Response iMT_PlayerPouncedProducerC1UnknownCoach
+}
+
+Rule iMT_PlayerReloadingCoach
+{
+	criteria iMT_PlayerReloading IsCoach
+	Response SurvivorReloadingCoach
+}
+
+Rule iMT_PlayerReloadingIntenseCoach
+{
+	criteria iMT_PlayerReloading IsCoach InIntenseCombat
+	Response SurvivorReloadingIntenseCoach
+}
+
+Rule iMT_PlayerReloadingQuietCoach
+{
+	criteria iMT_PlayerReloading IsCoach IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsCoachInWitchville
+	Response SurvivorReloadingC4M2Coach
+}
+
+Response iMT_PlayerSuggestHealthCoach
+{
+	scene "scenes/Coach/SuggestHealth01.vcd"  //We oughta heal up while it's quiet.
+	scene "scenes/Coach/SuggestHealth02.vcd"  //Heal if ya got em.
+	scene "scenes/Coach/SuggestHealth03.vcd"  //This ain't about me people, let's heal up.
+	scene "scenes/Coach/SuggestHealthC101.vcd"  //This would be the time to heal up.
+	scene "scenes/Coach/SuggestHealthC102.vcd"  //Now's a good time to heal if you can.
+	scene "scenes/Coach/SuggestHealthC103.vcd"  //If you got a health kit you should use it.
+}
+
+Rule iMT_PlayerSuggestHealthCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach
+	Response iMT_PlayerSuggestHealthCoach
+}
+
+Rule iMT_PlayerSuggestHealthC1Coach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Coach
+}
+
+Rule iMT_PlayerSuggestHealthGamblerCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach SubjectIsGambler IsSubjectDistNear200
+	Response PlayerSuggestHealthGamblerCoach
+}
+
+Rule iMT_PlayerSuggestHealthGamblerC1Coach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach SubjectIsGambler IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Coach
+}
+
+Rule iMT_PlayerSuggestHealthMechanicCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach SubjectIsMechanic IsSubjectDistNear200
+	Response PlayerSuggestHealthMechanicCoach
+}
+
+Rule iMT_PlayerSuggestHealthMechanicC1Coach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach SubjectIsMechanic IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Coach
+}
+
+Rule iMT_PlayerSuggestHealthProducerCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach SubjectIsProducer IsSubjectDistNear200
+	Response PlayerSuggestHealthProducerCoach
+}
+
+Rule iMT_PlayerSuggestHealthProducerC1Coach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach SubjectIsProducer IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Coach
+}
+
+Response iMT_PlayerTeamKillCoach
+{
+	scene "scenes/Coach/TeamKillAccident01.vcd"  //Woah, that there is some screwed up shit.
+	scene "scenes/Coach/TeamKillAccident02.vcd"  //You gotta watch where you aimin' that thing.
+	scene "scenes/Coach/TeamKillAccident03.vcd"  //Man, are you wrong in the head shootin like that?
+	scene "scenes/Coach/TeamKillAccident04.vcd"  //What the hell are you on shootin' like that.
+	scene "scenes/Coach/TeamKillAccident05.vcd"  //What the f'...  don't be doin that.
+	scene "scenes/Coach/TeamKillAccident06.vcd"  //Hey! Don't be doin that.
+	scene "scenes/Coach/TeamKillAccident07.vcd"  //You try that shit on me and you'll be wishin' your momma never met ya father.
+	scene "scenes/Coach/TeamKillAccident08.vcd"  //Keep goin at em like that and you gonna be the last man on earth.
+}
+
+Rule iMT_PlayerTeamKillCoach
+{
+	criteria iMT_PlayerTeamKill IsCoach
+	Response iMT_PlayerTeamKillCoach
+}
+
+Response iMT_PlayerTransitionCoach
+{
+	scene "scenes/Coach/TransitionClose01.vcd"  //That shit was crazy.
+	scene "scenes/Coach/TransitionClose02.vcd"  //That shit was crazy.
+	scene "scenes/Coach/TransitionClose03.vcd"  //That was some close ass shit.
+	scene "scenes/Coach/TransitionClose04.vcd"  //We just made that.
+	scene "scenes/Coach/TransitionClose05.vcd"  //I was bettin on the other guys (laughing).
+	scene "scenes/Coach/TransitionClose06.vcd"  //Man said, any fight you walk away from is a win.
+	scene "scenes/Coach/TransitionClose07.vcd"  //Let's put it behind us, we good, we good.
+	scene "scenes/Coach/TransitionClose08.vcd"  //Touchdown!
+	scene "scenes/Coach/TransitionClose09.vcd"  //They played us tough.
+	scene "scenes/Coach/TransitionClose10.vcd"  //That was some epic shit. Right there.
+	scene "scenes/Coach/TransitionClose11.vcd"  //Allright. We allright y'all. We made it.
+	scene "scenes/Coach/TransitionClose12.vcd"  //That shit was too goddamn close...
+	scene "scenes/Coach/TransitionClose13.vcd"  //We almost didn't make it...
+	scene "scenes/Coach/TransitionClose14.vcd"  //That was a little TOO close...
+	scene "scenes/Coach/TransitionClose15.vcd"  //Damn. I can't be all that's left...
+	scene "scenes/Coach/TransitionClose16.vcd"  //We got sloppy out there.
+	scene "scenes/Coach/TransitionClose17.vcd"  //I know we can do better than THAT.
+	scene "scenes/Coach/TransitionClose18.vcd"  //Man. That got BAD.
+}
+
+Rule iMT_PlayerTransitionCoach
+{
+	criteria iMT_PlayerTransition IsCoach
+	Response iMT_PlayerTransitionCoach
+}
+
+Response iMT_PlayerWitchChasingCoach
+{
+	scene "scenes/Coach/WitchChasing01.vcd"  //The bitch is chasing me!
+	scene "scenes/Coach/WitchChasing02.vcd"  //Bitch on my ass!
+	scene "scenes/Coach/WitchChasing03.vcd"  //Run, run, witch coming through!
+	scene "scenes/Coach/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch!
+	scene "scenes/Coach/WitchChasing05.vcd"  //Coming through! Witch on my ass!
+	scene "scenes/Coach/WitchChasing06.vcd"  //Get out of the way! Witch!!!!
+	scene "scenes/Coach/WitchChasing07.vcd"  //Aw shit. Witch! Witch! Witch!
+}
+
+Rule iMT_PlayerWitchChasingCoach
+{
+	criteria iMT_PlayerWitchChasing IsCoach
+	Response iMT_PlayerWitchChasingCoach
+}
+
+Response iMT_PlayerWitchChasingC6M1Coach
+{
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Bride's chasing me!
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Ugly brides chasing me! Brides chasing me!
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Kill the bride! Kill the bride!
+}
+
+Rule iMT_PlayerWitchChasingC6M1Coach
+{
+	criteria iMT_PlayerWitchChasing IsCoach Isc6m1_riverbank
+	Response iMT_PlayerWitchChasingC6M1Coach
+}
+
+Rule iMT_SurvivorCaughtVomitCoach
+{
+	criteria iMT_PlayerVomitInFace IsCoach
+	Response SurvivorCaughtVomitCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-specific
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_AllAboardCoach
+{
+	scene "scenes/Coach/DLC1_Community15.vcd"  //Shit, all aboard!
+	scene "scenes/Coach/DLC1_Community16.vcd"  //Shit, all aboard!
+}
+
+Rule iMT_AllAboardCoach
+{
+	criteria iMT_AllAboard IsCoach
+	Response iMT_AllAboardCoach
+}
+
+Response iMT_ApocalypseCoach
+{
+	scene "scenes/Coach/WorldC2M2B23.vcd"  //I find a Burger Tank in this place? I'm-a be a one-man cheeseburger apocalypse.
+}
+
+Rule iMT_ApocalypseCoach
+{
+	criteria iMT_Apocalypse IsCoach
+	Response iMT_ApocalypseCoach
+}
+
+Response iMT_BurgerMealCoach
+{
+	sequential
+	print " " then self iMT_BurgerMeal foo:0 0
+	scene "scenes/Coach/WorldC4M107.vcd" then self iMT_BurgerMeal foo:0 0  //I could go for a BBQ bacon burger...
+	scene "scenes/Coach/WorldC4M108.vcd" then self iMT_BurgerMeal foo:0 0  //and a large order of fries, and...
+	scene "scenes/Coach/WorldC4M109.vcd" then self iMT_BurgerMeal foo:0 0  //an orange soda with no ice, and a...
+	scene "scenes/Coach/WorldC4M110.vcd" then self iMT_BurgerMeal foo:0 0.3  //piece of hot apple pie.
+	scene "scenes/Coach/WorldC4M111.vcd"  //Goddamn I miss Burger Tank.
+}
+
+Rule iMT_BurgerMealCoach
+{
+	criteria iMT_BurgerMeal IsCoach
+	Response iMT_BurgerMealCoach
+}
+
+Response iMT_ChickenCoach
+{
+	scene "scenes/Coach/Generic01.vcd"  //Chicken ain't nothing but a bird.
+	scene "scenes/Coach/WorldC1M1B71.vcd" odds 30  //Mm-hmm.
+}
+
+Rule iMT_ChickenCoach
+{
+	criteria iMT_Chicken IsCoach
+	Response iMT_ChickenCoach
+}
+
+Rule iMT_DreamingCoach
+{
+	criteria iMT_Dreaming IsCoach
+	Response PlayerRemarkremark_MidnightRidersBusCoach
+}
+
+Response iMT_FairCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat10.vcd"  //Sounds fair.
+}
+
+Rule iMT_FairCoach
+{
+	criteria iMT_Fair IsCoach
+	Response iMT_FairCoach
+}
+
+Response iMT_GetBusyCoach
+{
+	scene "scenes/Coach/DLC1_Community04.vcd"  //Get busy living, or get busy dying.
+}
+
+Rule iMT_GetBusyCoach
+{
+	criteria iMT_GetBusy IsCoach
+	Response iMT_GetBusyCoach
+}
+
+Response iMT_HosannaCoach
+{
+	scene "scenes/Coach/WorldC1M1B30.vcd"  //Mm. Sweet Hosanna...
+	scene "scenes/Coach/WorldC1M1B31.vcd"  //Sweet Hosanna...
+	scene "scenes/Coach/WorldC1M1B34.vcd"  //Oh... sweet Hosanna...
+}
+
+Rule iMT_HosannaCoach
+{
+	criteria iMT_Hosanna IsCoach
+	Response iMT_HosannaCoach
+}
+
+Response iMT_HungryCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_SafeRoomConvo17.vcd"  //Man, I just realized with all this runnin', climbin' and fightin', I ain't even had time to eat.
+	scene "scenes/Coach/WorldC1M3B13.vcd"  //I could roll up a whole pizza right now, eat it sub-style.
+	scene "scenes/Coach/WorldC2M2B22.vcd"  //Oh, baby, I could destroy some kettle corn right now.
+	scene "scenes/Coach/WorldC2M2B37.vcd"  //Damn it. They can't keep a candy machine filled up around here?
+}
+
+Rule iMT_HungryCoach
+{
+	criteria iMT_Hungry IsCoach FromIsNotProducer
+	Response iMT_HungryCoach
+}
+
+Rule iMT_HungryReacCoach
+{
+	criteria iMT_Hungry IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach FromIsProducer IssuerClose ChanceToFire30Percent
+	Response iMT_HungryCoach
+}
+
+Response iMT_KillingCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat03.vcd"  //Damn right. We're getting good at killing these things.
+}
+
+Rule iMT_KillingCoach
+{
+	criteria iMT_Killing IsCoach
+	Response iMT_KillingCoach
+}
+
+Response iMT_LeaveEllisCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat11.vcd"  //Hell, we can even leave Ellis behind to make room for y'all.
+}
+
+Rule iMT_LeaveEllisCoach
+{
+	criteria iMT_LeaveEllis IsCoach
+	Response iMT_LeaveEllisCoach
+}
+
+Rule iMT_LouisRulesCoach
+{
+	criteria iMT_LouisRules IsCoach
+	Response L4D1PlayerNiceShotLouisCoach
+}
+
+Rule iMT_MarriageReacCoach
+{
+	criteria iMT_MarriageReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerClose
+	Response WorldC6M1_PostWedding01aCoach
+}
+
+Response iMT_NeighborhoodCoach
+{
+	scene "scenes/Coach/TeaserIntroMovie03.vcd" //This used to be a NICE NEIGHBORHOOD!
+	scene "scenes/Coach/TeaserIntroMovie04.vcd" //This used to be a NICE NEIGHBORHOOD!
+}
+
+Rule iMT_NeighborhoodCoach
+{
+	criteria iMT_Neighborhood IsCoach
+	Response iMT_NeighborhoodCoach
+}
+
+Response iMT_NightCoach
+{
+	scene "scenes/Coach/DLC1_Community11.vcd"  //Shit! Looks like it's gonna be one hell of a night.
+}
+
+Rule iMT_NightCoach
+{
+	criteria iMT_Night IsCoach
+	Response iMT_NightCoach
+}
+
+Response iMT_NotDieCoach
+{
+	scene "scenes/Coach/WorldC5M5B18.vcd"  //You want to TEST me? I been through HELL to get to here! You are NOT the one to take me down!
+	scene "scenes/Coach/WorldC5M5B19.vcd"  //I walked through a WORLD OF SHIT to get here! I am not gonna die now! I am NOT gonna DIE NOW!
+}
+
+Rule iMT_NotDieCoach
+{
+	criteria iMT_NotDie IsCoach
+	Response iMT_NotDieCoach
+}
+
+Response iMT_NotDieC4Coach
+{
+	scene "scenes/Coach/WorldC4M3GoingToDie01.vcd"  //I am not dying in a goddamn sugar mill.
+}
+
+Rule iMT_NotDieC4Coach
+{
+	criteria iMT_NotDie IsCoach ismap_c4m2_sugarmill_a
+	Response iMT_NotDieC4Coach
+}
+
+Response iMT_PancakesCoach
+{
+	scene "scenes/Coach/EllisInterrupt09.vcd"  //I'm listening. But this better be about pancakes.
+	scene "scenes/Coach/EllisInterrupt10.vcd"  //All right, you MENTIONED pancakes, but it wasn't really ABOUT them, was it?
+}
+
+Rule iMT_PancakesCoach
+{
+	criteria iMT_Pancakes IsCoach
+	Response iMT_PancakesCoach
+}
+
+Response iMT_PrayCoach
+{
+	scene "scenes/Coach/WorldC1M3B02.vcd" then self iMT_Pray2 foo:0 0.5  //Everybody, gather 'round. Let's pray. Dear Lord. See us safely through our time of trial in this mall. And please Lord... let the food court be okay.
+}
+
+Rule iMT_PrayCoach
+{
+	criteria iMT_Pray IsCoach
+	Response iMT_PrayCoach
+}
+
+Response iMT_Pray2Coach
+{
+	scene "scenes/Coach/WorldC1M3B03.vcd" then all iMT_PrayReac foo:0 -0.1  //Amen
+	scene "scenes/Coach/WorldC1M3B04.vcd" then all iMT_PrayReac foo:0 -0.1  //Amen
+}
+
+Rule iMT_Pray2Coach
+{
+	criteria iMT_Pray2 IsCoach
+	Response iMT_Pray2Coach
+}
+
+Response iMT_RideCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleCinematic03.vcd"  //Coach is going for a ride!
+}
+
+Rule iMT_RideCoach
+{
+	criteria iMT_Ride IsCoach
+	Response iMT_RideCoach
+}
+
+Response iMT_SingingCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_SuitcasePistols01.vcd" odds 20  //[singing] ...a suitcase full of pistols and MON-NAY!
+	scene "scenes/Coach/WorldC2M2B05.vcd" then all iMT_SingingMountain foo:0 -0.1  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
+	scene "scenes/Coach/WorldC2M2B06.vcd" then all iMT_SingingLady foo:0 -0.1  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
+}
+
+Rule iMT_SingingCoach
+{
+	criteria iMT_Singing IsCoach
+	Response iMT_SingingCoach
+}
+
+Response iMT_SingingLadyCoach
+{
+	scene "scenes/Coach/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
+}
+
+Rule iMT_SingingLadyCoach
+{
+	criteria iMT_SingingLady IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerClose ChanceToFire15Percent
+	Response iMT_SingingLadyCoach
+}
+
+Response iMT_SingingMountainCoach
+{
+	scene "scenes/Coach/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
+}
+
+Rule iMT_SingingMountainCoach
+{
+	criteria iMT_SingingMountain IsNotCoughing IsNotIncapacitated IsNotSpeaking IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerClose ChanceToFire15Percent
+	Response iMT_SingingMountainCoach
+}
+
+Response iMT_SwallowCoach
+{
+	scene "scenes/Coach/WorldC4M104.vcd"  //Shit. All these zombies should help you swallow.
+}
+
+Rule iMT_SwallowCoach
+{
+	criteria iMT_Swallow IsCoach
+	Response iMT_SwallowCoach
+}
+
+Response iMT_TeachingCoach
+{
+	scene "scenes/Coach/DLC1_Community13.vcd"  //Man, this shit's worse than teachin' Health class!
+}
+
+Rule iMT_TeachingCoach
+{
+	criteria iMT_Teaching IsCoach
+	Response iMT_TeachingCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Overrides
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerLostCallCoach
+{
+	scene "scenes/Coach/ScenarioJoinLast01.vcd"  //All right. We're all here!
+	scene "scenes/Coach/ScenarioJoinLast02.vcd"  //We're all here!
+}
+
+Rule iMT_PlayerAnswerLostCallCoach
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsEveryoneAlive IsNotSomeoneDied IsClosestSurvivorNear500 ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallCoach
+}
+
+Response iMT_PlayerAreaClearCoach
+{
+	scene "scenes/Coach/Defibrillator05.vcd"  //Clear!
+}
+
+Rule iMT_PlayerAreaClearCoach
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response iMT_PlayerAreaClearCoach
+}
+
+Rule iMT_PlayerHeardBoomerCoach
+{
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardBoomerCoach
+}
+
+Rule iMT_PlayerHeardChargerCoach
+{
+	criteria ConceptPlayerHeardCharger IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardChargerCoach
+}
+
+Rule iMT_PlayerHeardHunterCoach
+{
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardHunterCoach
+}
+
+Rule iMT_PlayerHeardJockeyCoach
+{
+	criteria ConceptPlayerHeardJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardJockeyCoach
+}
+
+Rule iMT_PlayerHeardSmokerCoach
+{
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardSmokerCoach
+}
+
+Rule iMT_PlayerHeardSpitterCoach
+{
+	criteria ConceptPlayerHeardSpitter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardSpitterCoach
+}
+
+Rule iMT_PlayerHeardTankCoach
+{
+	criteria ConceptPlayerHeardTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardTankCoach
+}
+
+Rule iMT_PlayerHeardWitchCoach
+{
+	criteria ConceptPlayerHeardWitch IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response PlayerHeardWitchCoach
+}
+
+Response iMT_PlayerLaughCoach
+{
+	scene "scenes/Coach/Laughter01.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter04.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter05.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter07.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter13.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter14.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter16.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter20.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter21.vcd"  //[Laughter]
+}
+
+Rule iMT_PlayerLaughCoach
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10
+	Response iMT_PlayerLaughCoach
+}
+
+Response iMT_PlayerThanksGamblerCoach
+{
+	scene "scenes/Coach/ThanksGambler01.vcd"  //Thanks, Nick, you're all right.
+}
+
+Rule iMT_PlayerThanksGamblerCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksGamblerCoach
+}
+
+Rule iMT_PlayerThanksGamblerC1Coach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksCoach
+}
+
+Response iMT_PlayerThanksMechanicCoach
+{
+	scene "scenes/Coach/ThanksMechanic01.vcd"  //I owe you one, Ellis.
+}
+
+Rule iMT_PlayerThanksMechanicCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksMechanicCoach
+}
+
+Rule iMT_PlayerThanksMechanicC1Coach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksCoach
+}
+
+Response iMT_PlayerThanksProducerCoach
+{
+	scene "scenes/Coach/ThanksProducer01.vcd"  //Can always count on you, Ro.
+}
+
+Rule iMT_PlayerThanksProducerCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksProducerCoach
+}
+
+Rule iMT_PlayerThanksProducerC1Coach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsProducer IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksCoach
+}
+
+Response iMT_PlayerThanksBikerCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Killing05.vcd"  //Thanks Francis!
+}
+
+Rule iMT_PlayerThanksBikerCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsBiker IsSubjectDistNear600 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerCoach
+}
+
+Rule iMT_PlayerThanksBikerC1Coach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsBiker IsSubjectDistNear600 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksCoach
+}
+
+Rule iMT_PlayerYouAreWelcomeGamblerCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeGamblerCoach
+}
+
+Rule iMT_PlayerYouAreWelcomeGamblerC1Coach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerYouAreWelcomeCoach
+}
+
+Rule iMT_PlayerYouAreWelcomeMechanicCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeMechanicCoach
+}
+
+Rule iMT_PlayerYouAreWelcomeMechanicC1Coach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerYouAreWelcomeCoach
+}
+
+Rule iMT_PlayerYouAreWelcomeProducerCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeProducerCoach
+}
+
+Rule iMT_PlayerYouAreWelcomeProducerC1Coach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsProducer IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerYouAreWelcomeCoach
+}
+
+Response iMT_ResponseSoftDispleasureSwearCoach
+{
+	scene "scenes/Coach/Exclamation01.vcd"  //Oh Shit!
+	scene "scenes/Coach/WorldC5M4B03.vcd"  //SHIT!
+}
+
+Rule iMT_ResponseSoftDispleasureSwearCoach
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IssuerMediumClose
+	Response iMT_ResponseSoftDispleasureSwearCoach
+}
+
+Rule iMT_SafeRoomStartCoach
+{
+	criteria ConceptTalkIdle IsCoach IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart ExtraWeight10
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule iMT_SurvivorCoughingDeathCoach
+{
+	criteria ConceptPlayerDeath IsCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorCoughingCoach
+}
+
+Rule iMT_SurvivorDeathCoach
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorDeathCoach
+}
+
+Rule iMT_SurvivorSpottedAmmoCoach
+{
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10
+	Response SurvivorSpottedAmmoCoach
+}
+
+Rule iMT_SurvivorSpottedBoomerCoach
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedBoomerCoach
+}
+
+Response iMT_SurvivorSpottedBoomerC1Coach
+{
+	scene "scenes/Coach/WarnBoomerC101.vcd"  //Fat guy!
+	scene "scenes/Coach/WarnBoomerC102.vcd"  //Roly poly!
+	scene "scenes/Coach/WarnBoomerC103.vcd"  //Fat thing!
+	scene "scenes/Coach/WorldC1M1B126.vcd" odds 10  //It's that big one that pukes on ya!
+}
+
+Rule iMT_SurvivorSpottedBoomer2Coach
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire20Percent
+	Response iMT_SurvivorSpottedBoomerC1Coach
+}
+
+Rule iMT_SurvivorSpottedBoomerC1Coach
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowBoomer IsNotSurvival ExtraWeight10
+	Response iMT_SurvivorSpottedBoomerC1Coach
+}
+
+Rule iMT_SurvivorSpottedChargerCoach
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedChargerCoach
+}
+
+Response iMT_SurvivorSpottedChargerC1Coach
+{
+	scene "scenes/Coach/WarnChargerC101.vcd"  //Big arm!
+	scene "scenes/Coach/WarnChargerC102.vcd"  //One arm!
+	scene "scenes/Coach/WorldC1M1B130.vcd" odds 10  //It's that one that runs at you.
+}
+
+Rule iMT_SurvivorSpottedCharger2Coach
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire20Percent
+	Response iMT_SurvivorSpottedChargerC1Coach
+}
+
+Rule iMT_SurvivorSpottedChargerC1Coach
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowCharger IsNotSurvival ExtraWeight10
+	Response iMT_SurvivorSpottedChargerC1Coach
+}
+
+Rule iMT_SurvivorSpottedHunterCoach
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedHunterCoach
+}
+
+Response iMT_SurvivorSpottedHunterC1Coach
+{
+	scene "scenes/Coach/WarnHunterC101.vcd"  //We got a Jumper!
+	scene "scenes/Coach/WarnHunterC102.vcd"  //Crazy legs!
+	scene "scenes/Coach/WorldC1M1B128.vcd" odds 10  //It's that mean one that pounces on ya.
+}
+
+Rule iMT_SurvivorSpottedHunter2Coach
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire20Percent
+	Response iMT_SurvivorSpottedHunterC1Coach
+}
+
+Rule iMT_SurvivorSpottedHunterC1Coach
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowHunter IsNotSurvival ExtraWeight10
+	Response iMT_SurvivorSpottedHunterC1Coach
+}
+
+Rule iMT_SurvivorSpottedInfectedCoach
+{
+	criteria ConceptPlayerIncoming IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedInfectedCoach
+}
+
+Rule iMT_SurvivorSpottedJockeyCoach
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedJockeyCoach
+}
+
+Rule iMT_SurvivorSpottedJockey2Coach
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire20Percent
+	Response SurvivorSpottedJockeyC1M1Coach
+}
+
+Rule iMT_SurvivorSpottedJockeyC1Coach
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowJockey IsNotSurvival
+	Response SurvivorSpottedJockeyC1M1Coach
+}
+
+Rule iMT_SurvivorSpottedSmokerCoach
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedSmokerCoach
+}
+
+Rule iMT_SurvivorSpottedSmoker2Coach
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire20Percent
+	Response SurvivorSpottedSmokerC1Coach
+}
+
+Rule iMT_SurvivorSpottedSmokerC1Coach
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowSmoker IsNotSurvival
+	Response SurvivorSpottedSmokerC1Coach
+}
+
+Rule iMT_SurvivorSpottedSpitterCoach
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedSpitterCoach
+}
+
+Response iMT_SurvivorSpottedSpitterC1Coach
+{
+	scene "scenes/Coach/WarnSpitterC101.vcd"  //Crazy woman!
+	scene "scenes/Coach/WarnSpitterC102.vcd"  //Neck!
+	scene "scenes/Coach/WarnSpitterC103.vcd"  //Spitting thing!
+	scene "scenes/Coach/WorldC1M1B132.vcd" odds 10  //It's that spittin' zombie.
+}
+
+Rule iMT_SurvivorSpottedSpitter2Coach
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire20Percent
+	Response iMT_SurvivorSpottedSpitterC1Coach
+}
+
+Rule iMT_SurvivorSpottedSpitterC1Coach
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 NoKnowSpitter IsNotSurvival ExtraWeight10
+	Response iMT_SurvivorSpottedSpitterC1Coach
+}
+
+Rule iMT_SurvivorSpottedTankCoach
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedTankCoach
+}
+
+Rule iMT_SurvivorSpottedTank2Coach
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10 ChanceToFire10Percent
+	Response SurvivorSpottedTankC1Coach
+}
+
+Rule iMT_SurvivorSpottedTankC1Coach
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2 IsNotSurvival
+	Response SurvivorSpottedTankC1Coach
+}
+
+Rule iMT_SurvivorSpottedTankC6M3Coach
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach Isc6m3_port ExtraWeight10
+	Response SurvivorSpottedTankCoach
+}
+
+Rule iMT_SurvivorSpottedWeaponCoach
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10
+	Response SurvivorSpottedWeaponCoach
+}
+
+Rule iMT_SurvivorSpottedWitchCoach
+{
+	criteria ConceptPlayerWarnWitch IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorSpottedWitchCoach
+}
+
+Response iMT_SurvivorTauntResponseCoach
+{
+	scene "scenes/Coach/Laughter15.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter22.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter23.vcd"  //[Laughter]
+	scene "scenes/Coach/Taunt01.vcd"  //Hell yeah!
+	scene "scenes/Coach/Taunt02.vcd"  //Goddamn right!
+	scene "scenes/Coach/Taunt03.vcd"  //Goddamn right!
+	scene "scenes/Coach/Taunt04.vcd"  //Aw riiiight.
+	scene "scenes/Coach/Taunt05.vcd"  //Oh hell yeah!
+	scene "scenes/Coach/Taunt06.vcd"  //Ooh. How ya like me now? Mmm.
+	scene "scenes/Coach/Taunt07.vcd"  //[Loud, evil laugh]
+	scene "scenes/Coach/Taunt08.vcd"  //[Loud, evil laugh]
+}
+
+Rule iMT_SurvivorTauntResponseCoach
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach ExtraWeight10
+	Response iMT_SurvivorTauntResponseCoach
+}
+
+Rule iMT_SurvivorVocalizeBackUpCoach
+{
+	criteria ConceptPlayerBackUp IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorVocalizeBackUpCoach
+}
+
+Rule iMT_SurvivorVocalizeEmphaticGoCoach
+{
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorVocalizeEmphaticGoCoach
+}
+
+Rule iMT_SurvivorVocalizeLookOutCoach
+{
+	criteria ConceptPlayerLookOut IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response SurvivorVocalizeLookOutCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_BoatmanCoach
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanCoach
+{
+	criteria iMT_Boatman IsCoach
+	Response iMT_BoatmanCoach
+}
+
+Response iMT_ChopperPilotCoach
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotCoach
+{
+	criteria iMT_ChopperPilot IsCoach
+	Response iMT_ChopperPilotCoach
+}
+
+Response iMT_ChurchGuyCoach
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyCoach
+{
+	criteria iMT_ChurchGuy IsCoach
+	Response iMT_ChurchGuyCoach
+}
+
+Response iMT_MoustachioCoach
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioCoach
+{
+	criteria iMT_Moustachio IsCoach
+	Response iMT_MoustachioCoach
+}
+
+Response iMT_PlanePilotCoach
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotCoach
+{
+	criteria iMT_PlanePilot IsCoach
+	Response iMT_PlanePilotCoach
+}
+
+Response iMT_Rescue9Coach
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9Coach
+{
+	criteria iMT_Rescue9 IsCoach
+	Response iMT_Rescue9Coach
+}
+
+Response iMT_SoldiersCoach
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersCoach
+{
+	criteria iMT_Soldiers IsCoach
+	Response iMT_SoldiersCoach
+}
+
+Response iMT_VirgilCoach
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilCoach
+{
+	criteria iMT_Virgil IsCoach
+	Response iMT_VirgilCoach
+}
+
+Response iMT_WhitakerCoach
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerCoach
+{
+	criteria iMT_Whitaker IsCoach
+	Response iMT_WhitakerCoach
+}

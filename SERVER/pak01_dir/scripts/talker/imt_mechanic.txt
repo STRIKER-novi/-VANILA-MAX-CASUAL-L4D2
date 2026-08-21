@@ -1,0 +1,2084 @@
+//--------------------------------------------------------------------------------------------------------------
+// ion's Vocalizer: Mechanic Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+// Stories
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_EllisStoriesMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_SafeRoomConvo20.vcd" then self iMT_EllisStoryEnd foo:0 -13.00  //Oh, dude! That reminds me of that time my buddy Keith, he went on a diet on account of what the doctor sayin' he had to go on a diet or he'd die, so they told him he could drink nothin but them little diet shakes, but those are like five bucks a can man, and Keith is like "Well I aint' gonna..."
+	scene "scenes/Mechanic/DLC1_CommunityE08.vcd" then self iMT_EllisStoryEnd foo:0 -21.73  //I ever tell you about the time my buddy Keith wanted to see what it felt like to be in snow storm? He ain't ever seen real snow, only snow we got is from that big machine that cleans the ice at the local rink. So he figured to make do and when that machine went to dump its load, he would just lay under it. Took us 2 hours to dig him out. He lost two fingers and a thumb to frostbite.
+	scene "scenes/Mechanic/DLC1_CommunityE23.vcd" then self iMT_EllisStoryEnd foo:0 -4.44  //I ever tell you about the time my buddy Keith told me that he was picked up by some little green men and they...
+	scene "scenes/Mechanic/DLC1_KeithStories01.vcd" then self iMT_EllisStoryEnd foo:0 -15.42  //This one time my buddy Keith, on a DARE, got a tattoo: "I'm a moron" right across his forehead. Course, Keith made two hundred bucks off that, so... you ask yourself: who's the REAL moron, huh?
+	scene "scenes/Mechanic/DLC1_KeithStories02a.vcd" then self iMT_DLC1_KeithStories02b foo:0 -9.23  //This one time my buddy Keith started up a historic tour, on account of his mom took him to Colonial Williamsburg, and it is like a license to print money at them places.
+	scene "scenes/Mechanic/DLC1_KeithStories03a.vcd" then self iMT_DLC1_KeithStories03b foo:0 -14.21  //Ya know, my buddy Keith had his car drop in a lake off a bridge like this one here. See he was drivin' over it late at night, and there in the middle of the bridge was what looked, in Keith's estimation, like a dead bear. So Keith gets out of his car to ick to poke it with, right?
+	scene "scenes/Mechanic/DLC1_KeithStories04.vcd" then self iMT_EllisStoryEnd foo:0 -41.19  //I ever tell you about the time Keith made sushi? Yeah, his mom took him to a sushi place for his birthday and he didn't want to go, and it turned out he LOVED it, man. But it's like 10 bucks a su-sho in one of them places, so Keith figures hey, how hard can it be to roll up some raw food in seaweed, right? As it turns out, it's hard. Now, they say that experience is the best teacher, and experience taught Keith that if you ever eat three pounds of raw chicken, it kills you. Now luckily, Keith's brain went into self-defense mode and started shutting organs down to head the chicken off at the pass, and the doctors were able to get 'em out before his heart stopped. But to this day, Keith has no sensation in his right foot, and he don't recognize his own brother Paul no more.
+	scene "scenes/Mechanic/DLC1_KeithStories05.vcd" then self iMT_EllisStoryEnd foo:0 -20.00  //Hey ya'll, yeah, I like this bridge you got. You know, this reminds me the my buddy Keith and I were once on a bridge just like this, man. Well, I mean kinda, I mean I was on the bridge and Keith thought he could jump the river without the bridge, so I raised the bridge, and well... Did you know cars can float? I mean, for a little while at least...
+	scene "scenes/Mechanic/DLC1_KeithStories06_v2.vcd" then self iMT_EllisStoryEnd foo:0 -13.04  //I ever tell you about the time my buddy Keith got married? 'Course not... that's a trick question. Cause he never did get married. You know you always hear about them runaway brides? Well Keith, he was a runaway groom and on his wedding day... Yep, it all started when he...
+	scene "scenes/Mechanic/DLC1_KeithStories07.vcd" then self iMT_EllisStoryEnd foo:0 -18.59  //I ever tell you about the time my buddy Keith snuck into a wedding? He thought he was being smart getting all dressed up and like...but it seems the preacher wasn't there and they thought he was the preacher and well, he married them the best he could. I think that counts for them being married but, I dunno, maybe not. I think they named one of their...
+	scene "scenes/Mechanic/EllisStoriesA01.vcd" then self iMT_EllisStoryEnd foo:0 -7.93  //Man I love malls.  I do.  Once I was in this mall, up in Atlanta, and these guys were dancing for like money and stuff and my friend Dave and I was all...
+	scene "scenes/Mechanic/EllisStoriesB01.vcd" then self iMT_EllisStoryEnd foo:0 -12.29  //Jimmy Gibbs, Jr. is the man. I mean I don't know anybody like that, man.  But there was this guy I knew, he raced dirt tracks, not stock cars but open wheeled cars you know, and he was racing once and a goat...
+	scene "scenes/Mechanic/EllisStoriesC01.vcd" then self iMT_EllisStoryEnd foo:0 -13.43  //I knew this guy who was trying to set the world record on staying on a Ferris wheel.  He had been up there like two days or somethin' and he wanted some beer, but they weren't givin' him any so he got this rope.  Now don't ask me where he got the rope from---
+	scene "scenes/Mechanic/EllisStoriesD01.vcd" then self iMT_EllisStoryEnd foo:0 -23.98  //Man, all this mud reminds me of my friend Keith.  Yeah, he was goin' to build a shack once, to live in and all, and I know most people here, they build houses and they become shacks, but Keith, he was about jumpin' right to the shack stage.  But he had no wood. So he got some mud and was makin' what we were all thinkin' was gonna be these adobe bricks, you know, like when them people out west made bricks and shit?  Well, he had mud and...
+	scene "scenes/Mechanic/EllisStoriesE01.vcd" then self iMT_EllisStoryEnd foo:0 -9.99  //I ain't never been in a sugar cane field before. I mean, I seen 'em and all, but no real reason to go into one, but now you go into a peach grove, you find all kinds of cool shit.  This one time I was in...
+	scene "scenes/Mechanic/EllisStoriesF01.vcd" then self iMT_EllisStoryEnd foo:0 -8.54  //Do you know what suck the heads means?  Cause I came down here with Keith once and he didn't know and… I mean, it ain't nothin' bad.  It's about eatin'.
+	scene "scenes/Mechanic/EllisStoriesG01.vcd" then self iMT_EllisStoryEnd foo:0 -14.33  //I ever tell you about the time Keith and I made fireworks? Now, I didn't know shit about chemistry, but Keith figured,  "Gasoline burns, doesn't it?" Third degree burns on ninety-five percent of his body. Man, people in the next city over were calling to complain about the smell of burning skin.
+	scene "scenes/Mechanic/EllisStoriesH01.vcd" then self iMT_EllisStoryEnd foo:0 -13.34  //I ever tell you about the time Keith tried to deep fry a turkey? Third degree burns over ninety percent of his body. His doctor called up, like, other doctors to look at him cause they'd never seen burns on top of existing burns--
+	scene "scenes/Mechanic/EllisStoriesI01.vcd" then self iMT_EllisStoryEnd foo:0 -16.69  //I ever tell you about the time my buddy Keith drove his car off a cliff, broke both his legs? It's not a funny ha-ha story so much as a make-you-think story.  For instance: windshields look pretty durable, right? Not the case, according to Keith. Son of a bitch flew right through that sucker--
+	scene "scenes/Mechanic/EllisStoriesJ01.vcd" then self iMT_EllisStoryEnd foo:0 -17.96  //My buddy Keith lived in a grave yard once, for a whole year. It wasn't a dare or nothing, he just got kicked out of his house. He said he never saw a single ghost, except this one time when a ghost stabbed him from behind and took all his money, and he might have just been a homeless guy cause he had a robe on with two eyes cut outta his face--
+	scene "scenes/Mechanic/EllisStoriesK01.vcd" then self iMT_EllisStoryEnd foo:0 -19.75  //My buddy Keith tried camping out on top of a building once. He was shooting crows but the police were too busy tear gassing him to ask what he was doing up there. He screamed for an entire YEAR every single time he opened his eyes. Oh, man.  At first it was funny, then it just got sad, but then it got funny again. Oh, man.
+	scene "scenes/Mechanic/EllisStoriesL01.vcd" then self iMT_EllisStoryEnd foo:0 -15.53  //I ever tell you guys about the time my buddy Keith got rolled by a gator in a swamp? Man, he didn't agonize it or nothing, we were just trying to grab two so we could piss 'em off and get 'em into a fight. Anyway, the third time Keith went under, I realized something was wrong, so I--
+	scene "scenes/Mechanic/EllisStoriesM01.vcd" then self iMT_EllisStoryEnd foo:0 -15.02  //I ever tell you about the time my buddy Keith drowned in the Tunnel of Love? You wouldn't think it could happen cause the water's so shallow, but that's how it gets you, man: Over confidence. Keith was with his lady at the time and he was yelling for her to save him but she didn't wanna get wet--
+	scene "scenes/Mechanic/EllisStoriesN01.vcd" then self iMT_EllisStoryEnd foo:0 -12.07  //I ever tell you about the time me and Keith snuck into a Tunnel of Love? Man, if you get your spit thick enough, y'see, y'all can hang a loogie off the overhang, right, so when smoochin' sons of bitches behind you--
+	scene "scenes/Mechanic/EllisStoriesP01.vcd" then self iMT_EllisStoryEnd foo:0 -10.17  //I ever tell you about the time me and Keith snuck paintball guns on a roller coaster? I never heard of anybody else doing it, so I thought we might have invented a sport. So Keith called the patent office but--
+	scene "scenes/Mechanic/EllisStoriesQ01.vcd" then self iMT_EllisStoryEnd foo:0 -12.00  //I ever tell you about the time me and Keith made a homemade bumper car ride with riding mowers in his back yard? Mower blade wounds over ninety percent of his body. I didn't run him over, either.  He somehow managed to fall under his own.
+	scene "scenes/Mechanic/EllisStoriesR01.vcd" then self iMT_EllisStoryEnd foo:0 -3.46  //I ever tell you about the time me and Keith filled up water balloons with our own--
+	scene "scenes/Mechanic/EllisStoriesS01.vcd" then self iMT_EllisStoryEnd foo:0 -18.21  //One the time the army bombed my buddy Keith. He went camping and didn't bother to read the signs, and I guess they were just testing bombs that day.  All sorts of stuff too, not just regular bombs. Like biological nerve gas bombs, shrapnel bombs, these bombs that break up in the air into like a hundred smaller bombs--
+	scene "scenes/Mechanic/EllisStoriesT01.vcd" then self iMT_EllisStoryEnd foo:0 -11.59  //I ever tell you about the time my buddy Keith fell down an open manhole? He was unconscious down there for like a week.  During that time, unbeknownst to Keith, they paved over him. Keith had to--
+	scene "scenes/Mechanic/EllisStoriesU01.vcd" then self iMT_EllisStoryEnd foo:0 -15.21  //I ever tell you about the time my buddy Keith and I were on the top of a burning building and we had to fight our way down like five floors of zombies? Wait a second.  I guess that was you guys. Aw shit, man, I can't wait to tell Keith about that one.
+	scene "scenes/Mechanic/EllisStoriesV01.vcd" then self iMT_EllisStoryEnd foo:0 -16.01  //I ever tell you about the time my buddy Keith fell out the roller coaster? Yeah, he didn't drop far, mind you, just onto the tracks, but the carnival people wouldn't stop the ride cause all the other people paid good money and Keith snuck on for free, so he had to dodge for like twenty minutes or so.
+	scene "scenes/Mechanic/World142.vcd" then self iMT_EllisStoryEnd foo:0 -4.3  //Did I ever tell you the time me and my grandpa took the bus the Memphis to go visit Graceland and...
+}
+
+Rule iMT_EllisStoriesMechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic _auto_NotTellingStory
+	ApplyContext "_auto_TellingStory:1:60,_auto_DidInterrupt:0:0"
+	applycontexttoworld
+	Response iMT_EllisStoriesMechanic
+}
+
+Rule iMT_EllisStoriesGoatMechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsSaidEllisGoatStory _auto_NotTellingStory
+	ApplyContext "_auto_TellingStory:1:60,_auto_DidInterrupt:0:0,SaidEllisGoatStory:0:0"
+	applycontexttoworld
+	Response iMT_EllisStoriesMechanic
+}
+
+Rule iMT_EllisStoriesNextMechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsEllisStorySpecific _auto_NotTellingStory
+	ApplyContext "_auto_TellingStory:1:60,_auto_DidInterrupt:0:0,EllisStorySpecific:0:0"
+	applycontexttoworld
+	Response iMT_EllisStoriesMechanic
+}
+
+Response iMT_DLC1_KeithStories02bMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories02b.vcd" then self iMT_EllisStoryEnd foo:0 -26.93  //Now, you might ask yourself how an honest attempt to recreate the majesty of colonial times turned into raccoon fights at five bucks a pop in Keith's backyard? And the answer to that particular question is Keith sharin' a place with his two brothers, and them bein' assholes who wouldn't let him do it anywhere but in the back yard. Add to that Keith didn't technically have any¡K you know, history to show, but did have this whole family of feral raccoons livin' in the chassis of an old car, and you'd begin to understand?
+}
+
+Rule iMT_DLC1_KeithStories02bMechanic
+{
+	criteria iMT_DLC1_KeithStories02b IsNotCoughing IsNotIncapacitated IsMechanic _auto_NotDidInterrupt
+	Response iMT_DLC1_KeithStories02bMechanic
+}
+
+Response iMT_DLC1_KeithStories03bMechanic
+{
+	sequential
+	print " " then self iMT_DLC1_KeithStories03b foo:0 0
+	scene "scenes/Mechanic/DLC1_KeithStories03b.vcd" then self iMT_DLC1_KeithStories03b foo:0 -24.62  //Well, it turns out it's just some lady's fur coat that musta fell out out of her car, so... free coat, right? Now, owls won't normally attack a man, but in this case they were hungry, and that made them reckless. Keith reckons they must've been there for hours, watchin' what they thought was a bear carcass, cause as soon as he picked it up, those owls had claws in him an inch deep.
+	scene "scenes/Mechanic/DLC1_KeithStories03c.vcd" then self iMT_EllisStoryEnd foo:0 -17.73  //Well, Keith figures his best bet'll be to jump in the lake, cause owls can't swim. Well, them owls could. He fought them for twenty minutes, treading water, and during that time, a boat came, the bridge went up, and down went Keith's car. Sometimes nature's just tryin' to teach us, if only we'd listen.
+}
+
+Rule iMT_DLC1_KeithStories03bMechanic
+{
+	criteria iMT_DLC1_KeithStories03b IsNotCoughing IsNotIncapacitated IsMechanic _auto_NotDidInterrupt
+	Response iMT_DLC1_KeithStories03bMechanic
+}
+
+Response iMT_EllisStoryC1M2Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesK01.vcd" then self iMT_EllisStoryEnd foo:0 -19.75
+}
+
+Rule iMT_EllisStoryC1M2Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c1m2_streets
+	ApplyContext "_auto_TellingStory:1:20,SrcGrp_ELLISSTORY:1:0,EllisStorySpecific:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC1M2Mechanic
+}
+
+Response iMT_EllisStoryC1M3Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesA01.vcd" then self iMT_EllisStoryEnd foo:0 -7.93
+}
+
+Rule iMT_EllisStoryC1M3Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c1m3_mall
+	ApplyContext "_auto_TellingStory:1:8,SrcGrp_ELLISSTORY:1:0,EllisStorySpecific:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC1M3Mechanic
+}
+
+Response iMT_EllisStoryC1M4Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesB01.vcd" then self iMT_EllisStoryEnd foo:0 -12.29
+}
+
+Rule iMT_EllisStoryC1M4Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c1m4_atrium
+	ApplyContext "_auto_TellingStory:1:13,SrcGrp_ELLISSTORY:1:0,SaidEllisGoatStory:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC1M4Mechanic
+}
+
+Response iMT_EllisStoryC2M2Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesC01.vcd" then self iMT_EllisStoryEnd foo:0 -13.43
+	scene "scenes/Mechanic/EllisStoriesQ01.vcd" then self iMT_EllisStoryEnd foo:0 -12.00
+}
+
+Rule iMT_EllisStoryC2M2Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c2m2
+	ApplyContext "_auto_TellingStory:1:14,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC2M2Mechanic
+}
+
+Response iMT_EllisStoryC2M3Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesM01.vcd" then self iMT_EllisStoryEnd foo:0 -15.02
+	scene "scenes/Mechanic/EllisStoriesN01.vcd" then self iMT_EllisStoryEnd foo:0 -12.07
+}
+
+Rule iMT_EllisStoryC2M3Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c2m3
+	ApplyContext "_auto_TellingStory:1:16,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC2M3Mechanic
+}
+
+Response iMT_EllisStoryC2M4Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesP01.vcd" then self iMT_EllisStoryEnd foo:0 -10.17
+	scene "scenes/Mechanic/EllisStoriesV01.vcd" then self iMT_EllisStoryEnd foo:0 -16.01
+}
+
+Rule iMT_EllisStoryC2M4Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c2m4
+	ApplyContext "_auto_TellingStory:1:17,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC2M4Mechanic
+}
+
+Response iMT_EllisStoryC2M5Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesG01.vcd" then self iMT_EllisStoryEnd foo:0 -14.33
+}
+
+Rule iMT_EllisStoryC2M5Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c2m5
+	ApplyContext "_auto_TellingStory:1:15,SrcGrp_ELLISSTORY:1:0,EllisStorySpecific:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC2M5Mechanic
+}
+
+Response iMT_EllisStoryC3M2Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesH01.vcd" then self iMT_EllisStoryEnd foo:0 -13.34
+}
+
+Rule iMT_EllisStoryC3M2Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismapc3m2_swamp
+	ApplyContext "_auto_TellingStory:1:14,SrcGrp_ELLISSTORY:1:0,EllisStorySpecific:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC3M2Mechanic
+}
+
+Response iMT_EllisStoryC3M3Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesD01.vcd" then self iMT_EllisStoryEnd foo:0 -23.98
+}
+
+Rule iMT_EllisStoryC3M3Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismapc3m3_shantytown
+	ApplyContext "_auto_TellingStory:1:25,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC3M3Mechanic
+}
+
+Response iMT_EllisStoryC3M4Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesL01.vcd" then self iMT_EllisStoryEnd foo:0 -15.53
+}
+
+Rule iMT_EllisStoryC3M4Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismapc3m4_plantation
+	ApplyContext "_auto_TellingStory:1:16,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC3M4Mechanic
+}
+
+Response iMT_EllisStoryC4M2Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesI01.vcd" then self iMT_EllisStoryEnd foo:0 -16.69
+}
+
+Rule iMT_EllisStoryC4M2Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY ismap_c4m2_sugarmill_a
+	ApplyContext "_auto_TellingStory:1:17,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC4M2Mechanic
+}
+
+Response iMT_EllisStoryC4M3Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesE01.vcd" then self iMT_EllisStoryEnd foo:0 -9.99
+}
+
+Rule iMT_EllisStoryC4M3Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY isc4m3
+	ApplyContext "_auto_TellingStory:1:11,SrcGrp_ELLISSTORY:1:0,EllisStorySpecific:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC4M3Mechanic
+}
+
+Response iMT_EllisStoryC4M4Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesU01.vcd" then self iMT_EllisStoryEnd foo:0 -15.21
+}
+
+Rule iMT_EllisStoryC4M4Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY isc4m4
+	ApplyContext "_auto_TellingStory:1:16,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC4M4Mechanic
+}
+
+Response iMT_EllisStoryC5M2Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesF01.vcd" then self iMT_EllisStoryEnd foo:0 -8.54
+}
+
+Rule iMT_EllisStoryC5M2Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY IsMapc5m2_park
+	ApplyContext "_auto_TellingStory:1:9,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC5M2Mechanic
+}
+
+Response iMT_EllisStoryC5M3Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesR01.vcd" then self iMT_EllisStoryEnd foo:0 -3.46
+}
+
+Rule iMT_EllisStoryC5M3Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY IsMapc5m3_cemetery _auto_NotTellingStory
+	ApplyContext "_auto_TellingStory:1:4,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC5M3Mechanic
+}
+
+Response iMT_EllisStoryC5M4Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesJ01.vcd" then self iMT_EllisStoryEnd foo:0 -17.96
+}
+
+Rule iMT_EllisStoryC5M4Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY IsMapc5m4_quarter
+	ApplyContext "_auto_TellingStory:1:18,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC5M4Mechanic
+}
+
+Response iMT_EllisStoryC5M5Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesS01.vcd" then self iMT_EllisStoryEnd foo:0 -18.21
+}
+
+Rule iMT_EllisStoryC5M5Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY IsMapc5m5_bridge
+	ApplyContext "_auto_TellingStory:1:19,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC5M5Mechanic
+}
+
+Response iMT_EllisStoryC6M2Mechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories02a.vcd" then self iMT_DLC1_KeithStories02b foo:0 -9.23
+	scene "scenes/Mechanic/DLC1_KeithStories04.vcd" then self iMT_EllisStoryEnd foo:0 -41.19
+	scene "scenes/Mechanic/DLC1_KeithStories06_v1.vcd" then self iMT_EllisStoryEnd foo:0 -14.18
+	scene "scenes/Mechanic/DLC1_KeithStories06_v2.vcd" then self iMT_EllisStoryEnd foo:0 -13.04
+	scene "scenes/Mechanic/DLC1_KeithStories07.vcd" then self iMT_EllisStoryEnd foo:0 -18.59
+}
+
+Rule iMT_EllisStoryC6M2Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY isc6m2_bedlam _auto_NotTellingStory
+	ApplyContext "_auto_TellingStory:1:42,SrcGrp_ELLISSTORY:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC6M2Mechanic
+}
+
+Response iMT_EllisStoryC6M3Mechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories03a.vcd" then self iMT_DLC1_KeithStories03b foo:0 -14.21
+	scene "scenes/Mechanic/DLC1_KeithStories05.vcd" then self iMT_EllisStoryEnd foo:0 -20.00
+}
+
+Rule iMT_EllisStoryC6M3Mechanic
+{
+	criteria iMT_EllisStories IsNotCoughing IsNotIncapacitated IsMechanic IsNotSrcGrp_ELLISSTORY Isc6m3_port _auto_NotTellingStory
+	ApplyContext "_auto_TellingStory:1:60,SrcGrp_ELLISSTORY:1:0,SaidEllisBridgeStoryStart:1:0,EllisStorySpecific:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryC6M3Mechanic
+}
+
+Response iMT_EllisStoryEndMechanic
+{
+	print " " then any iMT_EllisStoryInterrupt foo:0 0
+}
+
+Rule iMT_EllisStoryEndMechanic
+{
+	criteria iMT_EllisStoryEnd IsMechanic _auto_IsTellingStory
+	ApplyContext "_auto_TellingStory:0:0,_auto_DidInterrupt:1:0"
+	applycontexttoworld
+	Response iMT_EllisStoryEndMechanic
+}
+
+Response iMT_EllisStoryReacMechanic
+{
+	scene "scenes/Mechanic/EllisStoriesInterrupt04.vcd"  //Okay, but...
+	scene "scenes/Mechanic/EllisStoriesInterrupt05.vcd"  //Okay.
+	scene "scenes/Mechanic/EllisStoriesInterrupt09.vcd"  //Sorry, didn't mean to put you out none.
+	scene "scenes/Mechanic/EllisStoriesInterrupt14.vcd"  //Okay.
+}
+
+Rule iMT_EllisStoryReacMechanic
+{
+	criteria iMT_EllisStoryReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsMechanic IssuerCloseEnough
+	Response iMT_EllisStoryReacMechanic
+}
+
+Rule iMT_EllisStoryReacGoatMechanic
+{
+	criteria iMT_EllisStoryReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsMechanic IssuerCloseEnough IsSaidEllisGoatStory
+	Response EllisStoryReac01GoatMechanic
+}
+
+Rule iMT_EllisStoryStopMechanic
+{
+	criteria iMT_EllisStoryStop IsNotCoughing IsNotIncapacitated IsMechanic
+	Response EllisStoryReac01Mechanic
+}
+
+Rule iMT_EllisStoryStopGoatMechanic
+{
+	criteria iMT_EllisStoryStop IsNotCoughing IsNotIncapacitated IsMechanic IsSaidEllisGoatStory
+	Response EllisStoryReac01GoatMechanic
+}
+
+// Story-specific overrides
+
+Rule iMT_EllisStoryInterruptMechanic
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotSaidLeavingSafeArea _auto_IsTellingStory ChanceToFire100Percent
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule iMT_LeavingSafeRoomC5M5Mechanic
+{
+	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsNotSaidLeavingSafeArea IsMapc5m5_bridge _auto_IsTellingStory ChanceToFire100Percent
+	ApplyContext "Talk:0:0,SaidLeavingSafeArea:1:0,_auto_TimerLockA:1:5,_auto_SoldierChatter:1:0"
+	applycontexttoworld
+	Response C5M5LeaveSafeCoach
+}
+
+// C5M3 manhole story fix
+
+Rule iMT_EllisManholeStoryMechanic
+{
+	criteria ConceptRemark IsMechanic IsMapc5m3_cemetery Isc5m3manhole IsNotSaidc5m3manhole IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear300 AutoIsNotScavenge AutoIsNotSurvival _auto_NotInSewer IsNotSpeakingWeight0
+	ApplyContext "Saidc5m3manhole:1:0,_auto_TellingStory:1:12,_auto_DidInterrupt:0:0"
+	applycontexttoworld
+	Response PlayerRemarkc5m3manholeMechanic
+}
+
+// C6M2 tattoo story fix
+
+Response iMT_EllisTattooStoryMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories01.vcd" then any EllisInterrupt foo:0 -15.42
+}
+
+Rule iMT_EllisTattooStoryMechanic
+{
+	criteria ConceptRemark IsMechanic isc6m2_bedlam IsWorldC6M2_Tattoo IsNotSaidWorldC6M2_Tattoo ChanceToFire10Percent IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear300 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
+	ApplyContext "SaidWorldC6M2_Tattoo:1:0,_auto_TellingStory:1:16,_auto_DidInterrupt:0:0"
+	applycontexttoworld
+	Response iMT_EllisTattooStoryMechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerReadyMechanic
+{
+	scene "scenes/Mechanic/MeleeWeapons30.vcd"  //Man, I'm gonna beat these sons of bitches till I lose my watch.
+	scene "scenes/Mechanic/MeleeWeapons31.vcd"  //Time to beat on some sons of bitches.
+	scene "scenes/Mechanic/MeleeWeapons32.vcd"  //Gonna beat me a zombie till there ain't a chunk big enough to hit.
+	scene "scenes/Mechanic/TakeMelee07.vcd"  //I'm gonna mess some zombies up now.
+	scene "scenes/Mechanic/WorldC2M4B02.vcd"  //I was born ready. So... yes.
+}
+
+Rule iMT_PlayerAnswerReadyMechanic
+{
+	criteria iMT_PlayerAnswerReady IsMechanic
+	Response iMT_PlayerAnswerReadyMechanic
+}
+
+Rule iMT_PlayerBattleCryMechanic
+{
+	criteria iMT_PlayerBattleCry IsMechanic
+	Response PlayerChainSawUsedMechanic
+}
+
+Response iMT_PlayerBreathingMechanic
+{
+	scene "scenes/Mechanic/Defibrillator13.vcd"  //[gasp for breath]
+	scene "scenes/Mechanic/Defibrillator14.vcd"  //[gasp for breath]
+}
+
+Rule iMT_PlayerBreathingMechanic
+{
+	criteria iMT_PlayerBreathing IsMechanic
+	Response iMT_PlayerBreathingMechanic
+}
+
+Response iMT_PlayerBreathingReacMechanic
+{
+	scene "scenes/Mechanic/WorldC2M123.vcd"  //Coach, you're breathin' a little hard, you alright?
+}
+
+Rule iMT_PlayerBreathingReacMechanic
+{
+	criteria iMT_PlayerBreathingReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IssuerClose ChanceToFire10Percent
+	Response iMT_PlayerBreathingReacMechanic
+}
+
+Rule iMT_PlayerCloseTheDoorMechanic
+{
+	criteria iMT_PlayerCloseTheDoor IsMechanic
+	Response PlayerLockTheDoorCheckPointMechanic
+}
+
+Rule iMT_PlayerCloseTheDoorC1Mechanic
+{
+	criteria iMT_PlayerCloseTheDoor IsMechanic ismap_c1m1_hotel
+	Response PlayerLockTheDoorCheckPointC1Mechanic
+}
+
+Rule iMT_PlayerCoughingMechanic
+{
+	criteria iMT_PlayerCoughing IsMechanic
+	Response SurvivorCoughingMechanic
+}
+
+Response iMT_PlayerDeathScreamMechanic
+{
+	scene "scenes/Mechanic/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
+	scene "scenes/Mechanic/LedgeHangFall02.vcd"  //NOOOOOOOOOOOOOOOO!!!!
+	scene "scenes/Mechanic/LedgeHangFall03.vcd"  //WOOOOOAAAAAHHHHHH!!!!
+	scene "scenes/Mechanic/LedgeHangFall04.vcd"  //GOOD-BYYYYYYYYYYYE!!
+	scene "scenes/Mechanic/LedgeHangFall05.vcd"  //SORRY Y'AAAAAAAAAALLL!!
+}
+
+Rule iMT_PlayerDeathScreamMechanic
+{
+	criteria iMT_PlayerDeathScream IsMechanic
+	Response iMT_PlayerDeathScreamMechanic
+}
+
+Response iMT_PlayerEquippedItemMechanic
+{
+	scene "scenes/Mechanic/KillConfirmation03.vcd"  //I got it.
+	scene "scenes/Mechanic/WorldC1M4B43.vcd"  //I got this one!
+}
+
+Rule iMT_PlayerEquippedItemMechanic
+{
+	criteria iMT_PlayerEquippedItem IsMechanic
+	Response iMT_PlayerEquippedItemMechanic
+}
+
+Rule iMT_PlayerFriendlyFireMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic
+	Response PlayerFriendlyFireMechanic
+}
+
+Rule iMT_PlayerFriendlyFireC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromCoachMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic SubjectIsCoach IsSubjectDistNear800
+	Response PlayerFriendlyFireFromCoachMechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromCoachC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic SubjectIsCoach IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromCoachC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic SubjectIsGambler IsSubjectDistNear800
+	Response PlayerFriendlyFireFromGamblerMechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic SubjectIsGambler IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic SubjectIsProducer IsSubjectDistNear800
+	Response PlayerFriendlyFireFromProducerMechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic SubjectIsProducer IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromProducerC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireTankMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsZombiePresentTank IsSaidTankWarn2 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankMechanic
+}
+
+Rule iMT_PlayerFriendlyFireTankCoachMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsZombiePresentTank IsSaidTankWarn2 SubjectIsCoach IsSubjectDistNear800 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankCoachMechanic
+}
+
+Rule iMT_PlayerFriendlyFireTankGamblerMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsZombiePresentTank IsSaidTankWarn2 SubjectIsGambler IsSubjectDistNear800 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankGamblerMechanic
+}
+
+Rule iMT_PlayerFriendlyFireTankProducerMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsZombiePresentTank IsSaidTankWarn2 SubjectIsProducer IsSubjectDistNear800 isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response PlayerFriendlyFireTankProducerMechanic
+}
+
+Response iMT_PlayerGetToVehicleBoatMechanic
+{
+	scene "scenes/Mechanic/WorldC3M138.vcd" //Let's go! Everybody on the boat!
+	scene "scenes/Mechanic/WorldC3M139.vcd" //Here we go! Everybody on the boat!
+	scene "scenes/Mechanic/WorldC3M414.vcd"  //Hey, run to the boat! Run to the boat!
+	scene "scenes/Mechanic/WorldC3M416.vcd"  //Hey, quit fighting and get on the boat!
+	scene "scenes/Mechanic/WorldC4M4B26.vcd"  //GET TO THE BOAT!
+	scene "scenes/Mechanic/WorldC4M4B27.vcd"  //Y'ALL GET TO THE BOAT!
+}
+
+Rule iMT_PlayerGetToVehicleBoatMechanic
+{
+	criteria iMT_PlayerGetToVehicleBoat IsMechanic
+	Response iMT_PlayerGetToVehicleBoatMechanic
+}
+
+Response iMT_PlayerGetToVehicleChopperMechanic
+{
+	scene "scenes/Mechanic/World439.vcd"  //To the'copter!
+	scene "scenes/Mechanic/World440.vcd"  //Head to the helicopter!
+	scene "scenes/Mechanic/World443.vcd"  //Just get inside the helicopter, man!
+	scene "scenes/Mechanic/WorldC1M1B112.vcd" odds 10 then any iMT_WhirlybirdReac foo:0 0  //Goddamn whirlybird left without us!
+	scene "scenes/Mechanic/WorldC2M5B57.vcd"  //Let's go! Get to the chopper!
+	scene "scenes/Mechanic/WorldC2M5B58.vcd"  //Everybody get to the chopper!
+	scene "scenes/Mechanic/WorldC2M5B59.vcd"  //Let's go, guys! Get to the chopper!
+	scene "scenes/Mechanic/WorldC2M5B60.vcd"  //Chopper's leaving, let's go! Let's go!
+	scene "scenes/Mechanic/WorldC2M5B61.vcd"  //Let's go, let's go! Chopper's here!
+}
+
+Rule iMT_PlayerGetToVehicleChopperMechanic
+{
+	criteria iMT_PlayerGetToVehicleChopper IsMechanic
+	Response iMT_PlayerGetToVehicleChopperMechanic
+}
+
+Response iMT_PlayerGetToVehicleWheelsMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleBridgeRun03.vcd"  //Run to Jimmy Gibbs Jr!
+	scene "scenes/Mechanic/WorldC1M4B60.vcd"  //Everybody get in the damn car!
+	scene "scenes/Mechanic/WorldC1M4B61.vcd"  //Get in the car! We're ready!
+}
+
+Rule iMT_PlayerGetToVehicleWheelsMechanic
+{
+	criteria iMT_PlayerGetToVehicleWheels IsMechanic
+	Response iMT_PlayerGetToVehicleWheelsMechanic
+}
+
+Rule iMT_PlayerGoingToDieMechanic
+{
+	criteria iMT_PlayerGoingToDie IsMechanic
+	Response SurvivorVocalizeGoingToDieMechanic
+}
+
+Rule iMT_PlayerGoingToDie3Mechanic
+{
+	criteria iMT_PlayerGoingToDie IsMechanic IsOnThirdStrike
+	Response SurvivorVocalizeGoingToDie3Mechanic
+}
+
+Rule iMT_PlayerGooedBySpitterMechanic
+{
+	criteria iMT_PlayerGooedBySpitter IsMechanic
+	Response SurvivorGooedBySpitterMechanic
+}
+
+Response iMT_PlayerGooedBySpitterC1Mechanic
+{
+	scene "scenes/Mechanic/GooedBySpitterC101.vcd"  //Ah this shit burns!!?!?
+	scene "scenes/Mechanic/GooedBySpitterC102.vcd" then self iMT_PlayerGooedBySpitterC1Reac foo:0 0.3  //What the hell!?!? Spittin' fire?
+	scene "scenes/Mechanic/GooedBySpitterC103.vcd"  //Hey run, man! This is some crazy shit.
+}
+
+Rule iMT_PlayerGooedBySpitterC1Mechanic
+{
+	criteria iMT_PlayerGooedBySpitter IsMechanic C1M1orC1M2 NoKnowSpitter IsNotSurvival
+	Response iMT_PlayerGooedBySpitterC1Mechanic
+}
+
+Rule iMT_PlayerGooedBySpitterC1ReacMechanic
+{
+	criteria iMT_PlayerGooedBySpitterC1Reac IsNotCoughing IsNotIncapacitated IsMechanic
+	Response Player.GooedBySpitterC1RMechanic
+}
+
+Response iMT_PlayerHelloMechanic
+{
+	scene "scenes/Mechanic/ScenarioJoin01.vcd"  //Hello!
+	scene "scenes/Mechanic/ScenarioJoin02.vcd"  //Hi!
+	scene "scenes/Mechanic/ScenarioJoin03.vcd"  //Hey hey!
+	scene "scenes/Mechanic/ScenarioJoin04.vcd"  //Howdy!
+}
+
+Rule iMT_PlayerHelloMechanic
+{
+	criteria iMT_PlayerHello IsMechanic
+	Response iMT_PlayerHelloMechanic
+}
+
+Rule iMT_PlayerIncapacitatedHurtMechanic
+{
+	criteria iMT_PlayerIncapacitatedHurt IsMechanic
+	Response SurvivorIncapacitatedHurtMechanic
+}
+
+Response iMT_PlayerMeleeMechanic
+{
+	scene "scenes/Mechanic/MeleeSwing01.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing02.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing03.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing04.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing05.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing06.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing07.vcd"  //[Melee grunt]
+}
+
+Rule iMT_PlayerMeleeMechanic
+{
+	criteria iMT_PlayerMelee IsMechanic
+	Response iMT_PlayerMeleeMechanic
+}
+
+Response iMT_PlayerMournCoachMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournCoach01.vcd"  //Ah man Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach02.vcd"  //Well, Coach, thanks for all you done, man.
+	scene "scenes/Mechanic/SurvivorMournCoach03.vcd"  //Goodbye Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach04.vcd"  //You were a hell of a man, Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach05.vcd"  //Thanks Coach.
+	scene "scenes/Mechanic/SurvivorMournCoachC101.vcd"  //Man, I was hoping me and coach were gonna be friends.
+}
+
+Rule iMT_PlayerMournCoachAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsCoach IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournCoachMechanic
+}
+
+Rule iMT_PlayerMournCoachAliveC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsCoach IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames ExtraWeight10
+	Response SurvivorMournCoachC1Mechanic
+}
+
+Rule iMT_PlayerMournCoachDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNotAlive IsCoachNear200
+	Response iMT_PlayerMournCoachMechanic
+}
+
+Rule iMT_PlayerMournCoachDeadC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNotAlive IsCoachNear200 ismap_c1m1_hotel NoKnowNames
+	Response SurvivorMournCoachC1Mechanic
+}
+
+Response iMT_PlayerMournGamblerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournGamblerC101.vcd"  //Bet he didn't think he'd die before me.
+	scene "scenes/Mechanic/SurvivorMournNick01.vcd"  //Ahh Nick.
+	scene "scenes/Mechanic/SurvivorMournNick02.vcd"  //Nick, you were cool.
+	scene "scenes/Mechanic/SurvivorMournNick03.vcd"  //Miss ya, brother.
+	scene "scenes/Mechanic/SurvivorMournNick04.vcd"  //Damn, Nick. We was just gettin' to be friends.
+}
+
+Rule iMT_PlayerMournGamblerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsGambler IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournGamblerMechanic
+}
+
+Rule iMT_PlayerMournGamblerAliveC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsGambler IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames ExtraWeight10
+	Response SurvivorMournGamblerC1Mechanic
+}
+
+Rule iMT_PlayerMournGamblerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNotAlive IsGamblerNear200
+	Response iMT_PlayerMournGamblerMechanic
+}
+
+Rule iMT_PlayerMournGamblerDeadC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNotAlive IsGamblerNear200 ismap_c1m1_hotel NoKnowNames
+	Response SurvivorMournGamblerC1Mechanic
+}
+
+Response iMT_PlayerMournProducerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournProducerC101.vcd"  //She was the last one I wanted to see go.
+	scene "scenes/Mechanic/SurvivorMournProducerC102.vcd"  //She was the last one I wanted to see go.
+	scene "scenes/Mechanic/SurvivorMournRochelle01.vcd"  //Be good Rochelle.
+	scene "scenes/Mechanic/SurvivorMournRochelle02.vcd"  //Ro, I'm gonna miss ya.
+	scene "scenes/Mechanic/SurvivorMournRochelle03.vcd"  //I'll remember you in my prayers Ro.
+	scene "scenes/Mechanic/SurvivorMournRochelle04.vcd"  //Hell of a girl, Ro.
+}
+
+Rule iMT_PlayerMournProducerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsProducer IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournProducerMechanic
+}
+
+Rule iMT_PlayerMournProducerAliveC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsProducer IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames ExtraWeight10
+	Response SurvivorMournProducerC1Mechanic
+}
+
+Rule iMT_PlayerMournProducerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNotAlive IsProducerNear200
+	Response iMT_PlayerMournProducerMechanic
+}
+
+Rule iMT_PlayerMournProducerDeadC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNotAlive IsProducerNear200 ismap_c1m1_hotel NoKnowNames
+	Response SurvivorMournProducerC1Mechanic
+}
+
+Rule iMT_PlayerMournBikerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsBiker IsSubjectDistNear200 ExtraWeight10
+	Response SurvivorMournGamblerC1Mechanic
+}
+
+Rule iMT_PlayerMournBikerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic NotBikerAlive IsBikerNear200
+	Response SurvivorMournGamblerC1Mechanic
+}
+
+Response iMT_PlayerMournManagerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournNick03.vcd"  //Miss ya, brother.
+}
+
+Rule iMT_PlayerMournManagerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsManager IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournManagerMechanic
+}
+
+Rule iMT_PlayerMournManagerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic NotManagerAlive IsManagerNear200
+	Response iMT_PlayerMournManagerMechanic
+}
+
+Rule iMT_PlayerMournNamVetAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsNamVet IsSubjectDistNear200 ExtraWeight10
+	Response iMT_PlayerMournManagerMechanic
+}
+
+Rule iMT_PlayerMournNamVetDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic NotNamVetAlive IsNamVetNear200
+	Response iMT_PlayerMournManagerMechanic
+}
+
+Rule iMT_PlayerMournTeenGirlAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsTeenGirl IsSubjectDistNear200 ExtraWeight10
+	Response SurvivorMournProducerC1Mechanic
+}
+
+Rule iMT_PlayerMournTeenGirlDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic NotTeenGirlAlive IsTeenGirlNear200
+	Response SurvivorMournProducerC1Mechanic
+}
+
+Rule iMT_PlayerMournUnknownAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic SubjectIsUnknown IsSubjectDistNear200 ExtraWeight10
+	Response SurvivorMournProducerC1Mechanic
+}
+
+Rule iMT_PlayerNearExitMechanic
+{
+	criteria iMT_PlayerNearExit IsMechanic
+	Response SurvivorNearCheckpointMechanic
+}
+
+Rule iMT_PlayerNiceShotMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotCoachMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsCoach IsSubjectDistNear800
+	Response PlayerNiceShotCoachMechanic
+}
+
+Rule iMT_PlayerNiceShotCoachC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsCoach IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotGamblerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsGambler IsSubjectDistNear800
+	Response PlayerNiceShotGamblerMechanic
+}
+
+Rule iMT_PlayerNiceShotGamblerC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsGambler IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotProducerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsProducer IsSubjectDistNear800
+	Response PlayerNiceShotProducerMechanic
+}
+
+Rule iMT_PlayerNiceShotProducerC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsProducer IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Response iMT_PlayerNiceShotBikerMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing12.vcd"  //Hey, nice shot Francis.
+}
+
+Rule iMT_PlayerNiceShotBikerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerNiceShotBikerMechanic
+}
+
+Rule iMT_PlayerNiceShotBikerC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsBiker IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotManagerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsManager IsSubjectDistNear800
+	Response PlayerNiceShotLouisMechanic
+}
+
+Rule iMT_PlayerNiceShotManagerC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsManager IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotTeenGirlMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsTeenGirl IsSubjectDistNear800
+	Response L4D1PlayerNiceShotZoeyC6M3Mechanic
+}
+
+Rule iMT_PlayerNiceShotTeenGirlC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsTeenGirl IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotUnknownMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsUnknown IsSubjectDistNear800
+	Response L4D1PlayerNiceShotZoeyC6M3Mechanic
+}
+
+Rule iMT_PlayerNiceShotUnknownC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic SubjectIsUnknown IsSubjectDistNear800 ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
+}
+
+Response iMT_PlayerPainNoiseMechanic
+{
+	scene "scenes/Mechanic/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtMajor01.vcd"  //[pain noise - huh]
+	scene "scenes/Mechanic/HurtMajor02.vcd"  //[pain noise - ahh]
+	scene "scenes/Mechanic/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/Mechanic/HurtMajor04.vcd"  //[pain noise - ugh]
+	scene "scenes/Mechanic/HurtMajor05.vcd"  //[pain noise - ugh]
+	scene "scenes/Mechanic/HurtMajor06.vcd"  //[pain noise - ugh]
+}
+
+Rule iMT_PlayerPainNoiseMechanic
+{
+	criteria iMT_PlayerPainNoise IsMechanic
+	Response iMT_PlayerPainNoiseMechanic
+}
+
+Response iMT_PlayerPouncedC1Mechanic
+{
+	scene "scenes/Mechanic/HunterPouncedC101.vcd"  //A zombie's got him!
+	scene "scenes/Mechanic/HunterPouncedC102.vcd"  //One of those things got him!
+}
+
+Response iMT_PlayerPouncedCoachMechanic
+{
+	scene "scenes/Mechanic/HunterCoachPounced01.vcd"  //Hunter's got Coach!
+	scene "scenes/Mechanic/HunterCoachPounced02.vcd"  //Hey, hunter on Coach!
+}
+
+Rule iMT_PlayerPouncedCoachMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsCoach IsSubjectDistNear800
+	Response iMT_PlayerPouncedCoachMechanic
+}
+
+Rule iMT_PlayerPouncedCoachC1Mechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsCoach IsSubjectDistNear800 C1M1orC1M2 NoKnowHunter IsNotSurvival
+	Response iMT_PlayerPouncedC1Mechanic
+}
+
+Response iMT_PlayerPouncedGamblerMechanic
+{
+	scene "scenes/Mechanic/HunterNickPounced01.vcd"  //Hunter's got Nick!
+	scene "scenes/Mechanic/HunterNickPounced02.vcd"  //Hey hunter's on Nick!
+}
+
+Rule iMT_PlayerPouncedGamblerMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsGambler IsSubjectDistNear800
+	Response iMT_PlayerPouncedGamblerMechanic
+}
+
+Rule iMT_PlayerPouncedGamblerC1Mechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsGambler IsSubjectDistNear800 C1M1orC1M2 NoKnowHunter IsNotSurvival
+	Response iMT_PlayerPouncedC1Mechanic
+}
+
+Response iMT_PlayerPouncedProducerMechanic
+{
+	scene "scenes/Mechanic/HunterRochellePounced01.vcd"  //Hunter's got Rochelle!
+	scene "scenes/Mechanic/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
+}
+
+Rule iMT_PlayerPouncedProducerMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsProducer IsSubjectDistNear800
+	Response iMT_PlayerPouncedProducerMechanic
+}
+
+Response iMT_PlayerPouncedProducerC1Mechanic
+{
+	scene "scenes/Mechanic/HunterPouncedC1Producer01.vcd"  //Shit, a zombies got her!
+	scene "scenes/Mechanic/HunterPouncedC1Producer02.vcd"  //Hey, one of those things got her!
+}
+
+Rule iMT_PlayerPouncedProducerC1Mechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsProducer IsSubjectDistNear800 C1M1orC1M2 NoKnowHunter IsNotSurvival
+	Response iMT_PlayerPouncedProducerC1Mechanic
+}
+
+Rule iMT_PlayerPouncedBikerMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsBiker IsSubjectDistNear800
+	Response iMT_PlayerPouncedC1Mechanic
+}
+
+Rule iMT_PlayerPouncedManagerMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsManager IsSubjectDistNear800
+	Response iMT_PlayerPouncedC1Mechanic
+}
+
+Rule iMT_PlayerPouncedNamVetMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsNamVet IsSubjectDistNear800
+	Response iMT_PlayerPouncedC1Mechanic
+}
+
+Rule iMT_PlayerPouncedTeenGirlMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsTeenGirl IsSubjectDistNear800
+	Response iMT_PlayerPouncedProducerC1Mechanic
+}
+
+Rule iMT_PlayerPouncedUnknownMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic SubjectIsUnknown IsSubjectDistNear800
+	Response iMT_PlayerPouncedProducerC1Mechanic
+}
+
+Rule iMT_PlayerReloadingMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic
+	Response SurvivorReloadingMechanic
+}
+
+Rule iMT_PlayerReloadingIntenseMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic InIntenseCombat
+	Response SurvivorReloadingIntenseMechanic
+}
+
+Rule iMT_PlayerReloadingQuietMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic IsNotSaidSafeSpotAhead IsNotZombiePresentTank _auto_IsMechanicInWitchville
+	Response SurvivorReloadingC4M2Mechanic
+}
+
+Response iMT_PlayerSuggestHealthMechanic
+{
+	scene "scenes/Mechanic/SuggestHealth01.vcd"  //Heal up!
+	scene "scenes/Mechanic/SuggestHealth02.vcd"  //Hey, y'all should heal now.
+	scene "scenes/Mechanic/SuggestHealth03.vcd"  //It's a good time to heal up everybody.
+	scene "scenes/Mechanic/SuggestHealth04.vcd"  //Everybody take a minute and get yourself healed.
+	scene "scenes/Mechanic/SuggestHealthC101.vcd"  //Don't forget your health kits.
+	scene "scenes/Mechanic/SuggestHealthC102.vcd"  //Anybody want to heal now?
+	scene "scenes/Mechanic/SuggestHealthC103.vcd"  //Good time to heal.
+}
+
+Rule iMT_PlayerSuggestHealthMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic
+	Response iMT_PlayerSuggestHealthMechanic
+}
+
+Rule iMT_PlayerSuggestHealthC1Mechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Mechanic
+}
+
+Rule iMT_PlayerSuggestHealthCoachMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic SubjectIsCoach IsSubjectDistNear200
+	Response PlayerSuggestHealthCoachMechanic
+}
+
+Rule iMT_PlayerSuggestHealthCoachC1Mechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic SubjectIsCoach IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Mechanic
+}
+
+Rule iMT_PlayerSuggestHealthGamblerMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic SubjectIsGambler IsSubjectDistNear200
+	Response PlayerSuggestHealthGamblerMechanic
+}
+
+Rule iMT_PlayerSuggestHealthGamblerC1Mechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic SubjectIsGambler IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Mechanic
+}
+
+Rule iMT_PlayerSuggestHealthProducerMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic SubjectIsProducer IsSubjectDistNear200
+	Response PlayerSuggestHealthProducerMechanic
+}
+
+Rule iMT_PlayerSuggestHealthProducerC1Mechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic SubjectIsProducer IsSubjectDistNear200 ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthC1Mechanic
+}
+
+Response iMT_PlayerTeamKillMechanic
+{
+	scene "scenes/Mechanic/TeamKillAccident01.vcd"  //Woah! I didn't do that! Man, that ain't right!
+	scene "scenes/Mechanic/TeamKillAccident02.vcd"  //That's just straight messed up, man.
+	scene "scenes/Mechanic/TeamKillAccident03.vcd"  //Jumpin' Jesus! What are you doin'!?!?!
+	scene "scenes/Mechanic/TeamKillAccident04.vcd"  //Yo we're on the same team aren't we?
+	scene "scenes/Mechanic/TeamKillAccident05.vcd"  //Jesus Christ, man!
+}
+
+Rule iMT_PlayerTeamKillMechanic
+{
+	criteria iMT_PlayerTeamKill IsMechanic
+	Response iMT_PlayerTeamKillMechanic
+}
+
+Response iMT_PlayerTransitionMechanic
+{
+	scene "scenes/Mechanic/TransitionClose01.vcd"  //YEAH!
+	scene "scenes/Mechanic/TransitionClose02.vcd"  //I can't hardly believe we made that!
+	scene "scenes/Mechanic/TransitionClose03.vcd"  //That was closer than a... well shit man that was just straight up close!
+	scene "scenes/Mechanic/TransitionClose04.vcd"  //Who here didn't think we were gonna make that?
+	scene "scenes/Mechanic/TransitionClose05.vcd"  //That there was some crazy shit, man!
+	scene "scenes/Mechanic/TransitionClose06.vcd"  //Oh shit yeah! Oh shit yeah!
+	scene "scenes/Mechanic/TransitionClose07.vcd"  //Elvis has left the building!
+	scene "scenes/Mechanic/TransitionClose08.vcd"  //Oh man! Alright. You might want to clean your drawers after that one! I know I do.
+	scene "scenes/Mechanic/TransitionClose09.vcd"  //We gonna need to do better than THAT.
+	scene "scenes/Mechanic/TransitionClose10.vcd"  //Dude, we just got our asses handed to us.
+	scene "scenes/Mechanic/TransitionClose11.vcd"  //[whistles] That was BRUTAL!
+	scene "scenes/Mechanic/TransitionClose12.vcd"  //THAT... was a pretty poor display.
+	scene "scenes/Mechanic/TransitionClose13.vcd"  //We'll call that one a tie.
+	scene "scenes/Mechanic/TransitionClose14.vcd"  //You know what? We'll call that one a tie.
+	scene "scenes/Mechanic/TransitionClose15.vcd"  //We're still standin'!
+	scene "scenes/Mechanic/TransitionClose16.vcd"  //Woooow!
+	scene "scenes/Mechanic/TransitionClose17.vcd"  //Wow, man!
+}
+
+Rule iMT_PlayerTransitionMechanic
+{
+	criteria iMT_PlayerTransition IsMechanic
+	Response iMT_PlayerTransitionMechanic
+}
+
+Response iMT_PlayerWitchChasingMechanic
+{
+	scene "scenes/Mechanic/WitchChasing01.vcd"  //Out of my way, man, witch coming!!
+	scene "scenes/Mechanic/WitchChasing02.vcd"  //COMING THROUGH! WITCH ON MY ASS!!
+	scene "scenes/Mechanic/WitchChasing03.vcd"  //Run I pissed her off!
+	scene "scenes/Mechanic/WitchChasing04.vcd"  //SHOOT HER! SHOOT HER!
+	scene "scenes/Mechanic/WitchChasing05.vcd"  //WITCH WITCH WITCH!
+}
+
+Rule iMT_PlayerWitchChasingMechanic
+{
+	criteria iMT_PlayerWitchChasing IsMechanic
+	Response iMT_PlayerWitchChasingMechanic
+}
+
+Rule iMT_PlayerWitchChasingC6M1Mechanic
+{
+	criteria iMT_PlayerWitchChasing IsMechanic Isc6m1_riverbank
+	Response PlayerWitchChasingC6M1Mechanic
+}
+
+Rule iMT_SurvivorCaughtVomitMechanic
+{
+	criteria iMT_PlayerVomitInFace IsMechanic
+	Response SurvivorCaughtVomitMechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-specific
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_AllAboardMechanic
+{
+	scene "scenes/Mechanic/DLC1_CommunityE15.vcd"  //All aboard! Toot! Toot!
+	scene "scenes/Mechanic/DLC1_CommunityE16.vcd"  //All aboard! Toot! Toot!
+	scene "scenes/Mechanic/DLC1_CommunityE18.vcd"  //All aboard!
+	scene "scenes/Mechanic/WorldC2M325.vcd"  //Click-click-click-click
+}
+
+Rule iMT_AllAboardMechanic
+{
+	criteria iMT_AllAboard IsMechanic
+	Response iMT_AllAboardMechanic
+}
+
+Response iMT_BiscuitMechanic
+{
+	scene "scenes/Mechanic/Generic01.vcd"  //Well, butter my butt and call me a biscuit.
+	scene "scenes/Mechanic/Generic03.vcd"  //Well, butter my butt and call me a biscuit.
+}
+
+Rule iMT_BiscuitMechanic
+{
+	criteria iMT_Biscuit IsMechanic
+	Response iMT_BiscuitMechanic
+}
+
+Response iMT_BreakMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater03.vcd" then any iMT_BreakReac foo:0 0.3  //Okay if anybody needs a bathroom break, now'd be a good time.
+}
+
+Rule iMT_BreakMechanic
+{
+	criteria iMT_Break IsMechanic
+	Response iMT_BreakMechanic
+}
+
+Response iMT_CaCawMechanic
+{
+	scene "scenes/Mechanic/WorldMisc34.vcd"  //Ca Caw Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc35.vcd"  //Ca Caw Ca Caw Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc36.vcd"  //Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc37.vcd" odds 10  //[Whistles]
+}
+
+Rule iMT_CaCawMechanic
+{
+	criteria iMT_CaCaw IsMechanic
+	Response iMT_CaCawMechanic
+}
+
+Response iMT_CandyMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater02.vcd" //Oh man, I found a candy bar! [beat] Whup. False alarm.
+}
+
+Rule iMT_CandyMechanic
+{
+	criteria iMT_Candy IsMechanic
+	Response iMT_CandyMechanic
+}
+
+Response iMT_ComedianMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B22.vcd"  //You're a real comedian, Nick.
+	scene "scenes/Mechanic/WorldC2M2B23.vcd" odds 40  //Ha ha ha.
+	scene "scenes/Mechanic/WorldC2M2B24.vcd"  //Well, aren't you a real comedian.
+}
+
+Rule iMT_ComedianMechanic
+{
+	criteria iMT_Comedian IsMechanic
+	Response iMT_ComedianMechanic
+}
+
+Response iMT_DogMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat18.vcd"  //Can we not talk about dogs?
+}
+
+Rule iMT_DogMechanic
+{
+	criteria iMT_Dog IsMechanic
+	Response iMT_DogMechanic
+}
+
+Rule iMT_FeelHerMechanic
+{
+	criteria iMT_FeelHer IsMechanic
+	Response PlayerTransitionC6M2Mechanic
+}
+
+Response iMT_InHonorMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator03.vcd"  //Man, I'm gonna kill so many zombies she's gonna have to love me.
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator04.vcd"  //I'm gonna kill a tank in her honor and then I'm gonna name it after her.
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator05.vcd"  //I'm gonna kill a tank in her honor. Ooh, and then I'm gonna name it after her.
+}
+
+Rule iMT_InHonorMechanic
+{
+	criteria iMT_InHonor IsMechanic
+	Response iMT_InHonorMechanic
+}
+
+Response iMT_InLoveMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing01.vcd"  //A girl who can shoot? I am in love.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing05.vcd"  //Man. A girl who can shoot? I am in love.
+}
+
+Rule iMT_InLoveMechanic
+{
+	criteria iMT_InLove IsMechanic
+	Response iMT_InLoveMechanic
+}
+
+Rule iMT_LoveYouMechanic
+{
+	criteria iMT_LoveYou IsMechanic
+	Response C2M1Intro008Mechanic
+}
+
+Response iMT_MadamMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat01.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat02.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat03.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat04.vcd"  //Oh, yes, ma'am.
+}
+
+Rule iMT_MadamMechanic
+{
+	criteria iMT_Madam IsMechanic
+	Response iMT_MadamMechanic
+}
+
+Response iMT_MarriageMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch01.vcd" then any iMT_MarriageReac foo:0 0.3  //Hey Coach. Can coaches marry people?
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch02.vcd" then any iMT_MarriageReac2 foo:0 0.3  //You know what? This got me thinking... I should totally marry that girl.
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchAttacking01.vcd"  //Oh man I changed my mind! I do not wanna get married!
+}
+
+Rule iMT_MarriageMechanic
+{
+	criteria iMT_Marriage IsMechanic
+	Response iMT_MarriageMechanic
+}
+
+Response iMT_PrayReacMechanic
+{
+	scene "scenes/Mechanic/WorldC1M3B03.vcd"  //Amen!
+	scene "scenes/Mechanic/WorldC1M3B04.vcd"  //Amen!
+}
+
+Rule iMT_PrayReacMechanic
+{
+	criteria iMT_PrayReac IsNotCoughing IsNotIncapacitated IsNotSpeaking IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IssuerClose
+	Response iMT_PrayReacMechanic
+}
+
+Response iMT_SayingZoeyMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing06.vcd"  //Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing07.vcd"  //Zoey! Zoey! Zoey! Man I just love sayin' it.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing08.vcd"  //Zoey! Zoey! Zoey! I could say that all day long.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing09.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it, really.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing10.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it!
+}
+
+Rule iMT_SayingZoeyMechanic
+{
+	criteria iMT_SayingZoey IsMechanic
+	Response iMT_SayingZoeyMechanic
+}
+
+Response iMT_SingingMechanic
+{
+	scene "scenes/Mechanic/MeleeWeapons13.vcd" odds 20  //[humming] Gonna beat me a zombie to death... with a nightstick...
+	scene "scenes/Mechanic/WorldC2M2B05.vcd" predelay "0.11" then all iMT_SingingMountain foo:0 -0.01  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
+	scene "scenes/Mechanic/WorldC2M2B06.vcd" predelay "0.11" then all iMT_SingingLady foo:0 -0.01  //[singing] ...Every lady's crazy when her daddy's not around...
+}
+
+Rule iMT_SingingMechanic
+{
+	criteria iMT_Singing IsMechanic
+	Response iMT_SingingMechanic
+}
+
+Response iMT_SingingLadyMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around...
+}
+
+Rule iMT_SingingLadyMechanic
+{
+	criteria iMT_SingingLady IsNotCoughing IsNotIncapacitated IsNotSpeaking IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IssuerClose ChanceToFire15Percent
+	Response iMT_SingingLadyMechanic
+}
+
+Response iMT_SingingMountainMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
+}
+
+Rule iMT_SingingMountainMechanic
+{
+	criteria iMT_SingingMountain IsNotCoughing IsNotIncapacitated IsNotSpeaking IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IssuerClose ChanceToFire15Percent
+	Response iMT_SingingMountainMechanic
+}
+
+Response iMT_TattoosMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo01.vcd" then any iMT_TattoosReac foo:0 0.3  //Hey Nick, you and me ought to get tattoos that say "bros".
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo04.vcd"  //TATTOOS! TATTOOS!
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo06.vcd"  //I love tattoos. I only have one, but I was gonna get my truck tattooed on my other arm.
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo07.vcd"  //Man, I love tattoos. I only have one, I was gonna get my truck tattooed on the other arm, but maybe now I get Jimmy Gibbs Jr car. Damn zombies.
+}
+
+Rule iMT_TattoosMechanic
+{
+	criteria iMT_Tattoos IsMechanic
+	Response iMT_TattoosMechanic
+}
+
+Rule iMT_Tattoos2Mechanic
+{
+	criteria iMT_Tattoos2 IsNotCoughing IsNotIncapacitated IsMechanic
+	Response WorldC6M2_Tattoo03bMechanic
+}
+
+Response iMT_TeamFortress2Mechanic
+{
+	scene "scenes/Mechanic/DLC1_CommunityE20.vcd"  //Dude, this is just like Team Fortress 2!
+}
+
+Rule iMT_TeamFortress2Mechanic
+{
+	criteria iMT_TeamFortress2 IsMechanic
+	Response iMT_TeamFortress2Mechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Overrides
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAnswerLostCallMechanic
+{
+	scene "scenes/Mechanic/ScenarioJoinLast01.vcd"  //We're all here.
+}
+
+Rule iMT_PlayerAnswerLostCallMechanic
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsEveryoneAlive IsNotSomeoneDied IsClosestSurvivorNear500 ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallMechanic
+}
+
+Response iMT_PlayerAreaClearMechanic
+{
+	scene "scenes/Mechanic/Defibrillator07.vcd"  //Clear!
+}
+
+Rule iMT_PlayerAreaClearMechanic
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response iMT_PlayerAreaClearMechanic
+}
+
+Rule iMT_PlayerHeardBoomerMechanic
+{
+	criteria ConceptPlayerHeardBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardBoomerMechanic
+}
+
+Rule iMT_PlayerHeardChargerMechanic
+{
+	criteria ConceptPlayerHeardCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardChargerMechanic
+}
+
+Rule iMT_PlayerHeardHunterMechanic
+{
+	criteria ConceptPlayerHeardHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardHunterMechanic
+}
+
+Rule iMT_PlayerHeardJockeyMechanic
+{
+	criteria ConceptPlayerHeardJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardJockeyMechanic
+}
+
+Rule iMT_PlayerHeardSmokerMechanic
+{
+	criteria ConceptPlayerHeardSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardSmokerMechanic
+}
+
+Rule iMT_PlayerHeardSpitterMechanic
+{
+	criteria ConceptPlayerHeardSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardSpitterMechanic
+}
+
+Rule iMT_PlayerHeardTankMechanic
+{
+	criteria ConceptPlayerHeardTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardTankMechanic
+}
+
+Rule iMT_PlayerHeardWitchMechanic
+{
+	criteria ConceptPlayerHeardWitch IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response PlayerHeardWitchMechanic
+}
+
+Response iMT_PlayerLaughMechanic
+{
+	scene "scenes/Mechanic/Laughter04.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter05.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter06.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter10.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter11.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter12.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter13a.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter13b.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter13d.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter13e.vcd"  //<Hearty Laugh>
+}
+
+Rule iMT_PlayerLaughMechanic
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10
+	Response iMT_PlayerLaughMechanic
+}
+
+Response iMT_PlayerThanksCoachMechanic
+{
+	scene "scenes/Mechanic/Thanks01.vcd"  //Hey, thanks, man.
+	scene "scenes/Mechanic/Thanks06.vcd"  //Thanks man.
+	scene "scenes/Mechanic/ThanksCoach01.vcd"  //Thanks, Coach.
+	scene "scenes/Mechanic/ThanksCoach02.vcd"  //Thanks, Coach.
+	scene "scenes/Mechanic/ThanksCoach04.vcd"  //Thanks, Coach.
+}
+
+Rule iMT_PlayerThanksCoachMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksCoachMechanic
+}
+
+Response iMT_PlayerThanksCoachC1Mechanic
+{
+	scene "scenes/Mechanic/ThanksCoach03.vcd"  //Appreciate it, big guy.
+}
+
+Rule iMT_PlayerThanksCoachC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames ChanceToFire30Percent
+	Response iMT_PlayerThanksCoachC1Mechanic
+}
+
+Response iMT_PlayerThanksGamblerMechanic
+{
+	scene "scenes/Mechanic/Thanks01.vcd"  //Hey, thanks, man.
+	scene "scenes/Mechanic/Thanks06.vcd"  //Thanks man.
+	scene "scenes/Mechanic/ThanksGambler01.vcd"  //Thanks, Nick.
+	scene "scenes/Mechanic/ThanksGambler02.vcd"  //Hey, thanks, Nick.
+	scene "scenes/Mechanic/ThanksGambler03.vcd"  //Appreciate it, Nick.
+}
+
+Rule iMT_PlayerThanksGamblerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksGamblerMechanic
+}
+
+Rule iMT_PlayerThanksGamblerC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksMechanic
+}
+
+Response iMT_PlayerThanksProducerMechanic
+{
+	scene "scenes/Mechanic/Thanks03.vcd"  //Thank you kindly, ma'm.
+}
+
+Rule iMT_PlayerThanksProducerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksProducerMechanic
+}
+
+Response iMT_PlayerThanksBikerMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items05.vcd"  //Thanks Francis!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing14.vcd"  //Thanks Francis!
+}
+
+Rule iMT_PlayerThanksBikerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsBiker IsSubjectDistNear600 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerMechanic
+}
+
+Rule iMT_PlayerThanksBikerC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsBiker IsSubjectDistNear600 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksMechanic
+}
+
+Response iMT_PlayerThanksManagerMechanic
+{
+	scene "scenes/Mechanic/WorldC5M4B23.vcd"  //Thank you, sir.
+}
+
+Rule iMT_PlayerThanksManagerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsManager IsSubjectDistNear600 ChanceToFire30Percent
+	Response iMT_PlayerThanksManagerMechanic
+}
+
+Rule iMT_PlayerThanksManagerC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsManager IsSubjectDistNear600 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksMechanic
+}
+
+Response iMT_PlayerThanksTeenGirlMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items01.vcd"  //Thanks Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items02.vcd"  //Thank you Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items03.vcd"  //Hey, thanks Zoey!
+}
+
+Rule iMT_PlayerThanksTeenGirlMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsTeenGirl IsSubjectDistNear600 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlMechanic
+}
+
+Rule iMT_PlayerThanksTeenGirlC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsTeenGirl IsSubjectDistNear600 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksMechanic
+}
+
+Rule iMT_PlayerThanksUnknownMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsUnknown IsSubjectDistNear600 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlMechanic
+}
+
+Rule iMT_PlayerThanksUnknownC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsUnknown IsSubjectDistNear600 ismap_c1m1_hotel NoKnowNames
+	Response PlayerThanksMechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeCoachMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeCoachMechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeCoachC1Mechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames ChanceToFire30Percent
+	Response YouAreWelcomeCoachC1Mechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeGamblerMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeGamblerMechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeGamblerC1Mechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames ChanceToFire30Percent
+	Response YouAreWelcomeGamblerC1Mechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeProducerMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeProducerMechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeProducerC1Mechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100 ismap_c1m1_hotel NoKnowNames ChanceToFire30Percent
+	Response YouAreWelcomeProducerC1Mechanic
+}
+
+Response iMT_ResponseSoftDispleasureSwearMechanic
+{
+	scene "scenes/Mechanic/WorldC2M3B14.vcd"  //Ohmigod!
+	scene "scenes/Mechanic/WorldC5M4B01.vcd"  //Woah!
+}
+
+Rule iMT_ResponseSoftDispleasureSwearMechanic
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IssuerMediumClose
+	Response iMT_ResponseSoftDispleasureSwearMechanic
+}
+
+Rule iMT_SafeRoomStartMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart ExtraWeight10
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response NoResponse
+}
+
+Rule iMT_SurvivorCoughingDeathMechanic
+{
+	criteria ConceptPlayerDeath IsCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorCoughingMechanic
+}
+
+Rule iMT_SurvivorDeathMechanic
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorDeathMechanic
+}
+
+Rule iMT_SurvivorSpottedAmmoMechanic
+{
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10
+	Response SurvivorSpottedAmmoMechanic
+}
+
+Rule iMT_SurvivorSpottedBoomerMechanic
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedBoomerMechanic
+}
+
+Response iMT_SurvivorSpottedBoomerC1Mechanic
+{
+	scene "scenes/Mechanic/WarnBoomerC101.vcd"  //PUKER!
+	scene "scenes/Mechanic/WarnBoomerC102.vcd"  //IT'S EXPLODING GUY!
+	scene "scenes/Mechanic/WorldC1M1B150.vcd" odds 10  //It's the barfin' one!
+	scene "scenes/Mechanic/WorldC1M1B151.vcd" odds 10  //It's the barfin' fat ass zombie!
+}
+
+Rule iMT_SurvivorSpottedBoomer2Mechanic
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire20Percent
+	Response iMT_SurvivorSpottedBoomerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedBoomerC1Mechanic
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 NoKnowBoomer IsNotSurvival ExtraWeight10
+	Response iMT_SurvivorSpottedBoomerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedChargerMechanic
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedChargerMechanic
+}
+
+Response iMT_SurvivorSpottedChargerC1Mechanic
+{
+	scene "scenes/Mechanic/WarnChargerC101.vcd" odds 10  //Watch out, man, that thing charges!
+	scene "scenes/Mechanic/WarnChargerC102.vcd"  //ONE ARM!
+	scene "scenes/Mechanic/WarnChargerC103.vcd"  //BIG ARM!
+}
+
+Rule iMT_SurvivorSpottedCharger2Mechanic
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire20Percent
+	Response iMT_SurvivorSpottedChargerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedChargerC1Mechanic
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 NoKnowCharger IsNotSurvival ExtraWeight10
+	Response iMT_SurvivorSpottedChargerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedHunterMechanic
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedHunterMechanic
+}
+
+Rule iMT_SurvivorSpottedHunter2Mechanic
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire20Percent
+	Response SurvivorSpottedHunterC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedHunterC1Mechanic
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 NoKnowHunter IsNotSurvival
+	Response SurvivorSpottedHunterC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedInfectedMechanic
+{
+	criteria ConceptPlayerIncoming IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedInfectedMechanic
+}
+
+Rule iMT_SurvivorSpottedJockeyMechanic
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedJockeyMechanic
+}
+
+Rule iMT_SurvivorSpottedJockey2Mechanic
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire20Percent
+	Response SurvivorSpottedJockeyC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedJockeyC1Mechanic
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 NoKnowJockey IsNotSurvival
+	Response SurvivorSpottedJockeyC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedSmokerMechanic
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedSmokerMechanic
+}
+
+Rule iMT_SurvivorSpottedSmoker2Mechanic
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire20Percent
+	Response SurvivorSpottedSmokerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedSmokerC1Mechanic
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 NoKnowSmoker IsNotSurvival
+	Response SurvivorSpottedSmokerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedSpitterMechanic
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedSpitterMechanic
+}
+
+Rule iMT_SurvivorSpottedSpitter2Mechanic
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire20Percent
+	Response SurvivorSpottedSpitterC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedSpitterC1Mechanic
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 NoKnowSpitter IsNotSurvival
+	Response SurvivorSpottedSpitterC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedTankMechanic
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedTankMechanic
+}
+
+Rule iMT_SurvivorSpottedTank2Mechanic
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10 ChanceToFire10Percent
+	Response SurvivorSpottedTankC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedTankC1Mechanic
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 IsNotSurvival
+	Response SurvivorSpottedTankC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedTankC6M3Mechanic
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic Isc6m3_port ExtraWeight10
+	Response SurvivorSpottedTankMechanic
+}
+
+Rule iMT_SurvivorSpottedWeaponMechanic
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10
+	Response SurvivorSpottedWeaponMechanic
+}
+
+Rule iMT_SurvivorSpottedWitchMechanic
+{
+	criteria ConceptPlayerWarnWitch IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorSpottedWitchMechanic
+}
+
+Rule iMT_SurvivorSpottedWitchC1Mechanic
+{
+	criteria ConceptPlayerWarnWitch IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2 IsNotSurvival
+	Response SurvivorSpottedWitch2C1Mechanic
+}
+
+Rule iMT_SurvivorTauntResponseMechanic
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic ExtraWeight10
+	Response SurvivorTauntResponseMechanic
+}
+
+Rule iMT_SurvivorVocalizeBackUpMechanic
+{
+	criteria ConceptPlayerBackUp IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorVocalizeBackUpMechanic
+}
+
+Rule iMT_SurvivorVocalizeEmphaticGoMechanic
+{
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorVocalizeEmphaticGoMechanic
+}
+
+Rule iMT_SurvivorVocalizeLookOutMechanic
+{
+	criteria ConceptPlayerLookOut IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response SurvivorVocalizeLookOutMechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_BoatmanMechanic
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+
+Rule iMT_BoatmanMechanic
+{
+	criteria iMT_Boatman IsMechanic
+	Response iMT_BoatmanMechanic
+}
+
+Response iMT_ChopperPilotMechanic
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+
+Rule iMT_ChopperPilotMechanic
+{
+	criteria iMT_ChopperPilot IsMechanic
+	Response iMT_ChopperPilotMechanic
+}
+
+Response iMT_ChurchGuyMechanic
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+
+Rule iMT_ChurchGuyMechanic
+{
+	criteria iMT_ChurchGuy IsMechanic
+	Response iMT_ChurchGuyMechanic
+}
+
+Response iMT_MoustachioMechanic
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+
+Rule iMT_MoustachioMechanic
+{
+	criteria iMT_Moustachio IsMechanic
+	Response iMT_MoustachioMechanic
+}
+
+Response iMT_PlanePilotMechanic
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+
+Rule iMT_PlanePilotMechanic
+{
+	criteria iMT_PlanePilot IsMechanic
+	Response iMT_PlanePilotMechanic
+}
+
+Response iMT_Rescue9Mechanic
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+
+Rule iMT_Rescue9Mechanic
+{
+	criteria iMT_Rescue9 IsMechanic
+	Response iMT_Rescue9Mechanic
+}
+
+Response iMT_SoldiersMechanic
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+
+Rule iMT_SoldiersMechanic
+{
+	criteria iMT_Soldiers IsMechanic
+	Response iMT_SoldiersMechanic
+}
+
+Response iMT_VirgilMechanic
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+
+Rule iMT_VirgilMechanic
+{
+	criteria iMT_Virgil IsMechanic
+	Response iMT_VirgilMechanic
+}
+
+Response iMT_WhitakerMechanic
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+
+Rule iMT_WhitakerMechanic
+{
+	criteria iMT_Whitaker IsMechanic
+	Response iMT_WhitakerMechanic
+}

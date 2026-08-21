@@ -1,0 +1,4414 @@
+//--------------------------------------------------------------------------------------------------------------
+// ion's Vocalizer 19.0
+//--------------------------------------------------------------------------------------------------------------
+
+"RadialMenu"
+{
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+	"Orders,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize SmartLook"
+			"text"		"Mira"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerMoveOn"
+			"text"		"Sigamos"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerLeadOn"
+			"text"		"Tú delante"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerHurryUp"
+			"text"		"Rápido"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerYellRun"
+			"text"		"Correr"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerWaitHere"
+			"text"		"Esperar"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerFollowMe"
+			"text"		"Seguirme"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerAlertGiveItem"
+			"text"		"Toma"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerStayTogether"
+			"text"		"Juntos"
+		}
+	}
+
+	"QA,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerAskReady"
+			"text"		"¿Listos?"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerLaugh"
+			"text"		"Risa"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerTaunt"
+			"text"		"Insulto"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerNegative"
+			"text"		"¡Ah!"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerNo"
+			"text"		"No"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerSorry"
+			"text"		"Perdón"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerYes"
+			"text"		"Si"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerHurrah"
+			"text"		"Hurra"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerThanks"
+			"text"		"Gracias"
+		}
+	}
+
+	"Reactions,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerDeath"
+			"text"		"Gritar"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerLookOut"
+			"text"		"¡Cuidado!"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerAnswerLostCall"
+			"text"		"Estoy aquí"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerWatchOutBehind"
+			"text"		"Detrás"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerNiceJob"
+			"text"		"¡Muy Bien!"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerYouAreWelcome"
+			"text"		"De nada"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerWarnCareful"
+			"text"		"Con cuidado"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerToTheRescue"
+			"text"		"De camino"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerImWithYou"
+			"text"		"Estoy contigo"
+		}
+	}
+
+	"Enemies,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerHelp"
+			"text"		"Ayuda"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerWarnTank"
+			"text"		"Tank"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerWarnBoomer"
+			"text"		"Boomer"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerWarnHunter"
+			"text"		"Hunter"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerWarnSmoker"
+			"text"		"Smoker"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerWarnWitch"
+			"text"		"Witch"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerWarnSpitter"
+			"text"		"Spitter"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerWarnJockey"
+			"text"		"Jockey"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerWarnCharger"
+			"text"		"Charger"
+		}
+	}
+
+	"Warnings,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerIncoming"
+			"text"		"Horda"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerKillThatLight"
+			"text"		"Apaga la luz"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerHeardBoomer"
+			"text"		"Boomer"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerHeardHunter"
+			"text"		"Hunter"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerHeardSmoker"
+			"text"		"Smoker"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerHeardWitch"
+			"text"		"Witch"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerHeardSpitter"
+			"text"		"Spitter"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerHeardJockey"
+			"text"		"Jockey"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerHeardCharger"
+			"text"		"Charger"
+		}
+	}
+
+	"Events,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerChoke"
+			"text"		"Ahogándose"
+		}
+		"North"
+		{
+			"command"	"vocalize CallForRescue"
+			"text"		"Atrapado"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerLedgeHangStart"
+			"text"		"Resbaló"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerLedgeHangMiddle"
+			"text"		"Colgado"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerLedgeHangEnd"
+			"text"		"Apunto de caer"
+		}
+		"South"
+		{
+			"command"	"vocalize SurvivorJockeyed"
+			"text"		"Montado"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ScreamWhilePounced"
+			"text"		"Hunter ataco"
+		}
+		"West"
+		{
+			"command"	"vocalize chargerpound"
+			"text"		"Golpeado"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerGroundPoundedByTank"
+			"text"		"Aplastado"
+		}
+	}
+
+	"Misc,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerEmphaticGo"
+			"text"		"¡Va!"
+		}
+		"North"
+		{
+			"command"	"vocalize ResponseSoftDispleasureSwear"
+			"text"		"Disgusto"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize AskForHealth2"
+			"text"		"Cúrame"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerSpotAmmo"
+			"text"		"Munición"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerBackUp"
+			"text"		"Retirada"
+		}
+		"South"
+		{
+			"command"	"vocalize WitchGettingAngry"
+			"text"		"Witch enojada"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerSpotOtherWeapon"
+			"text"		"Armas"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerAreaClear"
+			"text"		"Limpio"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerCoverMe"
+			"text"		"Cúbreme"
+		}
+	}
+
+	"Misc2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ReviveFriendDown"
+			"text"		"Herido"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerLostCall"
+			"text"		"Solo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1_IntotheparkNoHealth"
+			"text"		"Botiquín"
+		}
+		"East"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello"
+			"text"		"Nombre"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize RevivedByDefibrillator"
+			"text"		"Jadeo"
+		}
+		"South"
+		{
+			"command"	"vocalize UseAdrenaline"
+			"text"		"Adrenalina"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize RelaxedSigh"
+			"text"		"Suspiro"
+		}
+		"West"
+		{
+			"command"	"vocalize C5M3FirstInAlarmField"
+			"text"		"Alarma"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C2M1Falling"
+			"text"		"Whoa"
+		}
+	}
+
+	"Misc3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ReviveFriendDownFinal"
+			"text"		"Bien"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerHealingOther"
+			"text"		"Te curo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerIncapacitated"
+			"text"		"Incapacitado"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerGrabbedByTongue"
+			"text"		"Arrastrado"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize RevivedByDefibrillatorDelayed"
+			"text"		"Desfibrilado"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerFriendlyFire"
+			"text"		"¡Para!"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerLedgeSave"
+			"text"		"Salvar"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerReviveFriend"
+			"text"		"Revivir"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerReviveFriendCritical"
+			"text"		"Crítico"
+		}
+	}
+
+	"Misc4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_PlayerCoughing"
+			"text"		"Tos"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_PlayerSuggestHealth"
+			"text"		"Sugerir curarse"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_PlayerNiceShot"
+			"text"		"Buen tiro"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_PlayerNearExit"
+			"text"		"Refugio"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlayerTransition"
+			"text"		"Estuvo cerca"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_SurvivorWasPounced"
+			"text"		"Hunter sobre"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_PlayerAnswerReady"
+			"text"		"Listo"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_PlayerHello"
+			"text"		"Hola"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_PlayerEquippedItem"
+			"text"		"La tengo"
+		}
+	}
+
+	"Misc5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_PlayerPainNoise"
+			"text"		"Dolor"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_PlayerMourn"
+			"text"		"Lamentar"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_PlayerIncapacitatedHurt"
+			"text"		"Grito de dolor"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_PlayerVomitInFace"
+			"text"		"Vomitado"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlayerBreathing"
+			"text"		"Respiración"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_PlayerBattleCry"
+			"text"		"Alboroto"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_PlayerTeamKill"
+			"text"		"Asesino de equipo"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_PlayerGoingToDie"
+			"text"		"Muriendo"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_PlayerDeathScream"
+			"text"		"Grito de caída"
+		}
+	}
+
+	"Misc6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_PlayerMelee"
+			"text"		"Melee"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_PlayerReloading"
+			"text"		"Recargando"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_PlayerGetToVehicleChopper"
+			"text"		"Helicóptero"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_PlayerGetToVehicleBoat"
+			"text"		"Barco"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlayerGetToVehicleWheels"
+			"text"		"Coche"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_PlayerFriendlyFire"
+			"text"		"Fuego amigo"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_PlayerGooedBySpitter"
+			"text"		"Escupitajo"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_PlayerCloseTheDoor"
+			"text"		"Puerta"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_PlayerWitchChasing"
+			"text"		"Perseguido"
+		}
+	}
+
+	"NPC,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Virgil"
+			"text"		"Virgil"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Moustachio"
+			"text"		"Moustachio"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_ChopperPilot"
+			"text"		"Piloto helicóptero"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Whitaker"
+			"text"		"Whitaker"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlanePilot"
+			"text"		"Piloto avión"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_Boatman"
+			"text"		"John Slater"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Rescue9"
+			"text"		"Militar"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Soldiers"
+			"text"		"Soldados"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_ChurchGuy"
+			"text"		"Chico de la iglesia"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Coach
+//--------------------------------------------------------------------------------------------------------------
+
+	"C1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize AskWhat"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize C4FinaleStart"
+			"text"		"Burger Tank"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldSignStayInGroup2"
+			"text"		"Digo"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M4SafeRoom2b5"
+			"text"		"Amén"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M2_Tattoo02b"
+			"text"		"Secretos"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C5M3Jets2"
+			"text"		"HIJOSDE-"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo18c"
+			"text"		"Chica"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize _C4M3_FLOODED01"
+			"text"		"Azúcar"
+		}
+	}
+
+	"C2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldSignsInfectedDetected2"
+			"text"		"Mierda"
+		}
+		"North"
+		{
+			"command"	"vocalize WorldC6M2_InSewer101a"
+			"text"		"Afróntalo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C5M3SeeGraveyard02"
+			"text"		"Mueve Nick"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC502Smell2"
+			"text"		"Huele"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WeddingWitchDead01"
+			"text"		"Problemas"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk101c"
+			"text"		"Cloaca"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize _C2M2_Kiddie01"
+			"text"		"Niñeras"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_13b"
+			"text"		"Ligar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C1M2SafeRoomb2"
+			"text"		"Actitud"
+		}
+	}
+
+	"C3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldC6M2_InSewer202a"
+			"text"		"Jesús"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M1_intro008"
+			"text"		"Otro lado"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_20d"
+			"text"		"Vampiros"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk103a"
+			"text"		"Cállate"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo13d"
+			"text"		"Positivo"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_InSewer102a"
+			"text"		"A cuestas"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo01a"
+			"text"		"Prioridad"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03a"
+			"text"		"No ahora"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC502OfficialInstructions"
+			"text"		"No esperar"
+		}
+	}
+
+	"C4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WeddingWitchDead02"
+			"text"		"Terrorífico"
+		}
+		"North"
+		{
+			"command"	"vocalize _c4m2_ElevatorHere01"
+			"text"		"Elevador"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _c2m3_coaster05"
+			"text"		"No agradable"
+		}
+		"East"
+		{
+			"command"	"vocalize _C2M2_Riders04"
+			"text"		"Canción"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M1_PostWedding01a"
+			"text"		"No Ellis"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn04a"
+			"text"		"Tank en Smoking"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1TakeSubMachineGun01"
+			"text"		"No Nick"
+		}
+		"West"
+		{
+			"command"	"vocalize _C3M1CrazyMilitants"
+			"text"		"Película"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo09a"
+			"text"		"Suciedad"
+		}
+	}
+
+	"C5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C5M2_signcontagious01"
+			"text"		"Claro"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo12d"
+			"text"		"Histórico"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldIntroC31e3"
+			"text"		"Barbacoa"
+		}
+		"East"
+		{
+			"command"	"vocalize C3M3SafeRoom2b2"
+			"text"		"Triste"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C6M1Intro_13e"
+			"text"		"Avergonzar"
+		}
+		"South"
+		{
+			"command"	"vocalize C2M5_PlanWorked"
+			"text"		"Salvados"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldIntroC3e1"
+			"text"		"Advertencia"
+		}
+		"West"
+		{
+			"command"	"vocalize InfoRemc3m2_parachutist2"
+			"text"		"Saltar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello05c"
+			"text"		"Juntos"
+		}
+	}
+
+	"C6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldC502NotZombies3b"
+			"text"		"Tienes Razón"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M2_CottonCandy01"
+			"text"		"Algodón de azúcar"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C5M3Bodies01"
+			"text"		"Razón"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldSignWhereIsCEDA2"
+			"text"		"CEDA"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo15b"
+			"text"		"Espero"
+		}
+		"South"
+		{
+			"command"	"vocalize C5M3Bodies03"
+			"text"		"No sé"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize Player.CoverMeC1RCoach2"
+			"text"		"Nunca hecho"
+		}
+		"West"
+		{
+			"command"	"vocalize _c4m2_waterpool02"
+			"text"		"Diluvio"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize _C2M1_Fall01"
+			"text"		"Demasiado viejo"
+		}
+	}
+
+	"C7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize _C2M1_Fall02"
+			"text"		"Loco"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M5_saferoom005"
+			"text"		"Nueva vida"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingI03"
+			"text"		"Devuelve"
+		}
+		"East"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo02e"
+			"text"		"Fe"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello2AliveExtra2"
+			"text"		"Animar"
+		}
+		"South"
+		{
+			"command"	"vocalize C2M3SafeIntro011"
+			"text"		"Experimentado"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingG01"
+			"text"		"Valle"
+		}
+		"West"
+		{
+			"command"	"vocalize c6M3_loss2"
+			"text"		"Perdiendo"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingD02"
+			"text"		"Saber"
+		}
+	}
+
+	"C8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Ride"
+			"text"		"Paseo"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_BurgerMeal"
+			"text"		"Hamburguesa"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Pancakes"
+			"text"		"Panqueques"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Hungry"
+			"text"		"Hambriento"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_Apocalypse"
+			"text"		"Apocalipsis"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_Neighborhood"
+			"text"		"Vecindario"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Hosanna"
+			"text"		"Hosanna"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Pray"
+			"text"		"Orar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Teaching"
+			"text"		"Enseñar"
+		}
+	}
+
+	"C9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Fair"
+			"text"		"Justo"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Killing"
+			"text"		"Matar"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Swallow"
+			"text"		"Digerir"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_LouisRules"
+			"text"		"Louis"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_Chicken"
+			"text"		"Pollo"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_LeaveEllis"
+			"text"		"Dejar a ellis"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Dreaming"
+			"text"		"Soñando"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Night"
+			"text"		"Noche"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_GetBusy"
+			"text"		"Ocuparse"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Nick
+//--------------------------------------------------------------------------------------------------------------
+
+	"N1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize AskWhat"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize WorldC6M2_Tattoo01b"
+			"text"		"Cerdo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C2M2_Steak01"
+			"text"		"Freír"
+		}
+		"East"
+		{
+			"command"	"vocalize RemWorldC6M1_WeddingWarn02"
+			"text"		"Pastel"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C1M3SafeRoom2a"
+			"text"		"Tienda"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo14f"
+			"text"		"No te molestes"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_15a"
+			"text"		"Magdalena"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_16a"
+			"text"		"Simio"
+		}
+	}
+
+	"N2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_09a"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M2_Kiddie01"
+			"text"		"5 años"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WeddingWitchDead03"
+			"text"		"Bien Coach"
+		}
+		"East"
+		{
+			"command"	"vocalize C5M2Horse001"
+			"text"		"Bien Ellis"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo07a"
+			"text"		"Mejor oportunidad"
+		}
+		"South"
+		{
+			"command"	"vocalize C1M2SafeRoomb3"
+			"text"		"Sentimientos"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldC6M2_InSewer201a"
+			"text"		"No te atrevas"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk101a"
+			"text"		"Cloaca"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC502SmellBath3"
+			"text"		"Estás mal"
+		}
+	}
+
+	"N3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C2M3SafeIntro012"
+			"text"		"Psh"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M3AlarmFieldNags02"
+			"text"		"Tu Madre"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_15e"
+			"text"		"Calma"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M1Crumbs"
+			"text"		"Migas"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C5M3Bodies04"
+			"text"		"Mal asunto"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_InSewer101c"
+			"text"		"Motivación"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C1M4NearFinale02a"
+			"text"		"Arruinado"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn05a"
+			"text"		"Mujeres"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C5M3SeeGraveyard01"
+			"text"		"Pánico"
+		}
+	}
+
+	"N4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C5M3manhole01"
+			"text"		"Alcantarilla"
+		}
+		"North"
+		{
+			"command"	"vocalize _introc1m1b08donuts"
+			"text"		"Confío"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C2M1abandoned02"
+			"text"		"Teoría"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC502Horse2"
+			"text"		"Caballo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M2_FinalWater01a"
+			"text"		"Odiar a Ellis"
+		}
+		"South"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo08a"
+			"text"		"Molestar"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize _C1M2Abandoned"
+			"text"		"Asustarte"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo09b"
+			"text"		"Virus"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC6M1_PostWedding02a"
+			"text"		"Casarte"
+		}
+	}
+
+	"N5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldC6M2_InSewer202a"
+			"text"		"Ugh"
+		}
+		"North"
+		{
+			"command"	"vocalize c6M3_loss2"
+			"text"		"De acuerdo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M2_OpenGate1a"
+			"text"		"¿Que hiciste?"
+		}
+		"East"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo11b"
+			"text"		"Con ella"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo06a"
+			"text"		"Nueces hervidas"
+		}
+		"South"
+		{
+			"command"	"vocalize C2M5_PlanWorked"
+			"text"		"Plan funcionó"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldIntroC3f2"
+			"text"		"No creo"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M2_AfterGate201a"
+			"text"		"No ahora"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo02b"
+			"text"		"Dejar"
+		}
+	}
+
+	"N6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo01b"
+			"text"		"Que te den"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M2_ThisTall01"
+			"text"		"Muchos tanks"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize HistoricTour01a"
+			"text"		"No será"
+		}
+		"East"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo10d"
+			"text"		"Debajo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize _c4m1Intro23"
+			"text"		"Bolsa"
+		}
+		"South"
+		{
+			"command"	"vocalize _C2M2_SeeSafehouse01"
+			"text"		"El Túnel del Amor"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C3M2SafeRoomb2"
+			"text"		"Agua de pantano"
+		}
+		"West"
+		{
+			"command"	"vocalize WeddingWitchDead04"
+			"text"		"Cariño"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize Player.WhinyNick"
+			"text"		"Si seguro"
+		}
+	}
+
+	"N7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C2M3SafeIntro013"
+			"text"		"Juntos"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo05d"
+			"text"		"Guapo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldSignRestrictedArea2"
+			"text"		"Restringido"
+		}
+		"East"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo02d"
+			"text"		"Vagabundo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingE03"
+			"text"		"Suficientemente malo"
+		}
+		"South"
+		{
+			"command"	"vocalize c3m2disgust"
+			"text"		"No molestes"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C2M3SafeIntro009"
+			"text"		"No agradable"
+		}
+		"West"
+		{
+			"command"	"vocalize C2M3SafeIntro007"
+			"text"		"Primos"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo03d"
+			"text"		"No miraré"
+		}
+	}
+
+	"N8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Quiet"
+			"text"		"Callarse"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_HavingFun"
+			"text"		"Divirtiendose"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Fantasy"
+			"text"		"Mucho tiempo"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Angel"
+			"text"		"Ángel"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_ShitAir"
+			"text"		"Respirando mierda"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_Honeymoon"
+			"text"		"Luna de miel"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Tricked"
+			"text"		"Engañado"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Hippie"
+			"text"		"Hippy"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_NotDie"
+			"text"		"Morir ahora"
+		}
+	}
+
+	"N9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Game"
+			"text"		"Juego"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Depressing"
+			"text"		"Deprimente"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Attractive"
+			"text"		"Atractivo"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Fish"
+			"text"		"Pez"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_LazyAss"
+			"text"		"Culo perezoso"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_GetRoom"
+			"text"		"Solos"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ScrewYou"
+			"text"		"Púdrete"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Test"
+			"text"		"Prueba"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Sevensome"
+			"text"		"Seamos siete"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Ellis
+//--------------------------------------------------------------------------------------------------------------
+
+	"E1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03c"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize _c2m3_coaster03"
+			"text"		"Navidad"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C1M2SafeRooma2"
+			"text"		"Tan mal"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M3SafeRoom2e"
+			"text"		"Amén"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize _c2m3_coollight01"
+			"text"		"Increíble"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C1M4SafeRoom2b3"
+			"text"		"Mi héroe"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingJ3"
+			"text"		"Fuerte"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C1M4SafeRoom2a5"
+			"text"		"Aguantando"
+		}
+	}
+
+	"E2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M2_OpenGate1b"
+			"text"		"Eh"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M5_Button2205"
+			"text"		"Máquinas"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingM4"
+			"text"		"Coach divertido"
+		}
+		"East"
+		{
+			"command"	"vocalize C5M3SeeGraveyard06"
+			"text"		"Fantasma"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M2_FinalWater01b"
+			"text"		"Aprecio Nick"
+		}
+		"South"
+		{
+			"command"	"vocalize InfoRemC3M2Bathtub2"
+			"text"		"Te haz olido"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldC502Smell2"
+			"text"		"Huele bien"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo03b"
+			"text"		"Despotricar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C1M2InsideGunShopPickupResponse"
+			"text"		"Mamá Ro"
+		}
+	}
+
+	"E3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_01c"
+			"text"		"¡Venga!"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M3Sniper01"
+			"text"		"Terrorifíco"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldSignC5AlarmWillSound3d"
+			"text"		"Lo entiendo"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC502Horse3"
+			"text"		"Enfermo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03a"
+			"text"		"Cállate"
+		}
+		"South"
+		{
+			"command"	"vocalize _C2M2_Peanut01"
+			"text"		"Cacahuete"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C2M1Intro009"
+			"text"		"No agradable"
+		}
+		"West"
+		{
+			"command"	"vocalize _c2m3_cement01"
+			"text"		"Divertido"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C5M3StopZombies"
+			"text"		"Linda"
+		}
+	}
+
+	"E4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize EllisStoryReac01"
+			"text"		"Okay"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M1_intro007"
+			"text"		"Sin sentido"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C4M4_FLOODED01"
+			"text"		"Atlántida"
+		}
+		"East"
+		{
+			"command"	"vocalize c1m4jimmyidea"
+			"text"		"Horrible"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo21b"
+			"text"		"Movies"
+		}
+		"South"
+		{
+			"command"	"vocalize C3M2SafeRoomb3"
+			"text"		"Punto"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo19e"
+			"text"		"Correr"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingk3"
+			"text"		"Asqueroso"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_23b"
+			"text"		"Contraseña"
+		}
+	}
+
+	"E5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C3M2SafeRooma2"
+			"text"		"Barro"
+		}
+		"North"
+		{
+			"command"	"vocalize c2m5_intro009"
+			"text"		"Dinosaurios"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C2M3SafeIntro010"
+			"text"		"Sin amor"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk102b"
+			"text"		"Cosecha"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C6M1Intro_13f"
+			"text"		"Avergonzado"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldIntroC31c1"
+			"text"		"Hombre de acción"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo04d"
+			"text"		"Presión"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_13c"
+			"text"		"Ángel"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_24e"
+			"text"		"Entendido"
+		}
+	}
+
+	"E6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello03a"
+			"text"		"El"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo09a"
+			"text"		"Traje prestado"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C2M2_Slide01"
+			"text"		"Sin prisa"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingA01"
+			"text"		"Pantanos"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WeddingWitchDead02"
+			"text"		"Incómodo"
+		}
+		"South"
+		{
+			"command"	"vocalize RemWorldC6M1_WeddingWarn02"
+			"text"		"No he visto"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldC502OfficialInstructions"
+			"text"		"Instrucciones"
+		}
+		"West"
+		{
+			"command"	"vocalize C5M3Bodies01"
+			"text"		"Gente"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC502BusStory2b"
+			"text"		"Graceland"
+		}
+	}
+
+	"E7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo07c"
+			"text"		"Vista"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo08c"
+			"text"		"Hombre muerto"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize c6m3_loss2"
+			"text"		"Actitud"
+		}
+		"East"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo03c"
+			"text"		"Caca"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingE02"
+			"text"		"Agricultores"
+		}
+		"South"
+		{
+			"command"	"vocalize C2M3SafeIntro006"
+			"text"		"Donde lo haces"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingG02"
+			"text"		"Bíblico"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingB01"
+			"text"		"Impresionante"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo01a"
+			"text"		"Besando"
+		}
+	}
+
+	"E8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_EllisStories"
+			"text"		"Historia"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Singing"
+			"text"		"Cantando"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_AllAboard"
+			"text"		"A bordo"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_SayingZoey"
+			"text"		"Zoey"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_Marriage"
+			"text"		"Casamiento"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_TeamFortress2"
+			"text"		"Team Fortress 2"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Tattoos"
+			"text"		"Tatuajes"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Candy"
+			"text"		"Caramelo"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_CaCaw"
+			"text"		"Ca caw"
+		}
+	}
+
+	"E9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Madam"
+			"text"		"Señora"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Biscuit"
+			"text"		"Jesús, María y José"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Comedian"
+			"text"		"Cómico"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Dog"
+			"text"		"Perros"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_InLove"
+			"text"		"Enamorado"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_FeelHer"
+			"text"		"Sentirla"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_InHonor"
+			"text"		"En honor"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Break"
+			"text"		"Baño"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_LoveYou"
+			"text"		"Te quiero"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Rochelle
+//--------------------------------------------------------------------------------------------------------------
+
+	"R1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize AskWhat"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize WorldC6M1_PostWedding02a"
+			"text"		"Tu cerebro"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo20a"
+			"text"		"Buena forma"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M3SafeRoom2e"
+			"text"		"Amén"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo08f"
+			"text"		"Mejor aspecto"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1Intro_10d"
+			"text"		"Ser amable"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_18b"
+			"text"		"Estúpido"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_15c"
+			"text"		"Estafador"
+		}
+	}
+
+	"R2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_06d"
+			"text"		"Después"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M2_Kiddie02"
+			"text"		"Niñolandia"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo19a"
+			"text"		"Buen aspecto"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldSignReportSick3"
+			"text"		"Infecciones"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C6M1Intro_22a"
+			"text"		"Ultima mujer"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk101a"
+			"text"		"Cloaca"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C3M2SafeRoom2d"
+			"text"		"Traje blanco"
+		}
+		"West"
+		{
+			"command"	"vocalize _C2M2_Okra"
+			"text"		"Okra"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_20d"
+			"text"		"Vampiros"
+		}
+	}
+
+	"R3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_17d"
+			"text"		"Mierda"
+		}
+		"North"
+		{
+			"command"	"vocalize WorldC502ArmYourself"
+			"text"		"Paletos"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_22f"
+			"text"		"Hacerlo"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M2SafeRoomd2"
+			"text"		"De acuerdo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerPickupFirstSMG2"
+			"text"		"Sin elección"
+		}
+		"South"
+		{
+			"command"	"vocalize _C2M2_Kiddie05"
+			"text"		"Situación"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C5M1Flyby02"
+			"text"		"Buena señal"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M2_InSewer202a"
+			"text"		"Carl"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03b"
+			"text"		"Cállate"
+		}
+	}
+
+	"R4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C5M5_Button2207"
+			"text"		"Mola"
+		}
+		"North"
+		{
+			"command"	"vocalize C1M2SafeRoomd2a"
+			"text"		"Tienda de armas"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_05c"
+			"text"		"Extraño"
+		}
+		"East"
+		{
+			"command"	"vocalize _C4M5_Intro04"
+			"text"		"Plan"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo03c"
+			"text"		"Cálmate"
+		}
+		"South"
+		{
+			"command"	"vocalize C2M3SafeIntro009"
+			"text"		"No romántico"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize _C2M2_Riders03"
+			"text"		"Odiar el rock"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo17b"
+			"text"		"Votar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo06a"
+			"text"		"Memorias"
+		}
+	}
+
+	"R5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldC6M2_Tattoo02d"
+			"text"		"Ugh"
+		}
+		"North"
+		{
+			"command"	"vocalize C1M4NearFinale03a"
+			"text"		"Sin rescate"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo14e"
+			"text"		"Hey Nick"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC6M2_InSewer101a"
+			"text"		"Aguas residuales"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk102b"
+			"text"		"Callate nick"
+		}
+		"South"
+		{
+			"command"	"vocalize C1M2SafeRoomb3"
+			"text"		"Cambiar ahora"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WeddingWitchDead01"
+			"text"		"Nick aterrador"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo01a"
+			"text"		"Agradable"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize Player.NotPackingHeat2"
+			"text"		"Amigos"
+		}
+	}
+
+	"R6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C5M3Jets3"
+			"text"		"Gritar"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M1MonsterTruck"
+			"text"		"Jimmy Gibbs"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C2M1abandoned02"
+			"text"		"Probablemente"
+		}
+		"East"
+		{
+			"command"	"vocalize C6M1Intro_19b"
+			"text"		"Simple"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C5M4BombIntA"
+			"text"		"No seguro"
+		}
+		"South"
+		{
+			"command"	"vocalize C3M3SafeRoom2a3"
+			"text"		"Gente del pantano"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1Intro_18d"
+			"text"		"Otro lado"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo06a"
+			"text"		"Crush"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo03a"
+			"text"		"Terrorífico"
+		}
+	}
+
+	"R7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello2AliveExtra2"
+			"text"		"Vamosvamos"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo09b"
+			"text"		"Chica con suerte"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C5M1_intro010"
+			"text"		"Monstruo"
+		}
+		"East"
+		{
+			"command"	"vocalize _C2M2_ThisTall01"
+			"text"		"Tanks"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03a"
+			"text"		"Witch Novia"
+		}
+		"South"
+		{
+			"command"	"vocalize _C2M2_Steak01"
+			"text"		"Comprar armas"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C2M3SafeIntro010"
+			"text"		"Bebe azul"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo04d"
+			"text"		"Celoso"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_24b"
+			"text"		"Aliens"
+		}
+	}
+
+	"R8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Tits"
+			"text"		"Tetas"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_NoNoNo"
+			"text"		"No no no"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Charming"
+			"text"		"Encantador"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Wedding"
+			"text"		"Boda"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_NickOCD"
+			"text"		"TOC de Nick"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_LoveGuns"
+			"text"		"Amar las armas"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_NoSex"
+			"text"		"Ultima"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Popcorn"
+			"text"		"Palomitas"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Kitchen"
+			"text"		"Cocina"
+		}
+	}
+
+	"R9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Aye"
+			"text"		"Sí"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Stomach"
+			"text"		"Estómago"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Something"
+			"text"		"Algo"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Turd"
+			"text"		"Caca"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_NewVoices"
+			"text"		"Nuevas voces"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_WhereFrom"
+			"text"		"¿De dónde son?"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Learning"
+			"text"		"Aprendizaje"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Hate"
+			"text"		"Odio"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Bothering"
+			"text"		"no molestar"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Francis
+//--------------------------------------------------------------------------------------------------------------
+
+	"F1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock049"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock629"
+			"text"		"Profesor Monster"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock607"
+			"text"		"Barba"
+		}
+		"East"
+		{
+			"command"	"vocalize CrashCourseR09"
+			"text"		"Morir"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize IntroCrashR23"
+			"text"		"Razón"
+		}
+		"South"
+		{
+			"command"	"vocalize CrashFinaleGenerator2Speak"
+			"text"		"Generador"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptNuttier"
+			"text"		"Amenaza"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock515"
+			"text"		"Hola"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock044"
+			"text"		"Estúpidos"
+		}
+	}
+
+	"F2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom004b"
+			"text"		"Nerd"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock710"
+			"text"		"Odio los hospitales"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M1_saferoom17"
+			"text"		"Odio las islas"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M3_saferoom001"
+			"text"		"Solo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M2_saferoom02c"
+			"text"		"Japonés"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M3_saferoom016c"
+			"text"		"Mental"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize Smalltown04_path05a"
+			"text"		"Viniendo"
+		}
+		"West"
+		{
+			"command"	"vocalize IntroCrashR06"
+			"text"		"Plan"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C7M1_saferoom21a"
+			"text"		"Odio los barcos"
+		}
+	}
+
+	"F3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock721"
+			"text"		"Que te den"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseC01"
+			"text"		"Lo dudo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock558"
+			"text"		"Viejo"
+		}
+		"East"
+		{
+			"command"	"vocalize ConceptBlock637"
+			"text"		"Prisión"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize IntroCrashR18"
+			"text"		"Apuesta"
+		}
+		"South"
+		{
+			"command"	"vocalize ConceptBlock697"
+			"text"		"Lo que sea"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock635"
+			"text"		"Guapo"
+		}
+		"West"
+		{
+			"command"	"vocalize InfoRemc7m1_tankcar01"
+			"text"		"Tanks"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize CrashYerKidding"
+			"text"		"Bromeas"
+		}
+	}
+
+	"F4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize hospital03_path08a2"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize airport04_08a"
+			"text"		"Yo dije"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize c6m3_outroL4D108a"
+			"text"		"No escuchado"
+		}
+		"East"
+		{
+			"command"	"vocalize C6M1Intro_01b"
+			"text"		"Nop"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize InfoReminfo_powerboat4a"
+			"text"		"Calla"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom21"
+			"text"		"Capitán"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize NeedsHelpResponseLouisB2"
+			"text"		"Aprobar"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR10"
+			"text"		"Bueno"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_10a"
+			"text"		"Insultar Nick"
+		}
+	}
+
+	"F5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize CrashFinaleGeneratorUnPressSpeak"
+			"text"		"Maldita sea"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom14a"
+			"text"		"Tren"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock712"
+			"text"		"No odio"
+		}
+		"East"
+		{
+			"command"	"vocalize CrashCourseR13"
+			"text"		"Vapor"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize c6m3_loss"
+			"text"		"Pocos quedan"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom13"
+			"text"		"Lágrimas"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom05"
+			"text"		"Dile a Zoey"
+		}
+		"West"
+		{
+			"command"	"vocalize IntroCrashR26"
+			"text"		"Chalecos"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize SmallTown02_path01c"
+			"text"		"No me importa"
+		}
+	}
+
+	"F6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_05d"
+			"text"		"Señora"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom15b"
+			"text"		"Pasar el tiempo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize RiversideIsDeadPlan"
+			"text"		"Plan"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M1_saferoom18a"
+			"text"		"Votar"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom07a"
+			"text"		"Conducirlo"
+		}
+		"South"
+		{
+			"command"	"vocalize ConceptBlock632"
+			"text"		"Autoridad"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1Intro_20e"
+			"text"		"Vampiros"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_09c"
+			"text"		"Señorita"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize NamVetWhoAreYou"
+			"text"		"Francis"
+		}
+	}
+
+	"F7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_24b"
+			"text"		"Sí"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom12a"
+			"text"		"Molesto"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR02"
+			"text"		"Parece que sí"
+		}
+		"East"
+		{
+			"command"	"vocalize InfoRemc7m1_pretank01"
+			"text"		"Por mí vale"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize CrashCourseR11"
+			"text"		"Lasaña"
+		}
+		"South"
+		{
+			"command"	"vocalize elevator_conversation"
+			"text"		"Conversación"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom06"
+			"text"		"Hay uno"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M3_saferoom014b"
+			"text"		"Pez"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize IntroCrashR04"
+			"text"		"Tienes razón"
+		}
+	}
+
+	"F8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Hate"
+			"text"		"Odio.."
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Waterworks"
+			"text"		"Abastecimiento"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_FrozenBeard"
+			"text"		"Congelado"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_ImACop"
+			"text"		"Policía"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_Brave"
+			"text"		"Valiente"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_GodIsDead"
+			"text"		"Dios esta muerto"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Hersch"
+			"text"		"Hersch"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Dog"
+			"text"		"Perro"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Predict"
+			"text"		"Esperar"
+		}
+	}
+
+	"F9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_WomanOfTaste"
+			"text"		"Mujer"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Recycle"
+			"text"		"Reciclar"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_HateToo"
+			"text"		"También los odio"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Hero"
+			"text"		"Héroe"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_YourName"
+			"text"		"Tú nombre"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_LoveRo"
+			"text"		"Te quiero Ro"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ShotHim"
+			"text"		"Disparado"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Slow"
+			"text"		"Poco a poco"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_ThisFar"
+			"text"		"Tan lejos"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Louis
+//--------------------------------------------------------------------------------------------------------------
+
+	"L1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock050"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom12"
+			"text"		"Molesto"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock717"
+			"text"		"Malo"
+		}
+		"East"
+		{
+			"command"	"vocalize InfoRemc7m1_pretank02"
+			"text"		"¿Yo?"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize airport04_08b"
+			"text"		"Bromas"
+		}
+		"South"
+		{
+			"command"	"vocalize CrashFinaleGenerator2Speak"
+			"text"		"Generador"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom003a"
+			"text"		"Cuántos años"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock515"
+			"text"		"Hola"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock019"
+			"text"		"Señor"
+		}
+	}
+
+	"L2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock652"
+			"text"		"Silbar"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseB01"
+			"text"		"Canadá"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M3_saferoom004"
+			"text"		"Firewall"
+		}
+		"East"
+		{
+			"command"	"vocalize ConceptBlock645"
+			"text"		"Herido"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize ConceptBlock658"
+			"text"		"Imparables"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M3_saferoom017g"
+			"text"		"Isla"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize IntroCrashR24"
+			"text"		"Desfile"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR04"
+			"text"		"Leer"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock628"
+			"text"		"Zombies"
+		}
+	}
+
+	"L3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize TakeShotgunGroovyLouis"
+			"text"		"Risilla"
+		}
+		"North"
+		{
+			"command"	"vocalize IntroCrashR09"
+			"text"		"Convenio"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock619"
+			"text"		"Humanidad"
+		}
+		"East"
+		{
+			"command"	"vocalize IntroCrashR22"
+			"text"		"Volar"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize IntroCrashWalkingB"
+			"text"		"Sensación"
+		}
+		"South"
+		{
+			"command"	"vocalize CrashCourseI01"
+			"text"		"Suena bien"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom006b"
+			"text"		"No más"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M2_saferoom02"
+			"text"		"Taki"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize Farm01_path03a"
+			"text"		"Campo"
+		}
+	}
+
+	"L4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom009a"
+			"text"		"Sonido"
+		}
+		"North"
+		{
+			"command"	"vocalize SmallTown02_path01b"
+			"text"		"Historia"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR13"
+			"text"		"Apagado/Encendido"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M3_saferoom016d"
+			"text"		"Piel"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize hospital04_path02a"
+			"text"		"Ejercicio"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M3_saferoom016b"
+			"text"		"Buen humor"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom007c"
+			"text"		"Siente"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom05a"
+			"text"		"Enojada"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize IntroCrashR31"
+			"text"		"Paisaje"
+		}
+	}
+
+	"L5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize CrashFinaleGeneratorUnPressSpeak"
+			"text"		"Joder"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom21"
+			"text"		"Odio los barcos"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M1_saferoom22a"
+			"text"		"Lo intento"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M3_saferoom010a"
+			"text"		"Aprender"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M3_saferoom015a"
+			"text"		"Optimista"
+		}
+		"South"
+		{
+			"command"	"vocalize c6m3_outroL4D102a"
+			"text"		"Gente normal"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize IntroCrashR17"
+			"text"		"Condenado"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M3_saferoom013c"
+			"text"		"Largo"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C7M1_saferoom24"
+			"text"		"Cardio"
+		}
+	}
+
+	"L6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M1_saferoom15c"
+			"text"		"Gracias"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock640"
+			"text"		"Afirmativo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR03"
+			"text"		"Alejarse"
+		}
+		"East"
+		{
+			"command"	"vocalize IntroCrashR37"
+			"text"		"Apuesta"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize ResponseWeCanStill"
+			"text"		"Oh, sí"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M2_saferoom04"
+			"text"		"Única oportunidad"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize c6m3_outroL4D106a"
+			"text"		"Ve Ellis"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M2_saferoom05c"
+			"text"		"Nota"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C7M1_saferoom08a"
+			"text"		"Ver también"
+		}
+	}
+
+	"L7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize RiversideIsDeadPlan"
+			"text"		"Okay"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseA01"
+			"text"		"Zona segura"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize Farm03_path01a"
+			"text"		"Positivo"
+		}
+		"East"
+		{
+			"command"	"vocalize c6m3_loss2"
+			"text"		"Solos"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom06b"
+			"text"		"On fire"
+		}
+		"South"
+		{
+			"command"	"vocalize hospital04_path04a"
+			"text"		"Ascensor"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize CrashCourseR10"
+			"text"		"Pedos"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom25b"
+			"text"		"Inmunes"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C14M2NoteLighthouse2"
+			"text"		"Negativo"
+		}
+	}
+
+	"L8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_TankFactory"
+			"text"		"Broma"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_GordonFreeman"
+			"text"		"Freeman"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Hero"
+			"text"		"Abusado"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Belch"
+			"text"		"Eructo"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_Apocalypse"
+			"text"		"Apocalipsis"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_CounterStrike"
+			"text"		"Counter-Strike"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_CubScouts"
+			"text"		"Boy Scout"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Alley"
+			"text"		"Callejón"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Recycle"
+			"text"		"Reciclar"
+		}
+	}
+
+	"L9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Introduction"
+			"text"		"Hola"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_SeeingMore"
+			"text"		"Verlo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Believing"
+			"text"		"Conseguirlo"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_IT"
+			"text"		"Email"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_MadeIt"
+			"text"		"Lo lograron"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_RifleRange"
+			"text"		"Tiro"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ShotHim"
+			"text"		"Disparado"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_New"
+			"text"		"Nuevo"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_BackToNormal"
+			"text"		"Normalidad"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Bill
+//--------------------------------------------------------------------------------------------------------------
+
+	"B1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock051"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock639"
+			"text"		"Propias manos"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M3_saferoom003c"
+			"text"		"Electricidad"
+		}
+		"East"
+		{
+			"command"	"vocalize ConceptBlock611"
+			"text"		"Guerra"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M3_saferoom003"
+			"text"		"Vieja escuela"
+		}
+		"South"
+		{
+			"command"	"vocalize CrashFinaleGenerator2Speak"
+			"text"		"Generador"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom25a"
+			"text"		"Aquí afuera"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock515"
+			"text"		"Hola"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock025"
+			"text"		"Abre"
+		}
+	}
+
+	"B2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock556"
+			"text"		"Oye"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom06b"
+			"text"		"En llamas"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize InfoReminfo_carnotboat"
+			"text"		"Coche"
+		}
+		"East"
+		{
+			"command"	"vocalize InfoRemc7m2_seebarge01"
+			"text"		"Piloto"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M3_saferoom010b"
+			"text"		"Experto"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom16a"
+			"text"		"Cansado"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom13a"
+			"text"		"Llorar"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock608"
+			"text"		"Molestar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock696"
+			"text"		"Zombies"
+		}
+	}
+
+	"B3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock715"
+			"text"		"Risita"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashFinaleGeneratorSpeakN"
+			"text"		"Demasiado viejo"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M1_saferoom21b"
+			"text"		"Tablón"
+		}
+		"East"
+		{
+			"command"	"vocalize airport04_08c"
+			"text"		"Dios"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom01a"
+			"text"		"Cállate"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom24a"
+			"text"		"Ejercicio"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize InfoReminfo_trailerboatruck"
+			"text"		"Tonterías"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom22"
+			"text"		"Bien"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize InfoReminfo_trailerboat"
+			"text"		"Trailer"
+		}
+	}
+
+	"B4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom012f"
+			"text"		"Anotada"
+		}
+		"North"
+		{
+			"command"	"vocalize hospital04_path04a"
+			"text"		"Elevador"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M2_saferoom07"
+			"text"		"Lo encontraremos"
+		}
+		"East"
+		{
+			"command"	"vocalize hospital04_path01a"
+			"text"		"Huele"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom08b"
+			"text"		"Cállense ambos"
+		}
+		"South"
+		{
+			"command"	"vocalize airport04_08a"
+			"text"		"Detener a la gente"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom12b"
+			"text"		"En marcha"
+		}
+		"West"
+		{
+			"command"	"vocalize InfoRemc7m1_harborblocked01"
+			"text"		"Océano"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C7M1_saferoom04b"
+			"text"		"Idiotas"
+		}
+	}
+
+	"B5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize CrashFinaleGeneratorUnPressSpeak"
+			"text"		"Mierda"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock652"
+			"text"		"Tararear"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock711"
+			"text"		"No odies"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M2_saferoom05b"
+			"text"		"Idea"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize NeedsHelpResponseLouisC2"
+			"text"		"A por él"
+		}
+		"South"
+		{
+			"command"	"vocalize ConceptBlock663"
+			"text"		"Whoa-ho-ho"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptNuttier"
+			"text"		"Más loco"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom20b"
+			"text"		"No lo estoy"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C7M1_saferoom03"
+			"text"		"Velero"
+		}
+	}
+
+	"B6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock648"
+			"text"		"¿Que ha?"
+		}
+		"North"
+		{
+			"command"	"vocalize InfoReminfo_sunkboatthere01"
+			"text"		"Hundido"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize hospital02_path03c1"
+			"text"		"Por arriba"
+		}
+		"East"
+		{
+			"command"	"vocalize Farm05_Path09C"
+			"text"		"Militares"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M2_saferoom01a"
+			"text"		"Nosotros cuatro"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom23a"
+			"text"		"Dejarlos"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom10b"
+			"text"		"No será fácil"
+		}
+		"West"
+		{
+			"command"	"vocalize IntroAirport01bb"
+			"text"		"C-130"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ResponseWeCanStill"
+			"text"		"Correcto"
+		}
+	}
+
+	"B7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize DontBeAnAss"
+			"text"		"Capullo"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom14"
+			"text"		"Ser idiota"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M2_saferoom06"
+			"text"		"Traicionados"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M1_saferoom09a"
+			"text"		"Plan"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize IntroHospital03"
+			"text"		"Evitar las calles"
+		}
+		"South"
+		{
+			"command"	"vocalize elevator_conversation"
+			"text"		"Conversación"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize hospital02_path03b1"
+			"text"		"Parecía fácil"
+		}
+		"West"
+		{
+			"command"	"vocalize RiversideIsDeadPlan"
+			"text"		"Hazlo"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C14M2NoteLighthouse2"
+			"text"		"Mal presentimiento"
+		}
+	}
+
+	"B8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Cold"
+			"text"		"Frío"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_10Miles"
+			"text"		"10 km"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_GoodEnough"
+			"text"		"Confieso"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Stink"
+			"text"		"Hedor"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_GoodRun"
+			"text"		"Buena vida"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_ShoeLeather"
+			"text"		"Si hubiera"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_JobDone"
+			"text"		"Misión cumplida"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Woods"
+			"text"		"Bosque"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_LastFight"
+			"text"		"Todo lo que tienen"
+		}
+	}
+
+	"B9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Mad"
+			"text"		"Enojada"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Hallelujah"
+			"text"		"¡Aleluya!"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Lonely"
+			"text"		"Solitario"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Home"
+			"text"		"Acogedor"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_FirstStep"
+			"text"		"Primer paso"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_KnowingLouis"
+			"text"		"Echar de menos"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_BigMouth"
+			"text"		"Bocaza"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Phone"
+			"text"		"Teléfono"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Family"
+			"text"		"Familia"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Zoey
+//--------------------------------------------------------------------------------------------------------------
+
+	"Z1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock052"
+			"text"		"¿Qué?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock647"
+			"text"		"Acabados"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M3_saferoom016c"
+			"text"		"Loción"
+		}
+		"East"
+		{
+			"command"	"vocalize CrashCourseR12"
+			"text"		"Vapor"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom09b"
+			"text"		"Lo que sea"
+		}
+		"South"
+		{
+			"command"	"vocalize CrashFinaleGenerator2Speak"
+			"text"		"Generador"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock037"
+			"text"		"Vaya"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock515"
+			"text"		"Hola"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock032"
+			"text"		"Abre"
+		}
+	}
+
+	"Z2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom004b"
+			"text"		"Abucheo"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseB01"
+			"text"		"Canadá"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock652"
+			"text"		"Estoo.."
+		}
+		"East"
+		{
+			"command"	"vocalize BounceReaction"
+			"text"		"Piramos"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C6M1Intro_22b"
+			"text"		"Te sientes"
+		}
+		"South"
+		{
+			"command"	"vocalize C6M1Intro_15b"
+			"text"		"Boo-hoo"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom005"
+			"text"		"Películas"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR01"
+			"text"		"Pájaros"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize CrashCourseR03"
+			"text"		"Zombie"
+		}
+	}
+
+	"Z3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock643"
+			"text"		"Ups"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M3_saferoom006c"
+			"text"		"Raza humana"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M2_saferoom05b"
+			"text"		"Porque"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M1_saferoom18"
+			"text"		"Votar"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize CrashCourseR11"
+			"text"		"Lasaña"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom23"
+			"text"		"Dejarlos"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock620"
+			"text"		"Optimista"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR10"
+			"text"		"Pedos"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize InfoReminfo_powerboat4"
+			"text"		"Velero"
+		}
+	}
+
+	"Z4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize CrashFinaleGenerator2OnSpk"
+			"text"		"Mamá"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M2_saferoom01b"
+			"text"		"Perdido"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR01"
+			"text"		"¿Los odias?"
+		}
+		"East"
+		{
+			"command"	"vocalize c6m3_outroL4D109a"
+			"text"		"Claro"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize c6m3_outroL4D104a"
+			"text"		"Lo tienes"
+		}
+		"South"
+		{
+			"command"	"vocalize IntroCrashR10"
+			"text"		"Durar mucho"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom19a"
+			"text"		"Entenderías"
+		}
+		"West"
+		{
+			"command"	"vocalize c6m3_outroL4D105a"
+			"text"		"Centro comercial"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_15d"
+			"text"		"Dispararte"
+		}
+	}
+
+	"Z5,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_23a"
+			"text"		"Mmm"
+		}
+		"North"
+		{
+			"command"	"vocalize c6m3_outroL4D103a"
+			"text"		"Difícil"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize c6m3_outroL4D107a"
+			"text"		"10 minutos"
+		}
+		"East"
+		{
+			"command"	"vocalize airport04_08d"
+			"text"		"Correcto"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize c6m3_outroL4D102b"
+			"text"		"No será"
+		}
+		"South"
+		{
+			"command"	"vocalize PlaneCrashResponse"
+			"text"		"Mierda"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize IntroCrashR09"
+			"text"		"De acuerdo"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom02"
+			"text"		"Dejar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize c6m3_outroL4D101a"
+			"text"		"Somos tres"
+		}
+	}
+
+	"Z6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize TakeShotgunGroovyZoey"
+			"text"		"Maravilloso"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom11"
+			"text"		"Gente muerta"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR11"
+			"text"		"Tienda piloto"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M3_saferoom007b"
+			"text"		"Seguro"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize IntroHospital02"
+			"text"		"Hospital"
+		}
+		"South"
+		{
+			"command"	"vocalize elevator_conversation"
+			"text"		"Conversasión"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize airport04_08b"
+			"text"		"Infección"
+		}
+		"West"
+		{
+			"command"	"vocalize IntroCrashR04"
+			"text"		"Ciudad"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize IntroCrashR07"
+			"text"		"Preocupación"
+		}
+	}
+
+	"Z7,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Yoink"
+			"text"		"Pa mí"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_NervousHumming"
+			"text"		"Tararear"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_5000Lawyers"
+			"text"		"5000 abogados"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_GodDamnYou"
+			"text"		"Maníacos"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_SoylentGreen"
+			"text"		"Soylent verde"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_PilotLicense"
+			"text"		"Licencia"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Chickenshits"
+			"text"		"Miedosos"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_ProclaimLiberty"
+			"text"		"Libertad"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_SexyBrunette"
+			"text"		"Proteger"
+		}
+	}
+
+	"Z8,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_GodIsDead"
+			"text"		"Dios"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_MetalSupply"
+			"text"		"Metales"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Really"
+			"text"		"Estas bromeando"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Parking"
+			"text"		"Estacionamiento"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_CopyPaper"
+			"text"		"Impresora"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_PassingGas"
+			"text"		"Gases"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_SnowCold"
+			"text"		"Frío/nieve"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Shoes"
+			"text"		"Zapatos"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_LatestIssue"
+			"text"		"Ultimo número"
+		}
+	}
+
+	"Z9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Greeting"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_NiceCar"
+			"text"		"Buen carro"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_MyBuddyEllis"
+			"text"		"Amigo Ellis"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Morons"
+			"text"		"Imbéciles"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_MissEllis"
+			"text"		"Extrañar a Ellis"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_CarCalling"
+			"text"		"Ve al coche"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ComeBack"
+			"text"		"Regresen"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Steal"
+			"text"		"Robar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_LastWoman"
+			"text"		"Última mujer"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Zombies
+//--------------------------------------------------------------------------------------------------------------
+
+	"Orders,Infected,Alive"
+	{
+		"Center"
+		{
+			"command"	"-mouse_menu"
+			"text"		""
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_ZombieSpecial"
+			"text"		"Especial"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_ZombieDeath"
+			"text"		"Muerte"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_ZombiePain"
+			"text"		"Dolor"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_ZombieFakeWitch1"
+			"text"		""
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_ZombieFakeTank"
+			"text"		""
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ZombieFakeWitch2"
+			"text"		""
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_ZombieWarn"
+			"text"		"Advertir"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_ZombieAlert"
+			"text"		"Alerta"
+		}
+	}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character selection
+//--------------------------------------------------------------------------------------------------------------
+
+	"Characters,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"go_away_from_keyboard; radialmenu none"
+			"text"		"INACTIVO"
+		}
+		"North"
+		{
+			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8; alias +ch9 +mouse_menu Z9"
+			"text"		"Zoey"
+		}
+		"NorthEast"
+		{
+			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8; alias +ch9 +mouse_menu C9"
+			"text"		"Coach"
+		}
+		"East"
+		{
+			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8; alias +ch9 +mouse_menu N9"
+			"text"		"Nick"
+		}
+		"SouthEast"
+		{
+			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8; alias +ch9 +mouse_menu E9"
+			"text"		"Ellis"
+		}
+		"South"
+		{
+			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8; alias +ch9 +mouse_menu R9"
+			"text"		"Rochelle"
+		}
+		"SouthWest"
+		{
+			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8; alias +ch9 +mouse_menu L9"
+			"text"		"Louis"
+		}
+		"West"
+		{
+			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8; alias +ch9 +mouse_menu B9"
+			"text"		"Bill"
+		}
+		"NorthWest"
+		{
+			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8; alias +ch9 +mouse_menu F9"
+			"text"		"Francis"
+		}
+	}
+
+	"Characters,Survivor,Dead"
+	{
+		"Center"
+		{
+			"command"	"-mouse_menu"
+			"text"		""
+		}
+		"North"
+		{
+			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8; alias +ch9 +mouse_menu Z9"
+			"text"		"Zoey"
+		}
+		"NorthEast"
+		{
+			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8; alias +ch9 +mouse_menu C9"
+			"text"		"Coach"
+		}
+		"East"
+		{
+			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8; alias +ch9 +mouse_menu N9"
+			"text"		"Nick"
+		}
+		"SouthEast"
+		{
+			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8; alias +ch9 +mouse_menu E9"
+			"text"		"Ellis"
+		}
+		"South"
+		{
+			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8; alias +ch9 +mouse_menu R9"
+			"text"		"Rochelle"
+		}
+		"SouthWest"
+		{
+			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8; alias +ch9 +mouse_menu L9"
+			"text"		"Louis"
+		}
+		"West"
+		{
+			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8; alias +ch9 +mouse_menu B9"
+			"text"		"Bill"
+		}
+		"NorthWest"
+		{
+			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8; alias +ch9 +mouse_menu F9"
+			"text"		"Francis"
+		}
+	}
+
+	"Characters,Spectator"
+	{
+		"Center"
+		{
+			"command"	"-mouse_menu"
+			"text"		""
+		}
+		"North"
+		{
+			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8; jointeam 2 zoey; radialmenu none"
+			"text"		"Zoey"
+		}
+		"NorthEast"
+		{
+			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8; jointeam 2 coach; radialmenu none"
+			"text"		"Coach"
+		}
+		"East"
+		{
+			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8; jointeam 2 nick; radialmenu none"
+			"text"		"Nick"
+		}
+		"SouthEast"
+		{
+			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8; jointeam 2 ellis; radialmenu none"
+			"text"		"Ellis"
+		}
+		"South"
+		{
+			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8; jointeam 2 rochelle; radialmenu none"
+			"text"		"Rochelle"
+		}
+		"SouthWest"
+		{
+			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8; jointeam 2 louis; radialmenu none"
+			"text"		"Louis"
+		}
+		"West"
+		{
+			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8; jointeam 2 bill; radialmenu none"
+			"text"		"Bill"
+		}
+		"NorthWest"
+		{
+			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8; jointeam 2 francis; radialmenu none"
+			"text"		"Francis"
+		}
+	}
+}
+
+// "The devil is in the details"
