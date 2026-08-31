@@ -4,8 +4,6 @@ IncludeScript("manacat_meleedrop");
 IncludeScript("manacat_delayheal");
 IncludeScript("manacat_spitfix");
 IncludeScript("manacat_lib/lib");
-IncludeScript("admin_system");
-
 
 ////////////NESCIUS-MODS/////////////*
 
