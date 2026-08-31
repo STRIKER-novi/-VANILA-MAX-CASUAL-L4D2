@@ -2,7 +2,6 @@
 
 IncludeScript("manacat_meleedrop");
 IncludeScript("manacat_delayheal");
-IncludeScript("manacat_carriable");
 IncludeScript("manacat_spitfix");
 IncludeScript("manacat_lib/lib");
 IncludeScript("admin_system");
@@ -68,7 +67,6 @@ __CollectEventCallbacks(DeadCenterDoors, "OnGameEvent_", "GameEventCallbacks", R
 //INTERP
 Convars.SetValue("sv_client_min_interp_ratio", "0");
 Convars.SetValue("sv_client_max_interp_ratio", "1");
-Convars.SetValue("melee_range", "73");
 Convars.SetValue("vs_defib_penalty", "30");
 Convars.SetValue("sb_vomit_blind_time", "2");
 
@@ -82,8 +80,8 @@ Convars.SetValue("sv_vote_creation_timer", "0");
 Convars.SetValue("sv_vote_plr_map_limit", "5");
 
 //SPAWN-RANGE
-Convars.SetValue("z_spawn_safety_range", "200");
-Convars.SetValue("z_safe_spawn_range", "200");
+Convars.SetValue("z_spawn_safety_range", "195");
+Convars.SetValue("z_safe_spawn_range", "195");
 
 //TIME-DAY
 Convars.SetValue("sv_force_time_of_day", "0");
@@ -106,6 +104,10 @@ Convars.SetValue("survivor_friendly_fire_factor_expert", "0" );
 Convars.SetValue("survivor_friendly_fire_factor_hard", "0" );
 Convars.SetValue("survivor_friendly_fire_factor_normal", "0" );
 
+Convars.SetValue("survivor_revive_health", "35");
+Convars.SetValue("survivor_incapacitated_reload_multiplier", "1.1");
+Convars.SetValue("melee_range", "73");
+
 
 Convars.SetValue("survivor_burn_factor_easy", "0" );
 Convars.SetValue("survivor_burn_factor_expert", "0" );
@@ -114,6 +116,10 @@ Convars.SetValue("survivor_burn_factor_normal", "0" );
 
 Convars.SetValue("z_gun_swing_vs_cooldown", "1.1");
 Convars.SetValue("z_gun_stun_duration", "1.20");
+
+
+Convars.SetValue("first_aid_heal_percent", "0.87");
+Convars.SetValue("first_aid_kit_max_heal", "96");
 
 
 Convars.SetValue("z_gun_survivor_friend_push", "0");
@@ -125,14 +131,16 @@ Convars.SetValue("sv_gravity", "780");
 
 //ITEMS
 
-Convars.SetValue("pipe_bomb_timer_duration", "4.3");
+Convars.SetValue("pipe_bomb_timer_duration", "4.5");
 Convars.SetValue("vomitjar_duration_infected_bot", "10");
-Convars.SetValue("vomitjar_duration_infected_pz", "13");
+Convars.SetValue("vomitjar_duration_infected_pz", "14");
 Convars.SetValue("inferno_flame_lifetime", "8.5");
 Convars.SetValue("chainsaw_attack_distance", "55");
 Convars.SetValue("grenadelauncher_damage", "260");
+Convars.SetValue("adrenaline_duration", "17")
 
-Convars.SetValue("ammo_grenadelauncher_max", "10");
+
+Convars.SetValue("ammo_grenadelauncher_max", "15");
 Convars.SetValue("ammo_assaultrifle_max", "340");
 Convars.SetValue("ammo_autoshotgun_max", "80");
 Convars.SetValue("ammo_chainsaw_max", "5");
@@ -145,9 +153,10 @@ Convars.SetValue("z_throttle_hit_interval_normal", "0.21");
 Convars.SetValue("z_throttle_hit_interval_hard", "0.21");
 Convars.SetValue("z_throttle_hit_interval_expert", "0.21");
 //Convars.SetValue("z_common_limit", "30");
-Convars.SetValue("z_health", "47");
+Convars.SetValue("z_health", "46");
 Convars.SetValue("z_pushaway_force", "0");
 Convars.SetValue("z_respawn_interval", "3");
+Convars.SetValue("z_speed","260");
 
 
 /////SMOKER/////
@@ -159,7 +168,7 @@ Convars.SetValue("tongue_break_from_damage_amount", "300");
 Convars.SetValue("tongue_start_pull_delay", "0");
 Convars.SetValue("tongue_range", "850");
 Convars.SetValue("smoker_tongue_delay", "0");
-Convars.SetValue("tongue_victim_max_speed", "183");
+Convars.SetValue("tongue_victim_max_speed", "185");
 Convars.SetValue("tongue_miss_delay", "2.8");
 //Convars.SetValue("tongue_no_progress_choke_time", "0");
 //Convars.SetValue("tongue_no_progress_damage_interval", "0");
@@ -212,7 +221,7 @@ Convars.SetValue("z_tank_attack_interval", "0");
 Convars.SetValue("tank_visibility_tolerance_suicide", "80");
 Convars.SetValue("tank_throw_min_interval", "8");
 Convars.SetValue("versus_tank_chance", "1");
-Convars.SetValue("z_tank_speed_vs", "206");
+Convars.SetValue("z_tank_speed_vs", "212");
 Convars.SetValue("tank_burn_duration", "112");
 Convars.SetValue("versus_tank_chance_intro", "1");
 Convars.SetValue("versus_tank_chance_finale", "1");
@@ -224,7 +233,7 @@ Convars.SetValue("z_tank_autoshotgun_dmg_scale", "0.80");
 Convars.SetValue("z_max_stagger_duration", "1.1");
 Convars.SetValue("versus_tank_chance", "1");
 Convars.SetValue("tank_ground_pound_duration", "0.97");
-Convars.SetValue("z_tank_throw_interval", "4.3");
+Convars.SetValue("z_tank_throw_interval", "4.4");
 Convars.SetValue("tank_swing_range", "59");
 
 ///// WITCH ////
@@ -253,7 +262,7 @@ Convars.SetValue("z_special_spawn_interval", "16");
 Convars.SetValue("l4d_obey_boss_spawn_except_static", "1");
 Convars.SetValue("l4d_obey_boss_spawn_cvars", "1");
 Convars.SetValue("z_door_reopen_interval", "0.65");
-Convars.SetValue("z_door_pound_damage", "190");
+Convars.SetValue("z_door_pound_damage", "180");
 
 
 ////////////OTHER-SCRIPTS//////////////*

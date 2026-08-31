@@ -64,7 +64,7 @@ WeaponData
 	"CharacterPenetrationMaxDistance" "210" // Shooting through infected is doesn't count against penetration count out to this range
 
 	"Damage"			"26"
-	"Range"				"3000"
+	"Range"				"2700"
 	"RangeModifier"			"0.7"
 	"Bullets"			"9"
 	"CycleTime"			"0.35"

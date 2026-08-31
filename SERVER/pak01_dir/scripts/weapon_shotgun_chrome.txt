@@ -9,15 +9,15 @@ WeaponData
 	"MinStandingSpread"		"0.8"
 	"MinInAirSpread"		"2.5"  //increased accuracy
 	"MaxMovementSpread"		"1.5"  //increased accuracy
-	"PelletScatterPitch"		"5.0"  //increased accuracy
-	"PelletScatterYaw"		"7.1"
-	"ReloadDuration"		"0.455"
+	"PelletScatterPitch"		"3.0"  //increased accuracy
+	"PelletScatterYaw"		"5.0"
+	"ReloadDuration"		"0.471"
 	"AddonAttachment"		"primary"
 	"Team"					"Survivor"
 	
 	"Tier"					"1"		// valid entries are 0, 1, 2
 	
-	"ResponseRulesName"		"PumpShotgun"
+	"ResponseRulesName"		"Shotgun_Chrome"
 
 	// particle muzzle flash effect to play when fired
 	"MuzzleFlashEffect_1stPerson"		"weapon_muzzle_flash_shotgun_FP"
@@ -31,6 +31,8 @@ WeaponData
 	
 	"DisplayName"			"#L4D_Weapon_PumpShotgun"
 	"DisplayNameAllCaps"	"#L4D_Weapon_PumpShotgun_CAPS"
+	
+	"NewInL4D2"				"1"
 
 	// 360 Terror Data
 	"MaxAutoAimDeflection1"			"10.0"
@@ -56,22 +58,21 @@ WeaponData
 	
 	// Weapon characteristics:
 	"PenetrationNumLayers"		"2"
-	"PenetrationPower"			"30"
-	"PenetrationMaxDistance"	"500"
+	"PenetrationPower"			"35"
+	"PenetrationMaxDistance"	"520"
 	"CharacterPenetrationMaxDistance" "300" // Shooting through infected is doesn't count against penetration count out to this range
 
-	"Damage"			"26"	// 22
-	"Range"				"2800"
+	"Damage"			"31"	// 22
+	"Range"				"3100"
 	"RangeModifier"		"0.7"	// 0.96
-	"Bullets"			"10"
-	"CycleTime"			"0.48"
+	"Bullets"			"8"
+	"CycleTime"			"0.5"
 	
 	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"			"Pump Shotgun"	
-	"playermodel"		"models/w_models/weapons/w_shotgun.mdl"
+	"printname"			"Pump Shotgun"
+	"playermodel"			"models/w_models/weapons/w_pumpshotgun_A.mdl"
 	
-	"viewmodel"			"models/v_models/v_pumpshotgun.mdl"
-
+	"viewmodel"			"models/v_models/v_shotgun_chrome.mdl"
 	"CharacterViewmodelAddon"
 	{
 		"Coach"				"models/weapons/arms/v_arms_coach_new.mdl"
@@ -95,10 +96,10 @@ WeaponData
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
-		"single_shot"		"Shotgun.Fire"
+		"single_shot"		"Shotgun_Chrome.Fire"
 		//"reload"		"Shotgun.WorldReloadShell"
 		//"reload_pump"		"Shotgun.WorldReloadPump"
-		"shoot_incendiary"	"Shotgun.FireIncendiary"
+		"shoot_incendiary"	"Shotgun_Chrome.FireIncendiary"
 	}
 
 	// Weapon Sprite data is loaded by the Client DLL.
@@ -106,9 +107,9 @@ WeaponData
 	{
 		"weapon"
 		{
-				"file"		"vgui/hud/iconsheet"
-				"x"			"320"
-				"y"			"320"
+				"file"		"vgui/hud/iconsheet2"
+				"x"			"192"
+				"y"			"192"
 				"width"		"192"
 				"height"	"64"	
 		}
@@ -151,3 +152,4 @@ WeaponData
 		}
 	}
 }
+

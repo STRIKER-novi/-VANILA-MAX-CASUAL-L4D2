@@ -64,7 +64,7 @@ WeaponData
 
 	"Damage"			"25"
 	"GainRange"			"900"
-	"Range"				"2350"
+	"Range"				"2400"
 	"RangeModifier"			"0.84"
 	"Bullets"			"1"
 	"CycleTime"			"0.0625"

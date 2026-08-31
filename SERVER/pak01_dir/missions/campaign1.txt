@@ -93,10 +93,10 @@
 				"VersusCompletionScore"	"500"
 				"versus_boss_spawning"
 				{
-					"spawn_pos_min"		"0.75"
+					"spawn_pos_min"		"0.80"
 					"spawn_pos_max"		"0.85"
-					"tank_chance"		"0.85"
-					"witch_chance"		"0.15"
+					"tank_chance"		"0.15"
+					"witch_chance"		"0.85"
 				}
 			}
 
@@ -124,7 +124,7 @@
 				"versus_boss_spawning"
 				{
 					"spawn_pos_min"		"0.35"
-					"spawn_pos_max"		"0.60"
+					"spawn_pos_max"		"0.50"
 					"tank_chance"		"0.85"
 					"witch_chance"		"0.15"
 				}

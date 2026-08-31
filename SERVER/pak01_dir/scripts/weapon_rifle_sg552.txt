@@ -5,8 +5,8 @@ WeaponData
 	"SpreadPerShot"			"0.62"
 	"MaxSpread"				"5"
 	"SpreadDecay"			"5"
-	"MinDuckingSpread"		"0.7"
-	"MinStandingSpread"		"0.5"
+	"MinDuckingSpread"		"0.5"
+	"MinStandingSpread"		"0.7"
 	"MinInAirSpread"		"1.5"
 	"MaxMovementSpread"		"4"
 	"AddonAttachment"		"primary"
@@ -59,8 +59,8 @@ WeaponData
 	"PenetrationPower"			"60"
 	"PenetrationMaxDistance"	"0"	// none
 
-	"Damage"			"37"
-	"Range"				"3500"
+	"Damage"			"38"
+	"Range"				"3400"
 	"RangeModifier"			"0.97"
 	"GainRange"			"1500"	// range at which to use a gain curve to fall off to zero
 	"Bullets"			"1"

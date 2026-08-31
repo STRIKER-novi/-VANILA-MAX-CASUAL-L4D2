@@ -11,7 +11,7 @@ function OnGameEvent_defibrillator_used( params )
 		local downs = Convars.GetFloat("survivor_max_incapacitated_count");
 		defibed.SetReviveCount(downs)
 		defibed.SetHealth(1);
-		defibed.SetHealthBuffer(41);
+		defibed.SetHealthBuffer(45);
 		NetProps.SetPropInt(defibed, "m_isGoingToDie", 1)
 	}
 }

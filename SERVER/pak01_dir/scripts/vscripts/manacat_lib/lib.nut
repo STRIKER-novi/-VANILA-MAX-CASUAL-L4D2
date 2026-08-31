@@ -44,7 +44,7 @@ if (!("MANACAT" in getroottable())){
 					switch(msg){
 						case "kr":msg = params["name"]+" 님이 게임에 참가하고 있습니다.";break;
 						case "jp":msg = "プレイヤー "+params["name"]+" がゲームに参加しています";break;
-						case "es":msg = "El jugador "+params["name"]+" esta ENTRANDO";break;
+						case "es":msg = "Jugador "+params["name"]+" esta ENTRANDO";break;
 						case "sc":msg = "玩家 "+params["name"]+" 正在加入游戏";break;//간체
 						case "tc":msg = "玩家 "+params["name"]+" 正在加入遊戲";break;//번체
 						case "ru":msg = "Игрок "+params["name"]+" вступает в игру";break;

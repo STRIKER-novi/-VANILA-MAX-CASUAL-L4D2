@@ -63,7 +63,7 @@ WeaponData
 	"PenetrationMaxDistance"	"0"	// none
 
 	"Damage"			"70"
-	"Range"				"3000"
+	"Range"				"2800"
 	"RangeModifier"			"1"
 	"Bullets"			"1"
 	//"CycleTime"			"0.15"

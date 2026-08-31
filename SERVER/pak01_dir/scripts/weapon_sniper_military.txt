@@ -6,7 +6,7 @@ WeaponData
 	"MaxSpread"			"15"
 	"SpreadDecay"			"8"
 	"MinDuckingSpread"		"0.05"
-	"MinStandingSpread"		"0.5"
+	"MinStandingSpread"		"0.6"
 	"MinInAirSpread"		"1.5"
 	"MaxMovementSpread"		"5"
 	"AddonAttachment"		"primary"
