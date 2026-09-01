@@ -4,7 +4,7 @@ Aqui estan guardadas tanto el mod de Vanila MAx como el sourcemod modificado con
 
 PRESIONA <>CODE es el boton azul a la derecha y en al ultima opcion descargar ZIP descargara lo que esta aqui
 
-Lleva el archivo descargado a tu L4D2 que seria "C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2" y ahi dentro lo descomprimes los archivos
+Lleva el archivo descargado a tu L4D2 que seria "C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2" y ahi dentro descomprimes los archivos
 
 Una vez instalado los 2 archivos.rar entras a "C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\sourcemod" y abre el archivo llamado "README-LEEME-tarado.txt" y sigue las intrucciones para poder ser Admin 
 
