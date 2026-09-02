@@ -13,4 +13,3 @@ no tarda mucho
 
 !!! Para activar el sourcemod con sus plugins NO OLVIDES PONER "-insecure" en tus parametros de lanzamiento del L4d2 este parametro tambien impedira que te unas a otras partidas y solo podras jugarla en tu sala de HOST LOCAL
 
-<gif width="268" height="268" alt="Image" src="https://github.com/user-attachments/assets/16ea7f93-6748-40f9-b6e3-6963fd3af61b" />
