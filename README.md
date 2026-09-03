@@ -1,6 +1,4 @@
-<td align="center">
-  <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="180">
-</td>
+<p align="center" video="autoplay"><img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" /></p>
 
 <div align="center">
 
