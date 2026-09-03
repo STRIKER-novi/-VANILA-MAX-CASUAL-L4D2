@@ -1,4 +1,4 @@
-<center><img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" /></center>
+<p align="center"><img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" /></p>
   
 # -VANILA-MAX-CASUAL-L4D2
 
