@@ -1,28 +1,28 @@
 <p align="center"><img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" /></p>
 
-<table>
+<table style="border-collapse: collapse; width: 100%;">
   <tr>
-    <th>Tank</th>
-    <th>Hunter</th>
-    <th>Witch</th>
+    <th style="border: 3px solid white;">TANK</th>
+    <th style="border: 3px solid white;">HUNTER</th>
+    <th style="border: 3px solid white;">WITCH</th>
   </tr>
 
   <tr>
-    <td align="center">
+    <td style="border: 3px solid white; text-align: center;">
       <img src="GIF1.gif" width="180">
     </td>
-    <td align="center">
+    <td style="border: 3px solid white; text-align: center;">
       <img src="GIF2.gif" width="180">
     </td>
-    <td align="center">
+    <td style="border: 3px solid white; text-align: center;">
       <img src="GIF3.gif" width="180">
     </td>
   </tr>
 
   <tr>
-    <td align="center">Gran fuerza</td>
-    <td align="center">Muy ágil</td>
-    <td align="center">Muy peligrosa</td>
+    <td style="border: 3px solid white; text-align: center;">Gran fuerza</td>
+    <td style="border: 3px solid white; text-align: center;">Muy ágil</td>
+    <td style="border: 3px solid white; text-align: center;">Peligrosa</td>
   </tr>
 </table>
   
