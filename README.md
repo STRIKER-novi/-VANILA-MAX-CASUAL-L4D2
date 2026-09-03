@@ -1,4 +1,30 @@
 <p align="center"><img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" /></p>
+
+<table>
+  <tr>
+    <th>Tank</th>
+    <th>Hunter</th>
+    <th>Witch</th>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img src="GIF1.gif" width="180">
+    </td>
+    <td align="center">
+      <img src="GIF2.gif" width="180">
+    </td>
+    <td align="center">
+      <img src="GIF3.gif" width="180">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">Gran fuerza</td>
+    <td align="center">Muy ágil</td>
+    <td align="center">Muy peligrosa</td>
+  </tr>
+</table>
   
 # -VANILA-MAX-CASUAL-L4D2
 
