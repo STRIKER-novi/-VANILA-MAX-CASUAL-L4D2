@@ -20,15 +20,15 @@
 
 </tr>
 
-  <tr>
-    <td align="center">Gran fuerza</td>
-    <td align="center">Muy ágil</td>
-    <td align="center">Peligrosa</td>
-  </tr>
+   <tr>
+     <td align="center">Gran fuerza</td>
+     <td align="center">Muy ágil</td>
+     <td align="center">Peligrosa</td>
+   </tr>
 </table>
 </div>
   
-# -VANILA-MAX-CASUAL-L4D2
+<h1># -VANILA-MAX-CASUAL-L4D2</h1>
 
 Aqui estan guardadas tanto el mod de Vanila MAx como el sourcemod modificado con los plugins de competitivo y tambien otros plugins de la internet
 
