@@ -34,7 +34,7 @@ no tarda mucho
 <tr>
   
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/55e63299-5160-4825-9fd2-fc30dc1f6ba7" width="250"> </td>
+    <img src="https://github.com/user-attachments/assets/c96cff5a-37bf-4a2c-b6dd-4a87632ae1f7" width="250"> </td>
 <td align="center">
     <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td> 
 <td align="center">
