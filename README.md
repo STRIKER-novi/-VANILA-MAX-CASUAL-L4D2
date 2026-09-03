@@ -9,13 +9,13 @@
 
   <tr>
     <td style="border: 3px solid white; text-align: center;">
-      <img src="GIF1.gif" width="180">
+      <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="180">
     </td>
     <td style="border: 3px solid white; text-align: center;">
-      <img src="GIF2.gif" width="180">
+      <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="180">
     </td>
     <td style="border: 3px solid white; text-align: center;">
-      <img src="GIF3.gif" width="180">
+      <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="180">
     </td>
   </tr>
 
