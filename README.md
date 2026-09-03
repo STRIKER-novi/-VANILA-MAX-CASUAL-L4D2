@@ -49,3 +49,31 @@ no tarda mucho
    </tr>
 </table>
 </div>
+
+<div align="center">
+<table>
+  
+  <tr>
+    <th>TANK</th>
+    <th>HUNTER</th>
+    <th>WITCH</th>
+  </tr>
+
+<tr>
+  
+<td align="center">
+    <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td>
+<td align="center">
+    <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td> 
+<td align="center">
+    <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td>
+
+</tr>
+
+   <tr>
+     <td align="center">Gran fuerza</td>
+     <td align="center">Muy ágil</td>
+     <td align="center">Peligrosa</td>
+   </tr>
+</table>
+</div>
