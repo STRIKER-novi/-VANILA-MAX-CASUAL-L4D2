@@ -104,3 +104,15 @@ no tarda mucho
 </div>
 
 <h3># HAY MUCHOS OTROS PLUGINS </h3>
+
+Muchos plugins que corrigen, cambian, mejoran, arreglan o agregan funciones a Juego como :
+
+-Pasar el tank escribiendo en el chat !pass
+-Irte a espectador escribiendo !spec
+-No dañar a compañeros infectados
+-ETC
+
+
+
+!!!<n>ADVENTENCIA</n> cuando alguien en al partida usa HACKS como SPEED MULTIHIT AIMBOT puede generar PING alto o lag
+
