@@ -26,9 +26,9 @@ no tarda mucho
 <table>
   
   <tr>
-    <th>TANK</th>
-    <th>HUNTER</th>
-    <th>WITCH</th>
+    <th>IA-BOTS+</th>
+    <th>NO-M2-HUNTER</th>
+    <th>TANK-DAMAGE</th>
   </tr>
 
 <tr>
@@ -43,9 +43,9 @@ no tarda mucho
 </tr>
 
    <tr>
-     <td align="center">Gran fuerza</td>
-     <td align="center">Muy ágil</td>
-     <td align="center">Peligrosa</td>
+     <td align="center">Mejora la IA de los bots Humanos y Zombies</td>
+     <td align="center">Evita que el hunter sea empujado al saltar</td>
+     <td align="center">Anuncia el daño hecho al tank en el chat</td>
    </tr>
 </table>
 </div>
