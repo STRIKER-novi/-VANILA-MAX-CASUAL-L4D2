@@ -62,9 +62,9 @@ no tarda mucho
 <tr>
   
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td>
+    <img src="https://github.com/user-attachments/assets/36757575-61e1-4d10-ace2-cbc78d601996" width="250"> </td>
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td> 
+    <img src="https://github.com/user-attachments/assets/956716e7-0b8a-4d2c-8cbc-1be4caf6873f" width="250"> </td> 
 <td align="center">
     <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td>
 
