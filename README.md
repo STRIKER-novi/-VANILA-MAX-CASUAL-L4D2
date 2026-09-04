@@ -78,4 +78,23 @@ no tarda mucho
 </table>
 </div>
 
-<p align="center" ><img width="290" src="https://github.com/user-attachments/assets/17eedf73-b114-45a3-8dd7-60e7687a70cd" /></p>
+
+
+<div align="center">
+<table>
+  
+<tr>
+     <td align="center">Gran fuerza</td>
+</tr>
+  
+<tr>
+<td align="center">
+    <img src="https://github.com/user-attachments/assets/17eedf73-b114-45a3-8dd7-60e7687a70cd" width="250"> </td>
+</tr>
+
+<tr>
+     <td align="center">Gran fuerza</td>
+</tr>
+
+</table>
+</div>
