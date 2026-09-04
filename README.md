@@ -13,7 +13,7 @@ PRESIONA <>CODE es el boton azul o verde a la derecha y en al ultima opcion desc
 
 Lleva el archivo descargado a tu L4D2 que seria "C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2" y ahi dentro descomprimes los archivos
 
-<img width="170" height="170" alt="Image" src="https://github.com/user-attachments/assets/9196f08b-f054-4c9b-8d8b-f4b61fb4b16e" />
+<img width="170" height="190" alt="Image" src="https://github.com/user-attachments/assets/9196f08b-f054-4c9b-8d8b-f4b61fb4b16e" />
 
 Una vez instalado los 2 archivos.rar entras a "C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2\addons\sourcemod" y abre el archivo llamado "README-LEEME-tarado.txt" y sigue las intrucciones para poder ser Admin 
 
