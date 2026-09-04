@@ -54,9 +54,9 @@ no tarda mucho
 <table>
   
   <tr>
-    <th>TANK</th>
-    <th>HUNTER</th>
-    <th>WITCH</th>
+    <th>SPECTATOR-AFK</th>
+    <th>MVP-STATS</th>
+    <th>NO-BUG-TANKS</th>
   </tr>
 
 <tr>
@@ -71,9 +71,9 @@ no tarda mucho
 </tr>
 
    <tr>
-     <td align="center">Gran fuerza</td>
-     <td align="center">Muy ágil</td>
-     <td align="center">Peligrosa</td>
+     <td align="center">Mueve a los AFK a espectadores</td>
+     <td align="center">Anuncia que jugadores hacen mas daño o matan mas commons en el chat</td>
+     <td align="center">Empuja a los supervivientes que intenten bugear a los Infectados</td>
    </tr>
 </table>
 </div>
