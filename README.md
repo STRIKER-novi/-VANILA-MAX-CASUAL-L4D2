@@ -108,8 +108,11 @@ no tarda mucho
 Muchos plugins que corrigen, cambian, mejoran, arreglan o agregan funciones a Juego como :
 
 -Pasar el tank escribiendo en el chat !pass
+
 -Irte a espectador escribiendo !spec
+
 -No dañar a compañeros infectados
+
 -ETC
 
 
