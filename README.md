@@ -34,11 +34,11 @@ no tarda mucho
 <tr>
   
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/c96cff5a-37bf-4a2c-b6dd-4a87632ae1f7" width="300"> </td>
+    <img src="https://github.com/user-attachments/assets/c96cff5a-37bf-4a2c-b6dd-4a87632ae1f7" width="290"> </td>
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/012671b8-c53e-42cd-a197-1795e42f4c4a" width="315"> </td> 
+    <img src="https://github.com/user-attachments/assets/012671b8-c53e-42cd-a197-1795e42f4c4a" width="310"> </td> 
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/b15e74c8-7010-4d3f-8acf-6310b06f2675" width="330"> </td>
+    <img src="https://github.com/user-attachments/assets/b15e74c8-7010-4d3f-8acf-6310b06f2675" width="325"> </td>
 
 </tr>
 
