@@ -3,7 +3,7 @@
 <p align="center" ><img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" /></p>
 
 
-Aqui estan guardadas tanto el mod de Vanila MAx como el sourcemod modificado con los plugins de competitivo y tambien otros plugins de la internet
+Aqui estan guardadas tanto el mod de Vanila MAX como el sourcemod modificado con los plugins de competitivo y tambien otros plugins de la internet
 
 PRESIONA <>CODE es el boton azul o verde a la derecha y en al ultima opcion descargar ZIP y se descargaran todos los plugins 
 
