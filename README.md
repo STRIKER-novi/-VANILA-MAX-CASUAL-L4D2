@@ -84,7 +84,7 @@ no tarda mucho
 <table>
   
 <tr>
-     <td align="center">Gran fuerza</td>
+     <td align="center">RESPAWN-HEALTH</td>
 </tr>
   
 <tr>
@@ -93,7 +93,7 @@ no tarda mucho
 </tr>
 
 <tr>
-     <td align="center">Gran fuerza</td>
+     <td align="center">Cura un poco se Salud al Respawnear</td>
 </tr>
 
 </table>
