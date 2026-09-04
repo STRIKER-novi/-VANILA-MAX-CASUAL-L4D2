@@ -1,9 +1,10 @@
 /////////////MANACAT-MODS//////////////*
 
-IncludeScript("manacat_meleedrop");
 IncludeScript("manacat_delayheal");
 IncludeScript("manacat_spitfix");
 IncludeScript("manacat_lib/lib");
+IncludeScript("admin_system");
+
 
 ////////////NESCIUS-MODS/////////////*
 
@@ -102,6 +103,7 @@ Convars.SetValue("survivor_friendly_fire_factor_expert", "0" );
 Convars.SetValue("survivor_friendly_fire_factor_hard", "0" );
 Convars.SetValue("survivor_friendly_fire_factor_normal", "0" );
 
+Convars.SetValue("upgrade_laser_sight_spread_factor", 0.6)
 Convars.SetValue("survivor_revive_health", "35");
 Convars.SetValue("survivor_incapacitated_reload_multiplier", "1.1");
 Convars.SetValue("melee_range", "73");
