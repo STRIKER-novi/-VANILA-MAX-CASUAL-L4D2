@@ -98,3 +98,5 @@ no tarda mucho
 
 </table>
 </div>
+
+<h3># HAY MUCHOS OTROS PLUGINS </h3>
