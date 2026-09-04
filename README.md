@@ -66,7 +66,7 @@ no tarda mucho
 <td align="center">
     <img src="https://github.com/user-attachments/assets/956716e7-0b8a-4d2c-8cbc-1be4caf6873f" width="250"> </td> 
 <td align="center">
-    <img src="https://github.com/user-attachments/assets/e4010145-5a0d-4d0e-a841-4e5181c1cecd" width="250"> </td>
+    <img src="https://github.com/user-attachments/assets/76f290d4-535a-48bc-a597-871a7ca08bb1" width="250"> </td>
 
 </tr>
 
