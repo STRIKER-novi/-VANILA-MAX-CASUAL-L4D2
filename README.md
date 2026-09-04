@@ -8,6 +8,7 @@ Aqui estan guardadas tanto el mod de Vanila MAx como el sourcemod modificado con
 PRESIONA <>CODE es el boton azul o verde a la derecha y en al ultima opcion descargar ZIP y se descargaran todos los plugins 
 
 <img width="90" height="30" alt="Image" src="https://github.com/user-attachments/assets/4577b5fa-9a74-42aa-b6eb-68320c7f871c" /> o <img width="90" height="30" alt="Image" src="https://github.com/user-attachments/assets/781bb2ca-33e9-4f23-9622-84c94fca3525" />
+<img width="100" height="100" alt="Image" src="https://github.com/user-attachments/assets/4619aa42-b796-4226-986f-b8ba5920ab7f" />
 
 Lleva el archivo descargado a tu L4D2 que seria "C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2" y ahi dentro descomprimes los archivos
 
