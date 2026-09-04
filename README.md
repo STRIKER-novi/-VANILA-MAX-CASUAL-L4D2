@@ -77,3 +77,5 @@ no tarda mucho
    </tr>
 </table>
 </div>
+
+<p align="center" ><img src="https://github.com/user-attachments/assets/17eedf73-b114-45a3-8dd7-60e7687a70cd" /></p>
