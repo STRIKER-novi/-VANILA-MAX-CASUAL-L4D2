@@ -43,7 +43,7 @@ no tarda mucho
 </tr>
 
    <tr>
-     <td align="center">Mejora la IA de los bots Humanos y Zombies</td>
+     <td align="center">Mejora la IA de los bots Infectados y Supervivientes</td>
      <td align="center">Evita que el hunter sea empujado al saltar</td>
      <td align="center">Anuncia el daño hecho al tank en el chat</td>
    </tr>
